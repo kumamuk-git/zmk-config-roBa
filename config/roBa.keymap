@@ -72,8 +72,6 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp COLON                      &kp SEMICOLON            &kp N        &kp M  &kp COMMA  &kp DOT  &mt LS(RIGHT_SHIFT) LS(DELETE)
 &mkp MB3          &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &mt BACKSPACE BACKSPACE  &lt 1 ENTER                             &kp SLASH
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         SYMBOL {
