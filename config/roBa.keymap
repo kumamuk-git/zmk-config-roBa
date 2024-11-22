@@ -70,13 +70,13 @@
 &kp Q             &kp W         &kp E         &kp R                 &kp T                                                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                 &kp G                   &kp LS(LG(S))                  &kp MINUS                &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp COLON                      &kp SEMICOLON            &kp N        &kp M  &kp COMMA  &kp DOT  &mt LS(RIGHT_SHIFT) LS(DELETE)
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &mt BACKSPACE BACKSPACE  &lt 1 ENTER                             &kp SLASH
+&mkp MB3          &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &mt BACKSPACE BACKSPACE  &lt 1 ENTER                             &kp SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        SYMBOL {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                    &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)    &kp LS(N9)        &kp LS(N0)
 &trans            &trans            &trans            &trans            &trans      &trans    &trans  &kp LEFT          &kp DOWN    &kp UP_ARROW  &kp RIGHT         &kp NON_US_BACKSLASH
