@@ -40,6 +40,21 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        mouse_left {
+            bindings = <&mkp MB1>;
+            key-positions = <17 18>;
+        };
+
+        mouse_right {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
+        };
+
+        mouse_cent {
+            bindings = <&mkp MB3>;
+            key-positions = <19 18>;
+        };
     };
 
     macros {
@@ -67,10 +82,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                                                                   &kp Y        &kp U  &lt 3 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 4 F               &kp G                   &kp LS(LG(S))                  &kp MINUS        &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
+&kp Q             &kp W         &kp E         &kp R                 &kp T                                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 3 F               &kp G                   &kp LS(LG(S))                  &kp MINUS        &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp COLON                      &kp SEMICOLON    &kp N        &kp M  &kp COMMA  &kp DOT  &mt LS(RIGHT_SHIFT) LS(DELETE)
-&mkp MB3          &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 3 SLASH
+&mkp MB3          &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 5 SLASH
             >;
         };
 
@@ -92,15 +107,6 @@
             >;
         };
 
-        SCROLL {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                &kp F6               &kp F7                  &kp F8         &kp F9                   &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans              &kp HOME             &mkp MB1                &kp PAGE_UP    &mkp MB2                 &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans              &kp END              &kp LS(LG(LEFT_ARROW))  &kp PAGE_DOWN  &kp LS(LG(RIGHT_ARROW))  &mt RIGHT_SHIFT F12
-&trans  &trans  &trans  &trans  &trans  &trans    &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                                  &trans
-            >;
-        };
-
         ARROW {
             bindings = <
 &kp ESCAPE  &trans  &trans  &trans  &trans                    &trans    &trans    &trans        &trans     &trans
@@ -110,6 +116,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        SCROLL {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                &kp F6               &kp F7                  &kp F8         &kp F9                   &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans    &trans              &kp HOME             &mkp MB1                &kp PAGE_UP    &mkp MB2                 &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans    &trans              &kp END              &kp LS(LG(LEFT_ARROW))  &kp PAGE_DOWN  &kp LS(LG(RIGHT_ARROW))  &mt RIGHT_SHIFT F12
+&trans  &trans  &trans  &trans  &trans  &trans    &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)                                                                  &trans
+            >;
         };
 
         MOUSE {
