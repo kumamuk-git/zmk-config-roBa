@@ -67,21 +67,21 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E         &kp R                        &kp T                                                         &kp Y        &kp U  &kp I        &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                    &kp MINUS       &kp H        &kp J  &kp K        &kp L    &kp SEMI
-&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V                        &kp B        &kp LANGUAGE_1                   &kp LANGUAGE_2  &kp N        &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
-&kp LCTRL           &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN    &kp BACKSPACE   &lt 1 ENTER                               &kp RIGHT_SHIFT
+&kp Q               &kp W         &kp E         &kp R                        &kp T                                                         &kp Y                  &kp U  &kp I        &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                    &kp MINUS       &kp H                  &kp J  &kp K        &kp L    &kp SEMI
+&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V                        &kp B        &kp LANGUAGE_2                   &kp LANGUAGE_1  &kp N                  &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
+&kp LCTRL           &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 5 SPACE  &lt_to_layer_0 3 INT_MUHENKAN    &kp BACKSPACE   &mt RIGHT_SHIFT ENTER                               &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
         };
 
-        FUNCTION {
+        SYMBOLS+ARROWS {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &kp F12
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans           &trans       &trans    &trans      &kp HOME     &trans    &trans  &trans     &trans         &kp UP_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans           &trans       &trans    &trans      &kp END      &trans    &trans  &trans     &kp LEFT       &kp DOWN      &kp RIGHT             &trans
+&trans           &trans       &trans    &trans      &trans       &trans    &trans  &trans                                                        &trans
             >;
         };
 
