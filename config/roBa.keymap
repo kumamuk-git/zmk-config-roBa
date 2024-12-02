@@ -68,7 +68,7 @@
         default {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R      &kp T                                          &kp Y                  &kp U  &kp I        &kp O    &kp P
-&mt LEFT_WIN A    &kp S         &kp D         &kp F      &kp G        &kp LS(LG(S))     &kp MINUS       &kp H                  &kp J  &kp K        &kp L    &kp SEMI
+&mt LEFT_WIN A    &kp S         &kp D         &kp F      &kp G        &kp LS(LG(S))     &kp MINUS       &kp H                  &kp J  &kp K        &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B        &kp LANGUAGE_2    &kp LANGUAGE_1  &kp N                  &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
 &trans            &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 TAB  &lt 5 SPACE  &mo 2             &kp BACKSPACE   &mt RIGHT_SHIFT ENTER                               &kp RIGHT_SHIFT
             >;
@@ -78,16 +78,16 @@
 
         symbol_arrow {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans           &trans       &trans    &trans      &kp HOME     &trans    &trans  &trans     &trans         &kp UP_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans           &trans       &trans    &trans      &kp END      &trans    &trans  &trans     &kp LEFT       &kp DOWN      &kp RIGHT             &kp GRAVE
-&trans           &trans       &trans    &trans      &trans       &trans    &trans  &trans                                                        &kp BACKSLASH
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH         &kp DOLLAR   &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans           &trans       &kp LC(LS(TAB))  &kp LC(TAB)  &kp HOME     &trans    &trans  &trans     &trans         &kp UP_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans           &trans       &trans           &trans       &kp END      &trans    &trans  &trans     &kp LEFT       &kp DOWN      &kp RIGHT             &kp GRAVE
+&trans           &trans       &trans           &trans       &trans       &trans    &trans  &trans                                                        &kp BACKSLASH
             >;
         };
 
         number_symbol {
             bindings = <
-&trans        &kp N7        &kp N8        &kp N9        &kp MINUS                             &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp ESCAPE    &kp N7        &kp N8        &kp N9        &kp MINUS                             &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS    &trans    &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans        &kp NUMBER_0  &kp NUMBER_0  &trans        &trans      &trans    &trans          &trans                                                                     &kp PIPE
@@ -116,10 +116,10 @@
 
         scroll_fn_bluetooth {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans    &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans                                                  &bt BT_CLR_ALL
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                    &kp LG(LS(NUMBER_8))    &kp LG(LS(NUMBER_9))  &kp LG(LS(NUMBER_0))  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(ENTER))     &kp LG(LS(RIGHT))     &bt BT_SEL 1  &bt BT_SEL 2
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans    &trans  &kp LG(LS(NUMBER_6))    &kp LC(DOWN_ARROW)    &kp LG(LS(NUMBER_7))  &bt BT_SEL 0  &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans   &trans    &trans  &trans                                                                            &bt BT_CLR_ALL
             >;
         };
     };
