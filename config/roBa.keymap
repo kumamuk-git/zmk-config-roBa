@@ -101,8 +101,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         mouse {
@@ -116,20 +114,13 @@
 
         scroll_fn_bluetooth {
             bindings = <
-&kp LC(LA(DELETE))  &kp F7  &kp F8  &kp F9  &kp F10                    &kp LG(LS(NUMBER_8))    &kp LG(LS(NUMBER_9))  &kp LG(LS(NUMBER_0))  &bt BT_SEL 3  &bt BT_SEL 4
-&trans              &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(ENTER))     &kp LG(LS(RIGHT))     &bt BT_SEL 1  &bt BT_SEL 2
-&trans              &kp F1  &kp F2  &kp F3  &kp F12  &trans    &trans  &kp LG(LS(NUMBER_6))    &kp LC(DOWN_ARROW)    &kp LG(LS(NUMBER_7))  &bt BT_SEL 0  &bt BT_CLR
-&trans              &trans  &trans  &trans  &trans   &trans    &trans  &trans                                                                            &bt BT_CLR_ALL
+&kp LC(LA(DELETE))  &trans         &trans           &trans       &trans                    &kp LG(LS(NUMBER_8))    &kp LG(LS(NUMBER_9))  &kp LG(LS(NUMBER_0))  &bt BT_SEL 3  &bt BT_SEL 4
+&trans              &kp LG(LS(S))  &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans    &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(ENTER))     &kp LG(LS(RIGHT))     &bt BT_SEL 1  &bt BT_SEL 2
+&trans              &trans         &trans           &trans       &trans  &trans    &trans  &kp LG(LS(NUMBER_6))    &kp LC(DOWN_ARROW)    &kp LG(LS(NUMBER_7))  &bt BT_SEL 0  &bt BT_CLR
+&trans              &trans         &trans           &trans       &trans  &trans    &trans  &trans                                                                            &bt BT_CLR_ALL
             >;
-        };
 
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
     };
 };
