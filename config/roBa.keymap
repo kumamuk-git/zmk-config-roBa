@@ -67,10 +67,10 @@
 
         default {
             bindings = <
-&kp Q             &kp W           &kp E           &kp R               &kp T                                                     &kp Y        &kp U                &kp I            &kp O            &kp P
-&mt LEFT_WIN A    &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G        &kp LS(LG(S))     &trans                     &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_SHIFT MINUS
-&mt LEFT_SHIFT Z  &kp X           &kp C           &kp V               &kp B        &kp LANGUAGE_2    &kp LANGUAGE_1             &kp N        &kp M                &lt 5 COMMA      &kp DOT          &mt RIGHT_SHIFT SQT
-&kp ESCAPE        &kp LEFT_ALT    &kp LEFT_WIN    &mo 1               &lt 5 SPACE  &lt 2 TAB         &mt RIGHT_SHIFT BACKSPACE  &lt 2 ENTER                                                         &kp RIGHT_SHIFT
+&kp Q               &kp W           &kp E           &kp R               &kp T                                          &kp Y        &kp U                &kp I            &kp O            &kp P
+&mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G        &kp LS(LG(S))     &kp DELETE      &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &mt RIGHT_SHIFT MINUS
+&mt LEFT_SHIFT Z    &kp X           &kp C           &kp V               &kp B        &kp LANGUAGE_2    &kp LANGUAGE_1  &kp N        &kp M                &lt 5 COMMA      &kp DOT          &mt RIGHT_SHIFT SQT
+&mt LSHFT ESCAPE    &kp LEFT_WIN    &kp LEFT_ALT    &mo 1               &lt 5 SPACE  &lt 2 TAB         &kp BACKSPACE   &lt 1 ENTER                                                         &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
