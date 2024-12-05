@@ -17,28 +17,18 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp LS(TAB)>;
             key-positions = <11 12>;
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&kp TAB>;
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
@@ -67,10 +57,10 @@
 
         default {
             bindings = <
-&kp Q               &kp W           &kp E           &kp R               &kp T                                          &kp Y        &kp U                &kp I            &kp O            &kp P
-&mt LEFT_CONTROL A  &mt LEFT_GUI S  &mt LEFT_ALT D  &mt LEFT_CONTROL F  &kp G        &kp LALT          &kp DELETE      &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &mt RIGHT_SHIFT MINUS
-&mt LEFT_SHIFT Z    &kp X           &kp C           &kp V               &kp B        &kp LANGUAGE_2    &kp LANGUAGE_1  &kp N        &kp M                &lt 5 COMMA      &kp DOT          &mt RIGHT_SHIFT SQT
-&mt LSHFT ESCAPE    &kp LEFT_WIN    &kp LEFT_ALT    &mo 1               &lt 5 SPACE  &lt 2 TAB         &kp BACKSPACE   &lt 1 ENTER                                                         &kp RIGHT_SHIFT
+&kp Q      &kp W         &kp E         &kp R  &kp T                                                             &kp Y                    &kp U  &lt 1 I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F  &kp G        &kp LALT                  &kp DELETE                 &kp H                    &kp J  &kp K        &kp L    &kp MINUS
+&kp Z      &kp X         &kp C         &kp V  &kp B        &to_layer_0 LANGUAGE_2    &to_layer_0 LANGUAGE_1     &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT SQT
+&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1  &lt 5 SPACE  &mo 2                     &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_CONTROL ENTER                               &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
