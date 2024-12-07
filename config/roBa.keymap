@@ -85,7 +85,7 @@
 &trans        &kp NUMBER_0  &kp NUMBER_0  &trans        &trans      &trans    &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB)>;
+            sensor-bindings = <&inc_dec_kp LS(LG(TAB)) LG(TAB)>;
         };
 
         no_use {
@@ -115,6 +115,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LC(PLUS)>;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
         };
     };
 };
