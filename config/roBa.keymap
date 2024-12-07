@@ -83,7 +83,7 @@
 &trans        &kp NUMBER_0  &kp NUMBER_0  &trans        &trans      &trans    &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB)>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         no_use {
