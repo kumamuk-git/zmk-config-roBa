@@ -73,8 +73,6 @@
 &kp PERCENT        &kp HASH     &kp ASTERISK          &kp GRAVE              &kp CARET   &trans    &trans  &kp TILDE      &kp LEFT   &kp DOWN      &kp RIGHT       &kp BACKSLASH
 &trans             &trans       &trans                &trans                 &trans      &trans    &trans  &trans                                                  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         number_symbol {
@@ -85,7 +83,7 @@
 &trans        &kp NUMBER_0  &kp NUMBER_0  &trans        &trans      &trans    &trans  &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LG(TAB)) LG(TAB)>;
+            sensor-bindings = <&inc_dec_kp LS(LC(TAB)) LC(TAB)>;
         };
 
         no_use {
