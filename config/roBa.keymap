@@ -112,7 +112,7 @@
 &trans              &trans         &trans           &trans       &trans  &trans    &trans  &trans                                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(MINUS) LC(PLUS)>;
+            sensor-bindings = <&inc_dec_kp LC(MINUS) LC(SEMI)>;
         };
 
         layer_6 {
