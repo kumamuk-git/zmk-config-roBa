@@ -57,10 +57,10 @@
 
         default {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R               &kp T                                                             &kp Y                    &kp U             &lt 1 I      &lt 2 O  &kp P
-&kp A             &kp S         &kp D         &mt LEFT_CONTROL F  &kp G        &trans                    &kp DELETE                 &kp H                    &kp J             &kp K        &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &mt LANGUAGE_2 V    &kp B        &to_layer_0 LANGUAGE_2    &to_layer_0 LANGUAGE_1     &kp N                    &mt LANGUAGE_1 M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LSHFT         &kp LEFT_WIN  &kp LEFT_ALT  &mo 1               &lt 5 SPACE  &mo 2                     &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_CONTROL ENTER                                          &kp RIGHT_SHIFT
+&kp Q      &kp W         &kp E             &kp R               &kp T                                                             &kp Y                    &kp U             &lt 1 I      &lt 2 O  &kp P
+&kp A      &kp S         &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &kp G        &trans                    &kp DELETE                 &kp H                    &kp J             &kp K        &kp L    &kp MINUS
+&kp Z      &kp X         &kp C             &mt LANGUAGE_2 V    &kp B        &to_layer_0 LANGUAGE_2    &to_layer_0 LANGUAGE_1     &kp N                    &mt LANGUAGE_1 M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1               &lt 5 SPACE  &mo 2                     &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_CONTROL ENTER                                          &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(TAB)) LA(TAB)>;
