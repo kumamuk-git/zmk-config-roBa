@@ -68,10 +68,10 @@
 
         symbol_arrow {
             bindings = <
-&kp EXCLAMATION    &kp AT_SIGN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                        &trans         &kp PIPE   &kp COLON     &kp SEMICOLON   &kp PLUS
-&kp DOUBLE_QUOTES  &kp SQT      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR  &trans    &trans  &kp AMPERSAND  &kp EQUAL  &kp UP_ARROW  &kp LEFT_BRACE  &kp RIGHT_BRACE
-&kp PERCENT        &kp HASH     &kp ASTERISK          &kp GRAVE              &kp CARET   &trans    &trans  &kp TILDE      &kp LEFT   &kp DOWN      &kp RIGHT       &kp BACKSLASH
-&trans             &trans       &trans                &trans                 &trans      &trans    &trans  &trans                                                  &trans
+&kp EXCLAMATION    &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                        &trans         &kp PIPE   &kp COLON     &kp SEMICOLON   &kp PLUS
+&kp DOUBLE_QUOTES  &kp SQT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR  &trans    &trans  &kp AMPERSAND  &kp EQUAL  &kp UP_ARROW  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&kp PERCENT        &kp ASTERISK  &kp HASH              &kp GRAVE              &kp CARET   &trans    &trans  &kp TILDE      &kp LEFT   &kp DOWN      &kp RIGHT       &kp BACKSLASH
+&trans             &trans        &trans                &trans                 &trans      &trans    &trans  &trans                                                  &trans
             >;
         };
 
@@ -108,7 +108,7 @@
             bindings = <
 &kp LC(LA(DELETE))  &trans         &trans           &trans             &trans                    &bt BT_SEL 2  &kp LG(LS(N8))        &kp LG(LS(N9))      &kp LG(LS(N0))  &bt BT_SEL 4
 &trans              &kp LG(LS(S))  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans    &trans  &bt BT_SEL 1  &kp LG(LEFT_ARROW)    &kp LG(UP_ARROW)    &kp LG(RIGHT)   &bt BT_SEL 3
-&trans              &trans         &trans           &trans             &trans  &trans    &trans  &bt BT_SEL 0  &kp LG(LS(NUMBER_6))  &kp LC(DOWN_ARROW)  &kp LG(LS(N7))  &bt BT_CLR
+&trans              &trans         &kp LA(LS(TAB))  &kp LA(TAB)        &trans  &trans    &trans  &bt BT_SEL 0  &kp LG(LS(NUMBER_6))  &kp LC(DOWN_ARROW)  &kp LG(LS(N7))  &bt BT_CLR
 &trans              &trans         &trans           &trans             &trans  &trans    &trans  &trans                                                                  &bt BT_CLR_ALL
             >;
 
