@@ -57,10 +57,10 @@
 
         default {
             bindings = <
-&kp Q      &kp W         &kp E             &kp R               &kp T                                                                       &kp Y                    &mt RIGHT_GUI U  &lt 1 I      &lt 2 O  &kp P
-&kp A      &kp S         &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &mt RIGHT_ALT G  &trans                         &kp DELETE                  &kp H                    &kp J            &kp K        &kp L    &kp BACKSPACE
-&kp Z      &kp X         &kp C             &kp V               &kp B            &to_layer_0 LANGUAGE_2         &to_layer_0 LANGUAGE_1      &kp N                    &kp M            &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT MINUS
-&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1               &lt 5 SPACE      &lt_to_layer_0 2 LANGUAGE_2    &mt RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                                         &kp RIGHT_SHIFT
+&kp Q      &kp W           &kp E             &kp R               &kp T                                                                       &kp Y                    &mt RIGHT_GUI U  &lt 1 I      &lt 2 O  &kp P
+&kp A      &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &mt RIGHT_ALT G  &trans                         &kp DELETE                  &kp H                    &kp J            &kp K        &kp L    &kp MINUS
+&kp Z      &kp X           &kp C             &kp V               &kp B            &to_layer_0 LANGUAGE_2         &to_layer_0 LANGUAGE_1      &kp N                    &kp M            &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
+&kp LSHFT  &kp LEFT_WIN    &kp LEFT_ALT      &mo 1               &lt 5 SPACE      &lt_to_layer_0 2 LANGUAGE_2    &mt RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                                         &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
@@ -79,7 +79,7 @@
             bindings = <
 &kp ESCAPE    &kp N7        &kp N8        &kp N9        &kp MINUS                     &kp F10  &kp F7  &kp F8  &kp F9  &trans
 &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS    &trans    &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans    &trans  &kp F12  &kp F1  &kp F2  &kp F3  &trans
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans    &trans  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
 &trans        &kp NUMBER_0  &kp NUMBER_0  &trans        &kp N0      &trans    &trans  &trans                           &trans
             >;
 
@@ -108,7 +108,7 @@
             bindings = <
 &kp LC(LA(DELETE))  &trans         &trans           &trans             &trans                    &bt BT_SEL 2  &kp LG(LS(N8))        &kp LG(LS(N9))      &kp LG(LS(N0))  &bt BT_SEL 4
 &kp LEFT_CONTROL    &kp LG(LS(S))  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans    &trans  &bt BT_SEL 1  &kp LG(LEFT_ARROW)    &kp LG(UP_ARROW)    &kp LG(RIGHT)   &bt BT_SEL 3
-&trans              &trans         &kp LA(LS(TAB))  &kp LA(TAB)        &trans  &trans    &trans  &bt BT_SEL 0  &kp LG(LS(NUMBER_6))  &kp LC(DOWN_ARROW)  &kp LG(LS(N7))  &bt BT_CLR
+&kp LEFT_SHIFT      &trans         &trans           &trans             &trans  &trans    &trans  &bt BT_SEL 0  &kp LG(LS(NUMBER_6))  &kp LC(DOWN_ARROW)  &kp LG(LS(N7))  &bt BT_CLR
 &trans              &trans         &trans           &trans             &trans  &trans    &trans  &trans                                                                  &bt BT_CLR_ALL
             >;
 
