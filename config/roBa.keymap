@@ -77,10 +77,10 @@
 
         number_symbol {
             bindings = <
-&kp ESCAPE    &kp N7        &kp N8        &kp N9        &kp MINUS                     &kp F10  &kp F7  &kp F8  &kp F9  &trans
-&kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS    &trans    &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &trans    &trans  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
-&trans        &kp NUMBER_0  &kp NUMBER_0  &kp N0        &kp N0      &kp N0    &trans  &trans                           &trans
+&kp ESCAPE    &kp MINUS     &kp N7        &kp N8  &kp N9                    &kp F10  &kp F7  &kp F8  &kp F9  &trans
+&kp ASTERISK  &kp PLUS      &kp N4        &kp N5  &kp N6  &trans    &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp SLASH     &kp DOT       &kp N1        &kp N2  &kp N3  &trans    &trans  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
+&trans        &kp NUMBER_0  &kp NUMBER_0  &kp N0  &kp N0  &kp N0    &trans  &trans                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
