@@ -57,10 +57,10 @@
 
         default {
             bindings = <
-&kp Q      &kp W           &kp E             &kp R               &kp T                                                                       &kp Y                    &mt RIGHT_GUI U  &lt 1 I      &lt 2 O  &kp P
-&kp A      &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &mt RIGHT_ALT G  &trans                         &kp DELETE                  &kp H                    &kp J            &kp K        &kp L    &kp MINUS
-&kp Z      &kp X           &kp C             &kp V               &kp B            &to_layer_0 LANGUAGE_2         &to_layer_0 LANGUAGE_1      &kp N                    &kp M            &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
-&kp LSHFT  &kp LEFT_WIN    &kp LEFT_ALT      &mo 1               &lt 5 SPACE      &lt_to_layer_0 2 LANGUAGE_2    &mt RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                                         &kp RIGHT_SHIFT
+&kp Q      &kp W         &kp E             &kp R  &kp T                                                                   &kp Y                    &kp U  &kp I        &kp O    &kp P
+&kp A      &kp S         &mt LEFT_SHIFT D  &kp F  &kp G        &trans                         &kp DELETE                  &kp H                    &kp J  &kp K        &kp L    &kp MINUS
+&kp Z      &kp X         &kp C             &kp V  &kp B        &kp LEFT_CONTROL               &kp RIGHT_GUI               &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
+&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1  &lt 5 SPACE  &lt_to_layer_0 2 LANGUAGE_2    &mt RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                               &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
@@ -78,7 +78,7 @@
         number_symbol {
             bindings = <
 &kp ESCAPE    &kp MINUS     &kp N7        &kp N8  &kp N9                    &kp F10  &kp F7  &kp F8  &kp F9  &trans
-&kp ASTERISK  &kp PLUS      &kp N4        &kp N5  &kp N6  &trans    &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp ASTERISK  &kp PLUS      &kp N4        &kp N5  &kp N6  &trans    &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LS(K))
 &kp SLASH     &kp DOT       &kp N1        &kp N2  &kp N3  &trans    &trans  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
 &trans        &kp NUMBER_0  &kp NUMBER_0  &kp N0  &kp N0  &kp N0    &trans  &trans                           &trans
             >;
