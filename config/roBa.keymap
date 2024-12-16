@@ -1,7 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -68,7 +69,7 @@
             bindings = <
 &kp Q      &kp W         &kp E             &kp R  &kp T                                                                              &kp Y                    &kp U  &kp I        &kp O    &kp P
 &kp A      &kp S         &mt LEFT_SHIFT D  &kp F  &kp G        &trans                         &kp DELETE                             &kp H                    &kp J  &kp K        &kp L    &kp MINUS
-&kp Z      &kp X         &kp C             &kp V  &kp B        &kp LEFT_CONTROL               &kp RIGHT_GUI                          &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &mt RIGHT_SHIFT BACKSPACE
+&kp Z      &kp X         &kp C             &kp V  &kp B        &kp LEFT_CONTROL               &kp RIGHT_GUI                          &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &kp BACKSPACE
 &kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1  &lt 5 SPACE  &lt_to_layer_0 2 LANGUAGE_2    &mt_to_layer_0 RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                               &kp RIGHT_SHIFT
             >;
 
@@ -86,10 +87,10 @@
 
         number_symbol {
             bindings = <
-&kp ESCAPE    &kp MINUS     &kp N7        &kp N8  &kp N9                              &kp F10  &kp F7  &kp F8  &kp F9  &trans
-&kp ASTERISK  &kp PLUS      &kp N4        &kp N5  &kp N6  &trans    &trans            &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(LS(K))
-&kp SLASH     &kp DOT       &kp N1        &kp N2  &kp N3  &trans    &kp LA(LS(DOWN))  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
-&trans        &kp NUMBER_0  &kp NUMBER_0  &kp N0  &kp N0  &kp N0    &trans            &trans                           &trans
+&kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp MINUS                              &kp F10  &kp F7  &kp F8  &kp F9  &kp LC(LS(K))
+&kp N0        &kp N4  &kp N5  &kp N6  &kp PLUS   &trans    &trans            &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp SLASH     &kp N1  &kp N2  &kp N3  &kp DOT    &trans    &kp LA(LS(DOWN))  &kp F12  &kp F1  &kp F2  &kp F3  &kp LC(SLASH)
+&trans        &trans  &trans  &trans  &trans     &trans    &trans            &trans                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
