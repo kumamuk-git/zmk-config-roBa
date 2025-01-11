@@ -1,7 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -83,8 +84,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                 &kp T                                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 3 F               &kp G                   &kp LS(LG(S))                  &kp MINUS        &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp COLON                      &kp SEMICOLON    &kp N        &kp M  &kp COMMA  &kp DOT  &mt LS(RIGHT_SHIFT) LS(DELETE)
+&kp A             &kp S         &kp D         &lt 3 F               &kp G                   &kp LS(LG(S))                  &lt 6 AT         &kp H        &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp COLON                      &lt 6 A          &kp N        &kp M  &kp COMMA  &kp DOT  &mt LS(RIGHT_SHIFT) LS(DELETE)
 &mkp MB3          &kp LEFT_WIN  &kp LEFT_ALT  &mt LCTRL LANGUAGE_5  &mt LS(LEFT_WIN) SPACE  &mt LC(LEFT_WIN) LANGUAGE_4    &lt 2 BACKSPACE  &lt 1 ENTER                             &lt 5 SLASH
             >;
         };
