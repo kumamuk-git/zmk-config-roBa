@@ -57,7 +57,7 @@
             key-positions = <19 18>;
         };
 
-        wintab {
+        win_tab {
             bindings = <&none>;
             key-positions = <1 11>;
         };
