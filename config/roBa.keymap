@@ -18,8 +18,8 @@
         compatible = "zmk,combos";
 
         tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            bindings = <&kp RA(TAB)>;
+            key-positions = <0 10>;
         };
 
         shift_tab {
@@ -55,6 +55,11 @@
         mouse_cent {
             bindings = <&mkp MB3>;
             key-positions = <19 18>;
+        };
+
+        wintab {
+            bindings = <&none>;
+            key-positions = <1 11>;
         };
     };
 
