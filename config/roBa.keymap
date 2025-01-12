@@ -31,6 +31,26 @@
             bindings = <&mkp MB3>;
             key-positions = <19 18>;
         };
+
+        win {
+            bindings = <&none>;
+            key-positions = <38 37>;
+        };
+
+        alt {
+            bindings = <&none>;
+            key-positions = <38 39>;
+        };
+
+        alt {
+            bindings = <&none>;
+            key-positions = <40 41>;
+        };
+
+        tab {
+            bindings = <&none>;
+            key-positions = <21 9>;
+        };
     };
 
     macros {
