@@ -37,12 +37,12 @@
             key-positions = <38 37>;
         };
 
-        alt {
+        Lalt {
             bindings = <&none>;
             key-positions = <38 39>;
         };
 
-        alt {
+        Ralt {
             bindings = <&none>;
             key-positions = <40 41>;
         };
