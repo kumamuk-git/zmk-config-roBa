@@ -39,6 +39,7 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         mkp_exit_AML: mkp_exit_AML {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -120,10 +121,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans             &trans             &trans             &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp_exit_AML MB4  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &mkp_exit_AML MB5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans             &trans             &trans             &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                      &trans
             >;
         };
 
