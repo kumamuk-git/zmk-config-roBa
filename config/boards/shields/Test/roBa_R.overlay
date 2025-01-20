@@ -41,6 +41,8 @@
     };
 };
 
+&xiao_serial { status = "disabled"; };
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
