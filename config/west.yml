@@ -12,7 +12,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: jzn1234
+      remote: kumamuk-git
       revision: main
   self:
     path: config
