@@ -12,6 +12,8 @@
     quick-tap-ms = <0>;
 };
 
+&sl { release-after-ms = <200>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -81,10 +83,10 @@
 
         default {
             bindings = <
-&kp Q      &kp W         &kp E             &kp R  &kp T                                                                                &kp Y                    &kp U  &kp I        &kp O    &kp P
-&kp A      &kp S         &mt LEFT_SHIFT D  &kp F  &kp G        &trans                           &kp DELETE                             &kp H                    &kp J  &kp K        &kp L    &kp MINUS
-&kp Z      &kp X         &kp C             &kp V  &kp B        &kp LEFT_CONTROL                 &kp RIGHT_GUI                          &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &kp BACKSPACE
-&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1  &lt 5 SPACE  &lt_to_layer_0 2 LANGUAGE_2      &mt_to_layer_0 RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                               &kp RIGHT_SHIFT
+&kp Q      &kp W         &kp E             &kp R  &kp T                                                          &kp Y                    &kp U  &kp I        &kp O    &kp P
+&kp A      &kp S         &mt LEFT_SHIFT D  &kp F  &kp G        &trans                &kp DELETE                  &kp H                    &kp J  &kp K        &kp L    &kp MINUS
+&kp Z      &kp X         &kp C             &kp V  &kp B        &kp LEFT_CONTROL      &kp RIGHT_GUI               &kp N                    &kp M  &lt 5 COMMA  &kp DOT  &kp BACKSPACE
+&kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT      &mo 1  &lt 5 SPACE  &lt 2 LANGUAGE_2      &mt RIGHT_SHIFT LANGUAGE_1  &mt RIGHT_CONTROL ENTER                               &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
