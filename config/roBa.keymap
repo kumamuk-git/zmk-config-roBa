@@ -1,3 +1,6 @@
+#define ZMK_MOUSE_MAX_SPEED 3000  // マウスの速さを決める
+#define ZMK_MOUSE_SCROLL_MAX_SPEED 2000  // スクロールの速さを決める
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
