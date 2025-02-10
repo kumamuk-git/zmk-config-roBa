@@ -67,8 +67,8 @@
     macros {
 
         // アクティブアプリ(切り替え)
-        LA_TAB: LA_TAB {
-            compatible = "zmk,zmk,behavior-macro";
+        LA_TAB: alt_tab {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_tap TAB>,
@@ -76,8 +76,8 @@
         };
 
         // アクティブアプリ(一覧)
-        LCA_TAB: LCA_TAB {
-            compatible = "zmk,zmk,behavior-macro";
+        LCA_TAB: alt_ctrl_tab {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_press &kp LCTRL>,
@@ -88,8 +88,8 @@
         };
 
         // 仮想デスクトップ 新規
-        LCG_D: LCG_D {
-            compatible = "zmk,zmk,behavior-macro";
+        LCG_D: gui_ctrl_d {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>,
                        <&macro_press &kp LCTRL>,
@@ -99,8 +99,8 @@
         };
 
         // 仮想デスクトップ 削除
-        LCG_F4: LCG_F4 {
-            compatible = "zmk,zmk,behavior-macro";
+        LCG_F4: gui_ctrl_F4 {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>,
                        <&macro_press &kp LCTRL>,
@@ -110,8 +110,8 @@
         };
 
         // 仮想デスクトップ 右移動
-        LCG_R: LCG_R {
-            compatible = "zmk,zmk,behavior-macro";
+        LCG_R: gui_ctrl_right {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>,
                        <&macro_press &kp LCTRL>,
@@ -121,8 +121,8 @@
         };
 
         // 仮想デスクトップ 左移動
-        LCG_L: LCG_L {
-            compatible = "zmk,zmk,behavior-macro";
+        LCG_L: gui_ctrl_left {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LGUI>,
                        <&macro_press &kp LCTRL>,
@@ -136,7 +136,7 @@
     behaviors {
         
         // HRMの設定
-        hrm: hrm {
+        hrm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
@@ -146,7 +146,7 @@
         };
 
         // mod-tap(mouse)の設定
-        mmt: mmt {
+        mmt: mousemod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -156,7 +156,7 @@
         };
 
         // layerの設定(文字を入力する場合)
-        klt: klt {
+        klt: key_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
