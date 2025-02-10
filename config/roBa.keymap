@@ -208,8 +208,8 @@ XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
         MOUSE {
             bindings = <
 &LA_TAB      &LCA_TAB    XXX          XXX       LCS_ESC                                        LC_V          LC_X           LC_C         LCS_TAB            LC_TAB
-LG_T         &kp LEFT    &kpo DOWN    &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           LC_W
-XXX          &LCG_D      &LCG_L       &LCG_R    LG_TAB            &kp LSHFT         &kp RGUI   LS_HOME)      LC_HOME        LC_END       LS_END             XXX
+LG_T         &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           LC_W
+XXX          &LCG_D      &LCG_L       &LCG_R    LG_TAB            &kp LSHFT         &kp RGUI   LS_HOME       LC_HOME        LC_END       LS_END             XXX
 XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     XXX
             >;
         };
@@ -217,7 +217,7 @@ XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5      
         MOVE {
             bindings = <
 &kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                 XXX             &kp DEL      &kp BSPC   LC_BS      &kp TAB
-&hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  XXX         &kp LCTRL      &kp RALT      &kp LEFT        &kpo DOWN    &kp UP     &kp RIGHT  &kp RET
+&hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  XXX         &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp RET
 &kp PSCRN       XXX        LC_T               LC_I              LC_O        &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END    &kp K_APP
 XXX             XXX        XXX                XXX               XXX         XXX            &klt SET DEL  &klt MAR SPACE                                     XXX
             >;
