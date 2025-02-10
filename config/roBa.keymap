@@ -13,6 +13,10 @@
 #define MAR 6
 #define SET 7
 
+// AML・スクロール用？
+#define MOUSE 2
+#define SCROLL 3
+
 // keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
 //#define XXX &none
 //#define ___ &none
