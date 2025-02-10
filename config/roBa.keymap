@@ -67,7 +67,7 @@
     macros {
 
         // アクティブアプリ(切り替え)
-        LA_TAB: alt_tab_change {
+        LA_TAB: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>,
@@ -190,7 +190,7 @@
 &kp Q        &kp W        &kp E         &kp R         &kp T                                               &kp Y        &kp U         &lt 5 I       &kp O        &kp P
 &hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G          &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm RGUI SQT
 &klt MOU Z   &kp X        &kp C         &kp V         &kp B          &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
-&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE  &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE  &mkp MB2              &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -219,7 +219,7 @@ XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5      
 &kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                 XXX             &kp DEL      &kp BSPC   LC_BS      &kp TAB
 &hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  XXX         &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp RET
 &kp PSCRN       XXX        LC_T               LC_I              LC_O        &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END    &kp K_APP
-XXX             XXX        XXX                XXX               XXX         XXX            &klt SET DEL  &klt MAR SPACE                                     XXX
+XXX             XXX        XXX                XXX               XXX         XXX            &lt SET DEL   &lt MAR SPACE                                      XXX
             >;
         };
 
