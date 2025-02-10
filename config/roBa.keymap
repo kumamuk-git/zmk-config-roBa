@@ -13,10 +13,53 @@
 #define MAR 6
 #define SET 7
 
-#define XXX &none
-#define ___ &trans
+// keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
+//#define XXX &none
+//#define ___ &trans
+
+// layerの設定
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <0>;
+};
 
 / {
+
+    behaviors {
+
+        // HRMの設定
+        hrm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // mod-tap(mouse)の設定
+        mmt: mousemod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&mkp>;
+        };
+
+        // layerの設定(文字を入力する場合)
+        klt: key_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -37,10 +80,10 @@
 
         DEFAULT {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T                                               &kp Y        &kp U         &kp I       &kp O        &kp P
-&kp A        &kp S        &kp D         &kp F         &kp G          &kp LCTRL             &kp RALT       &kp H        &kp J         &kp K       &kp L        &kp SQT
-&kp Z        &kp X        &kp C         &kp V         &kp B          &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA   &kp DOT      &kp SLASH
-&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &kp SPACE      &mkp MB2              &kp BSPC       &kp RET                                         &mo MOU
+&kp Q        &kp W        &kp E         &kp R         &kp T                                               &kp Y        &kp U         &lt 5 I       &kp O        &kp P
+&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G          &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm RGUI SQT
+&klt MOU Z   &kp X        &kp C         &kp V         &kp B          &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE  &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -48,64 +91,64 @@
 
         NAGINATA {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         MOUSE {
             bindings = <
-XXX          XXX         XXX          XXX       XXX                                            XXX           XXX            XXX          XXX                XXX
-XXX          &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           XXX
-XXX          XXX         XXX          XXX       XXX               &kp LSHFT         &kp RGUI   XXX           XXX            XXX          XXX                XXX
-XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     XXX
+&trans          &trans         &trans          &trans       &trans                                            &trans           &trans            &trans          &trans                &trans
+&trans          &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       &trans          &mkp MB2           &trans
+&trans          &trans         &trans          &trans       &trans               &kp LSHFT         &kp RGUI   &trans           &trans            &trans          &trans                &trans
+&trans          &trans         &trans          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     &trans
             >;
         };
 
         MOVE {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         LOWER {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         RAISE {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         MACRO {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         SETUP {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
     };
