@@ -13,162 +13,7 @@
 #define MAR 6
 #define SET 7
 
-// 初期値
-#define MOUSE 2
-#define SCROLL 3
-#define NUM 5
-
-#define XXX &none
-#define ___ &trans
-
-/* Global defaults */
-
-// Misc aliases. [TODO: clean up]
-#define LG_S       &kp LG(S)             // スクリーンショット
-#define LA_F4      &kp LA(F4)            // アプリケーション終了
-#define LG_TAB     &kp LG(TAB)           // タスクビュー
-#define LCS_ESC    &kp LS(LC(ESC))       // タスクマネージャー
-#define LG_T       &kp LG(T)             // タスクバー選択
-#define LCS_TAB    &kp LS(LC(TAB))       // タブ移動(左)
-#define LC_TAB     &kp LC(TAB)           // タブ移動(右)
-#define LC_W       &kp LC(W)             // タブ削除
-#define LC_PLU     &kp LC(KP_PLUS)       // ズーム+
-#define LC_MIN     &kp LC(KP_MINUS)      // ズーム-
-#define LS_TAB     &kp LS(TAB)           // 入力移動（左）
-#define LS_HOME    &kp LS(HOME)          // カーソルから末尾まで選択
-#define LC_HOME    &kp LC(HOME)          // 先頭を表示
-#define LC_END     &kp LC(END)           // 最後尾を表示
-#define LS_END     &kp LS(END)           // カーソルから行頭まで選択
-#define LC_BS      &kp LC(BSPC)          // 単語削除
-#define LC_Z       &kp LC(Z)             // undo
-#define LC_V       &kp LC(V)             // paste
-#define LC_X       &kp LC(X)             // cut
-#define LC_C       &kp LC(C)             // copy
-#define LC_Y       &kp LC(Y)             // redo
-#define LC_T       &kp LC(T)             // 半角英数字
-#define LC_I       &kp LC(I)             // 全角カタカナ
-#define LC_O       &kp LC(O)             // 半角カタカナ
-
-// mod-tapの設定
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <0>;
-};
-
-// layerの設定
-&lt {
-    tapping-term-ms = <150>;
-    quick-tap-ms = <0>;
-    flavor = "tap-preferred";
-};
-
 / {
-    /*
-    macros {
-
-        // アクティブアプリ(切り替え)
-        LA_TAB: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,
-                       <&macro_tap TAB>,
-                       <&macro_release &kp LALT>;
-        };
-
-        // アクティブアプリ(一覧)
-        LCA_TAB: alt_ctrl_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,
-                       <&macro_press &kp LCTRL>,
-                       <&macro_wait_time 100>,
-                       <&macro_tap TAB>,
-                       <&macro_release &kp LCTRL>,
-                       <&macro_release &kp LALT>;
-        };
-
-        // 仮想デスクトップ 新規
-        LCG_D: gui_ctrl_d {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_press &kp LCTRL>,
-                       <&macro_tap D>,
-                       <&macro_release &kp LCTRL>,
-                       <&macro_release &kp LGUI>;
-        };
-
-        // 仮想デスクトップ 削除
-        LCG_F4: gui_ctrl_F4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_press &kp LCTRL>,
-                       <&macro_tap F4>,
-                       <&macro_release &kp LCTRL>,
-                       <&macro_release &kp LGUI>;
-        };
-
-        // 仮想デスクトップ 右移動
-        LCG_R: gui_ctrl_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_press &kp LCTRL>,
-                       <&macro_tap RIGHT>,
-                       <&macro_release &kp LCTRL>,
-                       <&macro_release &kp LGUI>;
-        };
-
-        // 仮想デスクトップ 左移動
-        LCG_L: gui_ctrl_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_press &kp LCTRL>,
-                       <&macro_tap LEFT>,
-                       <&macro_release &kp LCTRL>,
-                       <&macro_release &kp LGUI>;
-        };
-
-    };
-    */
-
-    behaviors {
-        
-        // HRMの設定
-        hrm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        // mod-tap(mouse)の設定
-        mmt: mousemod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&mkp>;
-        };
-
-        // layerの設定(文字を入力する場合)
-        klt: key_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -189,10 +34,10 @@
 
         DEFAULT {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T                                               &kp Y        &kp U         &lt 5 I       &kp O        &kp P
-&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G          &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm RGUI SQT
-&klt MOU Z   &kp X        &kp C         &kp V         &kp B          &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
-&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE  &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
+&kp Q        &kp W        &kp E         &kp R         &kp T                                               &kp Y        &kp U         &kp I       &kp O        &kp P
+&kp A        &kp S        &kp D         &kp F         &kp G          &kp LCTRL             &kp RALT       &kp H        &kp J         &kp K       &kp L        &kp SQT
+&kp Z        &kp X        &kp C         &kp V         &kp B          &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA   &kp DOT      &kp SLASH
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &kp SPACE      &mkp MB2              &kp BSPC       &kp RET                                         &mo MOU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -209,55 +54,55 @@ XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
 
         MOUSE {
             bindings = <
-XXX          XXX         XXX          XXX       LCS_ESC                                        LC_V          LC_X           LC_C         LCS_TAB            LC_TAB
-LG_T         &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           LC_W
-XXX          XXX         XXX          XXX    LG_TAB            &kp LSHFT         &kp RGUI   LS_HOME       LC_HOME        LC_END       LS_END             XXX
+XXX          XXX         XXX          XXX       XXX                                            XXX           XXX            XXX          XXX                XXX
+XXX          &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           XXX
+XXX          XXX         XXX          XXX       XXX               &kp LSHFT         &kp RGUI   XXX           XXX            XXX          XXX                XXX
 XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     XXX
             >;
         };
 
         MOVE {
             bindings = <
-&kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                 XXX             &kp DEL      &kp BSPC   LC_BS      &kp TAB
-&hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  XXX         &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT  &kp RET
-&kp PSCRN       XXX        LC_T               LC_I              LC_O        &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END    &kp K_APP
-XXX             XXX        XXX                XXX               XXX         XXX            &lt SET DEL   &lt MAR SPACE                                      XXX
+XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
             >;
         };
 
         LOWER {
             bindings = <
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT                              &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-&kp GRAVE  &kp EQUAL  &kp MINUS  &kp NUBS  XXX        &kp LCTRL         &kp RALT  XXX        &kp LPAR  &kp LBKT  &kp LBRC  &kp SQT
-&kp TILDE  &kp PLUS   &kp UNDER  &kp PIPE  XXX        &kp LSHFT         &kp RGUI  XXX        &kp RPAR  &kp RBKT  &kp RBRC  &kp DQT
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                          XXX
+XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
             >;
         };
 
         RAISE {
             bindings = <
-&kp F1           &kp F2           &kp F3            &kp F4            &kp F5                                      &kp F6     &kp F7            &kp F8            &kp F9           &kp F10
-&hrm LGUI KP_N1  &hrm LALT KP_N2  &hrm LSHFT KP_N3  &hrm LCTRL KP_N4  &kp KP_N5   &kp LCTRL             &kp RALT  &kp KP_N6  &hrm RCTRL KP_N7  &hrm RSHFT KP_N8  &hrm RALT KP_N9  &hrm RGUI KP_N0
-&kp KP_PLUS      &kp KP_MINUS     &kp KP_MULTIPLY   &kp KP_DIVIDE     XXX         &kp LSHFT             &kp RGUI  XXX        &kp KP_DOT        &kp KP_EQUAL      &kp F11          &kp F12
-XXX              XXX              XXX               &kp DEL           &kp RET     &kp BSPC              XXX       XXX                                                             XXX
+XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
             >;
         };
 
         MACRO {
             bindings = <
-LA_F4    LG_S    &mkp MB4  &mkp MB5  &kp BSPC                         LCS_ESC  LC_PLU  LC_MIN  XXX       XXX
-LC_Z     LC_X    LC_C      LC_V      LC_Y      &kp LCTRL    &kp RALT  LC_T     XXX     XXX     XXX       XXX
-LCS_TAB  LC_TAB  LS_TAB    &kp TAB   &kp RET   &kp LSHFT    &kp RGUI  LG_TAB   XXX     XXX     XXX       XXX
-XXX      XXX     XXX       XXX       XXX       XXX          XXX       XXX                                XXX
+XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
             >;
         };
 
         SETUP {
             bindings = <
-&kp C_MUTE    &kp C_PP    XXX           XXX  &kp SLCK                    &kp CAPS    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
-&kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  XXX  XXX          XXX      XXX   &kp KP_NUM  XXX           XXX           XXX           &bt BT_SEL 4
-&kp C_VOL_DN  &kp C_PREV  &kp C_BRI_DN  XXX  &bootloader  XXX      XXX   XXX         XXX           XXX           &bt BT_CLR    &bt BT_CLR_ALL
-XXX           XXX         XXX           XXX  XXX          XXX      XXX   XXX                                                   XXX
+XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
+XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
             >;
         };
     };
