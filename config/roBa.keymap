@@ -54,28 +54,23 @@
     flavor = "tap-preferred";
     tapping-term-ms = <150>;
     quick-tap-ms = <0>;
-}
+};
 
 // layerの設定
 &lt {
     tapping-term-ms = <150>;
     quick-tap-ms = <0>;
     flavor = "tap-preferred";
-}
+};
 
 // layerの設定(文字を入力する場合)
 &lkp {
     tapping-term-ms = <230>;
     quick-tap-ms = <0>;
     flavor = "tap-preferred";
-}
+};
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-    };
-
     macros {
 
         // アクティブアプリ(切り替え)
