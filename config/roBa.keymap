@@ -45,64 +45,64 @@
 
         NAGINATA {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         MOUSE {
             bindings = <
-XXX          XXX         XXX          XXX       XXX                                            XXX           XXX            XXX          XXX                XXX
-XXX          &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           XXX
-XXX          XXX         XXX          XXX       XXX               &kp LSHFT         &kp RGUI   XXX           XXX            XXX          XXX                XXX
-XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     XXX
+&trans          &trans         &trans          &trans       &trans                                            &trans           &trans            &trans          &trans                &trans
+&trans          &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       &trans          &mkp MB2           &trans
+&trans          &trans         &trans          &trans       &trans               &kp LSHFT         &kp RGUI   &trans           &trans            &trans          &trans                &trans
+&trans          &trans         &trans          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     &trans
             >;
         };
 
         MOVE {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         LOWER {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         RAISE {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         MACRO {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
 
         SETUP {
             bindings = <
-XXX  XXX  XXX  XXX  XXX                      XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX  XXX  XXX  XXX  XXX
-XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                       &trans
             >;
         };
     };
