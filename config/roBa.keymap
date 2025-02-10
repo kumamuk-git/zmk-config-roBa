@@ -64,6 +64,7 @@
 };
 
 / {
+    /*
     macros {
 
         // アクティブアプリ(切り替え)
@@ -132,6 +133,7 @@
         };
 
     };
+    */
 
     behaviors {
         
@@ -207,9 +209,9 @@ XXX  XXX  XXX  XXX  XXX  XXX      XXX  XXX                       XXX
 
         MOUSE {
             bindings = <
-&LA_TAB      &LCA_TAB    XXX          XXX       LCS_ESC                                        LC_V          LC_X           LC_C         LCS_TAB            LC_TAB
+XXX          XXX         XXX          XXX       LCS_ESC                                        LC_V          LC_X           LC_C         LCS_TAB            LC_TAB
 LG_T         &kp LEFT    &kp DOWN     &kp UP    &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3      &mkp MB1       XXX          &mkp MB2           LC_W
-XXX          &LCG_D      &LCG_L       &LCG_R    LG_TAB            &kp LSHFT         &kp RGUI   LS_HOME       LC_HOME        LC_END       LS_END             XXX
+XXX          XXX         XXX          XXX    LG_TAB            &kp LSHFT         &kp RGUI   LS_HOME       LC_HOME        LC_END       LS_END             XXX
 XXX          XXX         XXX          &mkp MB4  &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                     XXX
             >;
         };
@@ -243,9 +245,9 @@ XXX              XXX              XXX               &kp DEL           &kp RET   
 
         MACRO {
             bindings = <
-LA_F4    LG_S    &mkp MB4  &mkp MB5  &kp BSPC                         LCS_ESC  LC_PLU  LC_MIN  &LCA_TAB  &LA_TAB
+LA_F4    LG_S    &mkp MB4  &mkp MB5  &kp BSPC                         LCS_ESC  LC_PLU  LC_MIN  XXX       XXX
 LC_Z     LC_X    LC_C      LC_V      LC_Y      &kp LCTRL    &kp RALT  LC_T     XXX     XXX     XXX       XXX
-LCS_TAB  LC_TAB  LS_TAB    &kp TAB   &kp RET   &kp LSHFT    &kp RGUI  LG_TAB   &LCG_L  &LCG_R  &LCG_D    &LCG_F4
+LCS_TAB  LC_TAB  LS_TAB    &kp TAB   &kp RET   &kp LSHFT    &kp RGUI  LG_TAB   XXX     XXX     XXX       XXX
 XXX      XXX     XXX       XXX       XXX       XXX          XXX       XXX                                XXX
             >;
         };
