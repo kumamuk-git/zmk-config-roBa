@@ -63,13 +63,6 @@
     flavor = "tap-preferred";
 };
 
-// layerの設定(文字を入力する場合)
-&lkp {
-    tapping-term-ms = <230>;
-    quick-tap-ms = <0>;
-    flavor = "tap-preferred";
-};
-
 / {
     macros {
 
@@ -160,6 +153,16 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&mkp>;
+        };
+
+        // layerの設定(文字を入力する場合)
+        &lkp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
         };
 
     };
