@@ -67,7 +67,7 @@
     macros {
 
         // アクティブアプリ(切り替え)
-        LA_TAB: alt_tab {
+        LA_TAB: alt_tab_change {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>,
@@ -252,10 +252,10 @@ XXX      XXX     XXX       XXX       XXX       XXX          XXX       XXX       
 
         SETUP {
             bindings = <
-&kp C_MUTE    &kp C_PP    XXX           XXX  &kp SLCK                &kp CAPS    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
-&kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  XXX  XXX       XXX      XXX  &kp KP_NUM  XXX           XXX           XXX           &bt BT_SEL 4
-&kp C_VOL_DN  &kp C_PREV  &kp C_BRI_DN  XXX  XXX       XXX      XXX  XXX         XXX           XXX           &bt BT_CLR    &bt BT_CLR_ALL
-XXX           XXX         XXX           XXX  XXX       XXX      XXX  XXX                                                   XXX
+&kp C_MUTE    &kp C_PP    XXX           XXX  &kp SLCK                    &kp CAPS    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+&kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  XXX  XXX          XXX      XXX   &kp KP_NUM  XXX           XXX           XXX           &bt BT_SEL 4
+&kp C_VOL_DN  &kp C_PREV  &kp C_BRI_DN  XXX  &bootloader  XXX      XXX   XXX         XXX           XXX           &bt BT_CLR    &bt BT_CLR_ALL
+XXX           XXX         XXX           XXX  XXX          XXX      XXX   XXX                                                   XXX
             >;
         };
     };
