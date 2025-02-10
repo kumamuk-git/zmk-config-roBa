@@ -17,6 +17,32 @@
 //#define XXX &none
 //#define ___ &none
 
+// Misc aliases. [TODO: clean up]
+//#define LG_S       &kp LG(S)             // スクリーンショット
+//#define LA_F4      &kp LA(F4)            // アプリケーション終了
+//#define LG_TAB     &kp LG(TAB)           // タスクビュー
+//#define LCS_ESC    &kp LS(LC(ESC))       // タスクマネージャー
+//#define LG_T       &kp LG(T)             // タスクバー選択
+//#define LCS_TAB    &kp LS(LC(TAB))       // タブ移動(左)
+//#define LC_TAB     &kp LC(TAB)           // タブ移動(右)
+//#define LC_W       &kp LC(W)             // タブ削除
+//#define LC_PLU     &kp LC(KP_PLUS)       // ズーム+
+//#define LC_MIN     &kp LC(KP_MINUS)      // ズーム-
+//#define LS_TAB     &kp LS(TAB)           // 入力移動（左）
+//#define LS_HOME    &kp LS(HOME)          // カーソルから末尾まで選択
+//#define LC_HOME    &kp LC(HOME)          // 先頭を表示
+//#define LC_END     &kp LC(END)           // 最後尾を表示
+//#define LS_END     &kp LS(END)           // カーソルから行頭まで選択
+//#define LC_BS      &kp LC(BSPC)          // 単語削除
+//#define LC_Z       &kp LC(Z)             // undo
+//#define LC_V       &kp LC(V)             // paste
+//#define LC_X       &kp LC(X)             // cut
+//#define LC_C       &kp LC(C)             // copy
+//#define LC_Y       &kp LC(Y)             // redo
+//#define LC_T       &kp LC(T)             // 半角英数字
+//#define LC_I       &kp LC(I)             // 全角カタカナ
+//#define LC_O       &kp LC(O)             // 半角カタカナ
+
 // layerの設定
 &lt {
     flavor = "tap-preferred";
@@ -27,6 +53,27 @@
 / {
 
     macros {
+
+        // アクティブアプリ(切り替え)
+        LA_TAB: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp TAB>,
+                       <&macro_release &kp LALT>;
+        };
+
+        // アクティブアプリ(一覧)
+        LCA_TAB: alt_ctrl_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_press &kp LCTRL>,
+                       <&macro_wait_time 100>,
+                       <&macro_tap &kp TAB>,
+                       <&macro_release &kp LCTRL>,
+                       <&macro_release &kp LALT>;
+        };
 
         // 仮想デスクトップ 新規
         LCG_D: gui_ctrl_d {
@@ -39,6 +86,38 @@
                        <&macro_release &kp LGUI>;
         };
 
+        // 仮想デスクトップ 削除
+        LCG_F4: gui_ctrl_F4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>,
+                       <&macro_press &kp LCTRL>,
+                       <&macro_tap &kp F4>,
+                       <&macro_release &kp LCTRL>,
+                       <&macro_release &kp LGUI>;
+        };
+
+        // 仮想デスクトップ 右移動
+        LCG_R: gui_ctrl_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>,
+                       <&macro_press &kp LCTRL>,
+                       <&macro_tap &kp RIGHT>,
+                       <&macro_release &kp LCTRL>,
+                       <&macro_release &kp LGUI>;
+        };
+
+        // 仮想デスクトップ 左移動
+        LCG_L: gui_ctrl_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>,
+                       <&macro_press &kp LCTRL>,
+                       <&macro_tap &kp LEFT>,
+                       <&macro_release &kp LCTRL>,
+                       <&macro_release &kp LGUI>;
+        };
 
     };
 
@@ -116,9 +195,9 @@
 
         MOUSE {
             bindings = <
-&none          &none         &none      &none       &kp LS(LC(ESC))                                &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
+&LA_TAB        &none         &none      &none       &kp LS(LC(ESC))                                &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
 &kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3       &mkp MB1       &none          &mkp MB2           &kp LC(W)
-&none          &LCG_D        &none      &none       &kp LG(TAB)       &kp LSHFT         &kp RGUI   &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
+&none          &LCG_D        &LCG_L     &LCG_R      &kp LG(TAB)       &kp LSHFT         &kp RGUI   &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
 &none          &none         &none      &mkp MB4    &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                        &none
             >;
         };
@@ -152,9 +231,9 @@
 
         MACRO {
             bindings = <
-&kp LA(F4)       &kp LG(S)    &mkp MB4      &mkp MB5    &kp BSPC                           &kp LS(LC(ESC))  &kp LC(KP_PLUS)   &kp LC(KP_MINUS)  &none       &none
+&kp LA(F4)       &kp LG(S)    &mkp MB4      &mkp MB5    &kp BSPC                           &kp LS(LC(ESC))  &kp LC(KP_PLUS)   &kp LC(KP_MINUS)  &LCA_TAB    &LA_TAB
 &kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)   &kp LC(Y)   &kp LCTRL    &kp RALT  &kp LC(T)        &none             &none             &none       &none
-&kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(TAB)   &kp TAB     &kp RET     &kp LSHFT    &kp RGUI  &kp LG(TAB)      &none             &none             &LCG_D      &none
+&kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(TAB)   &kp TAB     &kp RET     &kp LSHFT    &kp RGUI  &kp LG(TAB)      &LCG_L            &LCG_R            &LCG_D      &LCG_F4
 &none            &none        &none         &none       &none       &none        &none     &none                                                            &none
             >;
         };
