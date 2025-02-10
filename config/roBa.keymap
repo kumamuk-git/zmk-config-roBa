@@ -81,7 +81,7 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_press &kp LCTRL>,
-                       <&macro_wait_time 100>
+                       <&macro_wait_time 100>,
                        <&macro_tap TAB>,
                        <&macro_release &kp LCTRL>,
                        <&macro_release &kp LALT>;
