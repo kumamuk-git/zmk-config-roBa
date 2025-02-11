@@ -14,7 +14,6 @@
             ;
 };
 
-/*
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -41,9 +40,9 @@
         };
     };
 };
-*/
+
 &xiao_serial { status = "disabled"; };
-/*
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -58,8 +57,8 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        automouse-layer = <4>;
-        scroll-layers = <5>;
+        //automouse-layer = <4>;
+        scroll-layers = <2>;
     };
 };
 */
