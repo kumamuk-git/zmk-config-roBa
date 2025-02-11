@@ -154,20 +154,25 @@
         };
 
         // JIS用文字入力
-        jseco: semi_comma {
+        jseco: jis_semi_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&hrm RGUI SEMI>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        //hrm_jseco: homerow_mods_jis_semi_comma {
-        //    compatible = "zmk,behavior-hold-tap";
-        //    #binding-cells = <2>;
-        //    tapping-term-ms = <230>;
-        //    quick-tap-ms = <0>;
-        //    flavor = "tap-preferred";
-        //    bindings = <&kp>, <&jseco>;
-        //};
+        jsqap: jis_sqt_apos {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jsqap: jis_sqt_apos {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+　　　　　
 
     };
 
@@ -239,8 +244,8 @@
         LOWER {
             bindings = <
 &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT                                &kp CARET   &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-&kp GRAVE  &kp EQUAL  &kp MINUS  &kp NUBS  &none        &kp LCTRL         &kp RALT  &none       &kp LPAR  &kp LBKT  &kp LBRC  &kp SQT
-&kp TILDE  &kp PLUS   &kp UNDER  &kp PIPE  &none        &kp LSHFT         &kp RGUI  &none       &kp RPAR  &kp RBKT  &kp RBRC  &kp DQT
+&kp GRAVE  &kp EQUAL  &kp MINUS  &kp NUBS  &none        &kp LCTRL         &kp RALT  &none       &kp LPAR  &kp LBKT  &kp LBRC  &jsqap
+&kp TILDE  &kp PLUS   &kp UNDER  &kp PIPE  &none        &kp LSHFT         &kp RGUI  &none       &kp RPAR  &kp RBKT  &kp RBRC  &kp LS(&jsqap)
 &none      &none      &none      &kp DEL   &kp RET      &kp BSPC          &none     &none                                     &none
             >;
         };
