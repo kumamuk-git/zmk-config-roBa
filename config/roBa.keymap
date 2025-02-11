@@ -57,6 +57,22 @@
 
 / {
 
+    combos {
+        compatible = "zmk,combos";
+        combo_ng_on {
+            timeout-ms = <300>;
+            key-positions = <29 30>;
+            bindings = <&ng_on>;
+            layers = <0>;
+        };
+        combo_ng_off {
+            timeout-ms = <300>;
+            key-positions = <25 26>;
+            bindings = <&ng_off>;
+            layers = <0 1>;
+        };
+    };
+
     macros {
 
         // アクティブアプリ(切り替え)
@@ -123,6 +139,24 @@
                        <&macro_release &kp LCTRL>,
                        <&macro_release &kp LGUI>;
         };
+
+        ng_on: ng_on {
+//            label = "ZM_ng_on";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_1 &kp INTERNATIONAL_4 &to 1>
+                ;
+        };
+        ng_off: ng_off {
+//            label = "ZM_ng_off";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
+                ;
+        };
+
     };
 
     behaviors {
