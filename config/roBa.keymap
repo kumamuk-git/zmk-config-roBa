@@ -165,7 +165,7 @@
             #binding-cells = <0>;
             bindings = <&kp AT>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };　　　
+        };
 
     };
 
