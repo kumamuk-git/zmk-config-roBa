@@ -153,17 +153,53 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // JIS用文字入力
-        jseco: jis_semi_comma {
+        // JIS用文字入力([/?]はJISでも入力が同じ)
+        jeqpl: jis_equal_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jmiun: jis_minus_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(INT1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jbspi: jis_bslh_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp INT1>, <&kp LS(INT3)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jseco: jis_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&hrm RGUI SEMI>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        jsqap: jis_sqt_apos {
+        jsqdq: jis_sqt_dqt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp AT>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jlblb: jis_lbkt_lbrc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp LS(RBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jrbrb: jis_rbkt_rbrc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUHS>, <&kp LS(NUHS)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jgrti: jis_grave_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -218,7 +254,7 @@
 
         MOVE {
             bindings = <
-&kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                   &none           &kp DEL      &kp BSPC   &kp LC(BSPC)   &kp TAB
+&kp ESC         &kp INS    &kp INT5           &kp INT4          &kp CAPS                                   &none           &kp DEL      &kp BSPC   &kp LC(BSPC)   &kp TAB
 &hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  &caps_word    &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT      &kp RET
 &kp PSCRN       &none      &kp LC(T)          &kp LC(I)	        &kp LC(O)     &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END        &kp K_APP
 &none           &none      &none              &none             &none         &none          &lt SET DEL   &lt MAR SPACE                                          &none
@@ -236,10 +272,10 @@
 
         LOWER {
             bindings = <
-&kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT                                &kp CARET   &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-&kp GRAVE  &kp EQUAL  &kp MINUS  &kp NUBS  &none        &kp LCTRL         &kp RALT  &none       &kp LPAR  &kp LBKT  &kp LBRC  &jsqap
-&kp TILDE  &kp PLUS   &kp UNDER  &kp PIPE  &none        &kp LSHFT         &kp RGUI  &none       &kp RPAR  &kp RBKT  &kp RBRC  &kp LS(&jsqap)
-&none      &none      &none      &kp DEL   &kp RET      &kp BSPC          &none     &none                                     &none
+&kp LS(N1) &kp LBKT   &kp LS(N3)    &kp LS(N4)    &kp LS(N5)                               &kp EQUAL   &kp LS(N6)  &kp LS(SQT)  &kp LS(N8)    &kp LS(N9)
+&jgrti     &jeqpl     &jmiun        &jbspi        &none        &kp LCTRL         &kp RALT  &none       &kp LS(N8)  &jlblb       &kp LS(RBKT)  &jsqdq
+&kp PLUS   &kp COLON  &kp LS(INT1)  &kp LS(INT3)  &none        &kp LSHFT         &kp RGUI  &none       &kp LS(N9)  &jrbrb       &kp LS(NUHS)  &kp AMPS
+&none      &none      &none         &kp DEL       &kp RET      &kp BSPC          &none     &none                                              &none
             >;
         };
 
