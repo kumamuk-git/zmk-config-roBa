@@ -160,6 +160,14 @@
             bindings = <&kp SEMI>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        hrm_jseco: homerow_mods_jis_semi_comma {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&jseco>;
+        };
 
     };
 
@@ -184,7 +192,7 @@
         DEFAULT {
             bindings = <
 &kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &lt 5 I       &kp O        &kp P
-&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm jseco
+&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm_jseco RGUI
 &klt MOU Z   &kp X        &kp C         &kp V         &kp B             &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
 &kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE     &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
