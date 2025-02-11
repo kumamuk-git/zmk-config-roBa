@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <interfaces/hid-trackball.dtsi>
 
 // レイヤー定義
 #define QWE 0
@@ -119,14 +118,6 @@
                        <&macro_release &kp LCTRL>,
                        <&macro_release &kp LGUI>;
         };
-
-        // scroll
-        scroll: mo_scroll {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&tb_mo_scroll &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-        };
-
     };
 
     behaviors {
@@ -161,16 +152,6 @@
             bindings = <&mo>, <&kp>;
         };
 
-        // scroll
-        lscrl: layer_scroll {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&scroll>;
-        };
-
     };
 
     keymap {
@@ -196,7 +177,7 @@
 &kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &lt 5 I       &kp O        &kp P
 &hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm RGUI SQT
 &klt MOU Z   &kp X        &kp C         &kp V         &kp B             &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
-&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lscrl MOV SPACE  &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &mmt MOV SPACE  &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
