@@ -7,8 +7,8 @@
 #define QWE 0
 #define NAG 1
 #define MOU 2
-#define MO2 3
-#define MOV 4
+#define MOV 3
+#define MO2 4
 #define LOW 5
 #define RAI 6
 #define MAR 7
@@ -196,7 +196,7 @@
         MOUSE {
             bindings = <
 &LA_TAB        &none         &none      &none       &kp LS(LC(ESC))                                &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
-&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3       &mkp MB1       &lt MOU        &mkp MB2           &kp LC(W)
+&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3       &mkp MB1       &lt MOV        &mkp MB2           &kp LC(W)
 &none          &LCG_D        &LCG_L     &LCG_R      &kp LG(TAB)       &kp LSHFT         &kp RGUI   &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
 &none          &none         &none      &mkp MB4    &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                        &none
             >;
