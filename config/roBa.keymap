@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define HOST_OS 2
+#include "unicode.h"
+#include "keycode_japanese.h"
+
 // レイヤー定義
 #define QWE 0
 #define NAG 1
@@ -236,10 +240,10 @@
 
         NAGINATA {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none                       &none
+&ng Q      &ng W      &ng E      &ng R         &ng T                                    &ng Y      &ng U      &ng I      &ng O      &ng P
+&ng A      &ng S      &ng D      &ng F         &ng G       &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
+&ng Z      &ng X      &ng C      &ng V         &ng B       &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
+&none      &none      &none      &mlt MO2 MB1  &ng SPACE   &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
 
