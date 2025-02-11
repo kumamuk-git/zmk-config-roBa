@@ -153,6 +153,14 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // JIS用文字入力
+        jseco: semi_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     keymap {
@@ -176,7 +184,7 @@
         DEFAULT {
             bindings = <
 &kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &lt 5 I       &kp O        &kp P
-&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hrm RGUI SQT
+&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &jseco
 &klt MOU Z   &kp X        &kp C         &kp V         &kp B             &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
 &kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE     &mmt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
@@ -232,7 +240,7 @@
         RAISE {
             bindings = <
 &kp F1           &kp F2           &kp F3            &kp F4            &kp F5                                      &kp F6     &kp F7            &kp F8            &kp F9           &kp F10
-&hrm LGUI KP_N1  &hrm LALT KP_N2  &hrm LSHFT KP_N3  &hrm LCTRL KP_N4  &kp KP_N5   &kp LCTRL             &kp RALT  &kp KP_N6  &hrm RCTRL KP_N7  &hrm RSHFT KP_N8  &hrm RALT KP_N9  &hrm RGUI KP_N0
+&hrm LGUI N1     &hrm LALT N2     &hrm LSHFT N3     &hrm LCTRL N4     &kp N5      &kp LCTRL             &kp RALT  &kp N6     &hrm RCTRL N7     &hrm RSHFT N8     &hrm RALT N9     &hrm RGUI N0
 &kp KP_PLUS      &kp KP_MINUS     &kp KP_MULTIPLY   &kp KP_DIVIDE     &none       &kp LSHFT             &kp RGUI  &none      &kp KP_DOT        &kp KP_EQUAL      &kp F11          &kp F12
 &none            &none            &none             &kp DEL           &kp RET     &lt SET BSPC          &none     &none                                                           &none
             >;
