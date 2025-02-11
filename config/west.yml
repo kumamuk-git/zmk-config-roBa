@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    #- name: kumamuk-git
-    #  url-base: https://github.com/kumamuk-git
     - name: englmaxi
       url-base: https://github.com/englmaxi
   projects:
@@ -11,11 +9,6 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    # 既存のトラックボール設定
-    #- name: zmk-pmw3610-driver
-    #  remote: kumamuk-git
-    #  revision: main
-  　# 新規トラックボール設定
     - name: zmk-hid-trackball-interface
       remote: englmaxi
       revision: main
