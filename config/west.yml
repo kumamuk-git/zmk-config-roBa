@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: eswai
+      url-base: https://github.com/eswai
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -11,6 +13,9 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
+      revision: main
+    - name: zmk-naginata
+      remote: eswai
       revision: main
   self:
     path: config
