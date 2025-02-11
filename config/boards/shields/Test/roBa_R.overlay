@@ -14,6 +14,7 @@
             ;
 };
 
+/*
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
@@ -40,9 +41,9 @@
         };
     };
 };
-
+*/
 &xiao_serial { status = "disabled"; };
-
+/*
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -61,5 +62,5 @@
         scroll-layers = <5>;
     };
 };
-
+*/
 
