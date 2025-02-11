@@ -195,10 +195,10 @@
 
         MOUSE {
             bindings = <
-&LA_TAB        &none         &none      &none       &kp LS(LC(ESC))                                &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
-&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT   &mkp MB3       &mkp MB1       &mo MOV        &mkp MB2           &kp LC(W)
-&none          &LCG_D        &LCG_L     &LCG_R      &kp LG(TAB)       &kp LSHFT         &kp RGUI   &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
-&none          &none         &none      &mkp MB4    &mkp MB3          &mkp MB5          &mkp MB4   &mkp MB5                                                        &none
+&LA_TAB        &none         &none      &none       &kp LS(LC(ESC))                                    &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
+&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT       &mkp MB3       &mkp MB1       &mo MOV        &mkp MB2           &kp LC(W)
+&none          &LCG_D        &LCG_L     &LCG_R      &kp LG(TAB)       &kp LSHFT         &kp RGUI       &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
+&none          &none         &none      &mkp MB4    &mkp MB3          &mkp MB5          &mmt MAR MB4   &mmt MO2 MB5                                                    &none
             >;
         };
 
@@ -225,7 +225,7 @@
 &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT                                &kp CARET   &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
 &kp GRAVE  &kp EQUAL  &kp MINUS  &kp NUBS  &none        &kp LCTRL         &kp RALT  &none       &kp LPAR  &kp LBKT  &kp LBRC  &kp SQT
 &kp TILDE  &kp PLUS   &kp UNDER  &kp PIPE  &none        &kp LSHFT         &kp RGUI  &none       &kp RPAR  &kp RBKT  &kp RBRC  &kp DQT
-&none      &none      &none      &none     &none        &none             &none     &none                                     &none
+&none      &none      &none      &kp DEL   &kp RET      &kp BSPC          &none     &none                                     &none
             >;
         };
 
@@ -234,7 +234,7 @@
 &kp F1           &kp F2           &kp F3            &kp F4            &kp F5                                      &kp F6     &kp F7            &kp F8            &kp F9           &kp F10
 &hrm LGUI KP_N1  &hrm LALT KP_N2  &hrm LSHFT KP_N3  &hrm LCTRL KP_N4  &kp KP_N5   &kp LCTRL             &kp RALT  &kp KP_N6  &hrm RCTRL KP_N7  &hrm RSHFT KP_N8  &hrm RALT KP_N9  &hrm RGUI KP_N0
 &kp KP_PLUS      &kp KP_MINUS     &kp KP_MULTIPLY   &kp KP_DIVIDE     &none       &kp LSHFT             &kp RGUI  &none      &kp KP_DOT        &kp KP_EQUAL      &kp F11          &kp F12
-&none            &none            &none             &kp DEL           &kp RET     &kp BSPC              &none     &none                                                           &none
+&none            &none            &none             &kp DEL           &kp RET     &lt SET BSPC          &none     &none                                                           &none
             >;
         };
 
