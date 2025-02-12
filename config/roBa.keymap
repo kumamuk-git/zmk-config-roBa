@@ -85,7 +85,7 @@
         };
         combo_astarte_off {
             timeout-ms = <300>;
-            key-positions = <13 14>;
+            key-positions = <25 26>;
             bindings = <&to 0>;
             layers = <0 1>;
         };
