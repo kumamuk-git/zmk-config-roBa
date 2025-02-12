@@ -139,8 +139,8 @@
                        <&macro_release &kp LGUI>;
         };
 
+        // naginata
         ng_on: ng_on {
-//            label = "ZM_ng_on";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -148,12 +148,23 @@
                 ;
         };
         ng_off: ng_off {
-//            label = "ZM_ng_off";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LANGUAGE_2 &kp INTERNATIONAL_5 &to 0>
                 ;
+        };
+        nscrl: ng_shift_scroll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <1>;
+            bindings = 
+                       <&macro_param_1to1>,
+                       <&macro_press &mo MACRO_PLACEHOLDER>,
+                       <&macro_press &ng SPACE>,
+                       <&macro_pause_for_release>,
+                       <&macro_release &ng SPACE>,
+                       <&macro_param_1to1>,
+                       <&macro_press &mo MACRO_PLACEHOLDER>,
         };
 
     };
@@ -276,7 +287,7 @@
 &ng Q      &ng W      &ng E      &ng R         &ng T                                    &ng Y      &ng U      &ng I      &ng O      &ng P
 &ng A      &ng S      &ng D      &ng F         &ng G       &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
 &ng Z      &ng X      &ng C      &ng V         &ng B       &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
-&none      &none      &none      &mlt MO2 MB1  &ng SPACE   &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
+&none      &none      &none      &mlt MO2 MB1  &nscrl      &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
 
@@ -310,8 +321,8 @@
         LOWER {
             bindings = <
 &kp LS(N1) &kp LBKT   &kp LS(N3)    &kp LS(N4)    &kp LS(N5)                               &kp EQUAL   &kp LS(N6)  &kp LS(SQT)  &kp LS(N8)    &kp LS(N9)
-&jgrti     &jeqpl     &jmiun        &jbspi        &none        &kp LCTRL         &kp RALT  &none       &kp LS(N8)  &jlblb       &kp LS(RBKT)  &jsqdq
-&kp PLUS   &kp COLON  &kp LS(INT1)  &kp LS(INT3)  &none        &kp LSHFT         &kp RGUI  &none       &kp LS(N9)  &jrbrb       &kp LS(NUHS)  &kp AMPS
+&jgrti     &jeqpl     &jmiun        &jbspi        &none        &kp LCTRL         &kp RALT  &none       &kp LS(N8)  &jlblb       &kp LS(RBKT)  &kp AMPS
+&kp PLUS   &kp COLON  &kp LS(INT1)  &kp LS(INT3)  &none        &kp LSHFT         &kp RGUI  &none       &kp LS(N9)  &jrbrb       &kp LS(NUHS)  &jsqdq
 &none      &none      &none         &kp DEL       &kp RET      &kp BSPC          &none     &none                                              &none
             >;
         };
