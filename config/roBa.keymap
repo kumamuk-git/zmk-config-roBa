@@ -259,7 +259,7 @@
         };
 
         // JIS用文字入力([/?]はJISでも入力が同じ)
-        jeqpl: homerow_mods_jis_equal_plus {
+        jeqpl: jis_equal_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp COLON>;
@@ -277,7 +277,7 @@
             bindings = <&kp INT1>, <&kp LS(INT3)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        hjseco: jis_semi_colon {
+        hjseco: homerow_mods_jis_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&hrm RGUI SEMI>, <&kp SQT>;
