@@ -156,7 +156,7 @@
                 ;
         };
         nscrl: ng_shift_scroll {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = 
                        <&macro_param_1to1>,
