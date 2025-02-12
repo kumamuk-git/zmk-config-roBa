@@ -259,7 +259,7 @@
         };
 
         // JIS用文字入力([/?]はJISでも入力が同じ)
-        jeqpl: jis_equal_plus {
+        jeqpl: homerow_mods_jis_equal_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp COLON>;
