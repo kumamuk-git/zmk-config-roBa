@@ -347,10 +347,10 @@
 
         ASTARTE {
             bindings = <
-&kp Q        &kp P        &kp U         &kp Y         &kp COMMA                                              &kp J        &kp D         &kp H         &kp G        &kp W
-&hrm LGUI I  &hrm LALT O  &hrm LSHFT E  &hrm LCTRL A  &kp DOT           &kp LCTRL             &kp RALT       &kp K        &hrm RCTRL T  &hrm RSHFT N  &hrm RALT S  &hrm RGUI R
-&klt MOU Z   &kp X        &kp SLASH     &kp C         &kpjseco          &kp LSHFT             &kp RGUI       &kp M        &kp L         &kp F         &kp B        &klt MOU V
-&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE     &mlt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
+&kp Q        &kp P        &kp U         &kp Y         &kp COMMA                                            &kp J        &kp D         &kp H         &kp G        &kp W
+&hrm LGUI I  &hrm LALT O  &hrm LSHFT E  &hrm LCTRL A  &kp DOT         &kp LCTRL             &kp RALT       &kp K        &hrm RCTRL T  &hrm RSHFT N  &hrm RALT S  &hrm RGUI R
+&klt MOU Z   &kp X        &kp SLASH     &kp C         &jseco        　&kp LSHFT             &kp RGUI       &kp M        &kp L         &kp F         &kp B        &klt MOU V
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE   &mlt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
