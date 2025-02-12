@@ -16,6 +16,7 @@
 #define RAI 6
 #define MAR 7
 #define SET 8
+#define SCR 9
 
 // keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
 //#define XXX &none
@@ -287,7 +288,7 @@
 &ng Q      &ng W      &ng E      &ng R         &ng T                                    &ng Y      &ng U      &ng I      &ng O      &ng P
 &ng A      &ng S      &ng D      &ng F         &ng G       &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
 &ng Z      &ng X      &ng C      &ng V         &ng B       &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
-&none      &none      &none      &mlt MO2 MB1  &nscrl      &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
+&none      &none      &none      &mlt MO2 MB1  &nscrl SCR  &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
 
@@ -353,5 +354,15 @@
 &none         &none       &none         &none  &none          &none      &none   &none                                                 &none
             >;
         };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
     };
 };
