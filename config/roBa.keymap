@@ -51,7 +51,7 @@
 &lt {
     flavor = "tap-preferred";
     tapping-term-ms = <150>;
-    quick-tap-ms = <0>;
+    quick-tap-ms = <70>;
 };
 
 / {
@@ -165,7 +165,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <70>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <70>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&mkp>;
         };
@@ -185,7 +185,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <70>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
