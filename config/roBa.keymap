@@ -385,7 +385,7 @@
 
         MOVE2 {
             bindings = <
-&kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                   &none           &kp DEL      &kp BSPC   &kp LC(BSPC)   &kp TAB
+&kp ESC         &kp INS    &kp LANG5          &kp LANG4         &kp CAPS                                   &none           &kp BSPC     &kp DEL    &kp LC(BSPC)   &kp TAB
 &hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  &caps_word    &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT      &kp RET
 &kp PSCRN       &none      &kp LC(T)          &kp LC(I)	        &kp LC(O)     &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END        &kp K_APP
 &none           &none      &none              &none             &none         &none          &lt SET DEL   &lt MAR SPACE                                          &none
