@@ -4,7 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors/naginata.dtsi>
 
-#define HOST_OS 2
+// 薙刀式のOS設定  (WIN 0, MAC 1, LINUX 2, IOS 3)
+#define HOST_OS 0
 
 // レイヤー定義
 #define QWE 0
@@ -192,6 +193,16 @@
             bindings = <&mo>, <&mkp>;
         };
 
+        //薙刀式のスクロール
+        mns: mo_ng_shift_scroll {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&nscrl>, <&ng>;
+        };
+
         // layerの設定(文字を入力する場合)
         klt: key_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -285,10 +296,10 @@
 
         NAGINATA {
             bindings = <
-&ng Q      &ng W      &ng E      &ng R         &ng T                                    &ng Y      &ng U      &ng I      &ng O      &ng P
-&ng A      &ng S      &ng D      &ng F         &ng G       &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
-&ng Z      &ng X      &ng C      &ng V         &ng B       &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
-&none      &none      &none      &mlt MO2 MB1  &nscrl SCR  &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
+&ng Q      &ng W      &ng E      &ng R         &ng T                                        &ng Y      &ng U      &ng I      &ng O      &ng P
+&ng A      &ng S      &ng D      &ng F         &ng G           &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
+&ng Z      &ng X      &ng C      &ng V         &ng B           &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
+&none      &none      &none      &mlt MO2 MB1  &mns SCR SPACE  &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
 
