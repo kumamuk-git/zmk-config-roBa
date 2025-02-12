@@ -8,17 +8,28 @@
 #define HOST_OS 0
 
 // レイヤー定義
+//#define QWE 0
+//#define AST 1
+//#define NAG 2
+//#define MOU 3
+//#define MOV 4
+//#define MO2 5
+//#define LOW 6
+//#define RAI 7
+//#define MAR 8
+//#define SET 9
+//#define SCR 10
+
 #define QWE 0
-#define AST 1
-#define NAG 2
-#define MOU 3
-#define MOV 4
-#define MO2 5
-#define LOW 6
-#define RAI 7
-#define MAR 8
-#define SET 9
-#define SCR 10
+#define NAG 1
+#define MOU 2
+#define MOV 3
+#define MO2 4
+#define LOW 5
+#define RAI 6
+#define MAR 7
+#define SET 8
+#define SCR 9
 
 // keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
 //#define XXX &none
@@ -76,7 +87,7 @@
             layers = <0 2>;
         };
 
-        //
+        // Astarte
         combo_astarte_on {
             timeout-ms = <300>;
             key-positions = <29 30>;
@@ -344,7 +355,7 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
-
+/*
         ASTARTE {
             bindings = <
 &kp Q        &kp P        &kp U         &kp Y         &kp COMMA                                            &kp J        &kp D         &kp H         &kp G        &kp W
@@ -355,7 +366,7 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
-
+*/
         NAGINATA {
             bindings = <
 &ng Q      &ng W      &ng E      &ng R         &ng T                                        &ng Y      &ng U      &ng I      &ng O      &ng P
