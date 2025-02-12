@@ -9,15 +9,16 @@
 
 // レイヤー定義
 #define QWE 0
-#define NAG 1
-#define MOU 2
-#define MOV 3
-#define MO2 4
-#define LOW 5
-#define RAI 6
-#define MAR 7
-#define SET 8
-#define SCR 9
+#define AST 1
+#define NAG 2
+#define MOU 3
+#define MOV 4
+#define MO2 5
+#define LOW 6
+#define RAI 7
+#define MAR 8
+#define SET 9
+#define SCR 10
 
 // keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
 //#define XXX &none
@@ -60,6 +61,8 @@
 
     combos {
         compatible = "zmk,combos";
+
+        // 薙刀式
         combo_ng_on {
             timeout-ms = <300>;
             key-positions = <17 18>;
@@ -70,8 +73,23 @@
             timeout-ms = <300>;
             key-positions = <13 14>;
             bindings = <&ng_off>;
+            layers = <0 2>;
+        };
+
+        //
+        combo_astarte_on {
+            timeout-ms = <300>;
+            key-positions = <29 30>;
+            bindings = <&to 1>;
+            layers = <0>;
+        };
+        combo_astarte_off {
+            timeout-ms = <300>;
+            key-positions = <13 14>;
+            bindings = <&to 0>;
             layers = <0 1>;
         };
+
     };
 
     macros {
@@ -139,6 +157,33 @@
                        <&macro_tap &kp LEFT>,
                        <&macro_release &kp LCTRL>,
                        <&macro_release &kp LGUI>;
+        };
+
+        // 括弧() JIS
+        JPRN2: jis_lprn_rprn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LS(N8)>,
+                       <&macro_tap &kp LS(N9)>,
+                       <&macro_tap &kp LEFT>;
+        };
+
+        // 括弧[] JIS
+        JBRC2: jis_lbrc_rbrc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RBKT>,
+                       <&macro_tap &kp NUHS>,
+                       <&macro_tap &kp LEFT>;
+        };
+
+        // 括弧{} JIS
+        JCBR2: jis_lcbr_rcbr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LS(RBKT)>,
+                       <&macro_tap &kp LS(NUHS)>,
+                       <&macro_tap &kp LEFT>;
         };
 
         // naginata
@@ -232,10 +277,16 @@
             bindings = <&kp INT1>, <&kp LS(INT3)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        jseco: jis_semi_colon {
+        hjseco: jis_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&hrm RGUI SEMI>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        jseco: jis_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp SQT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         jsqdq: jis_sqt_dqt {
@@ -285,9 +336,20 @@
 
         DEFAULT {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &lt 5 I       &kp O        &kp P
-&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &jseco
+&kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &kp I         &kp O        &kp P
+&hrm LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G             &kp LCTRL             &kp RALT       &kp H        &hrm RCTRL J  &hrm RSHFT K  &hrm RALT L  &hjseco
 &klt MOU Z   &kp X        &kp C         &kp V         &kp B             &kp LSHFT             &kp RGUI       &kp N        &kp M         &kp COMMA     &kp DOT      &klt MOU SLASH
+&kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE     &mlt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
+            >;
+
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        ASTARTE {
+            bindings = <
+&kp Q        &kp P        &kp U         &kp Y         &kp COMMA                                              &kp J        &kp D         &kp H         &kp G        &kp W
+&hrm LGUI I  &hrm LALT O  &hrm LSHFT E  &hrm LCTRL A  &kp DOT           &kp LCTRL             &kp RALT       &kp K        &hrm RCTRL T  &hrm RSHFT N  &hrm RALT S  &hrm RGUI R
+&klt MOU Z   &kp X        &kp SLASH     &kp C         &kpjseco          &kp LSHFT             &kp RGUI       &kp M        &kp L         &kp F         &kp B        &klt MOU V
 &kp LALT     &kp LCTRL    &kp LSHFT     &mkp MB1      &lt MOV SPACE     &mlt MAR MB2          &lt LOW BSPC   &lt RAI RET                                           &mo MOU
             >;
 
@@ -306,7 +368,7 @@
         MOUSE {
             bindings = <
 &LA_TAB        &none         &none      &none       &kp LS(LC(ESC))                                    &kp LC(V)      &kp LC(X)      &kp LC(C)      &kp LS(LC(TAB))    &kp LC(TAB)
-&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT       &mkp MB3       &mkp MB1       &mo MOV        &mkp MB2           &kp LC(W)
+&kp LG(T)      &kp LEFT      &kp DOWN   &kp UP      &kp RIGHT         &kp LCTRL         &kp RALT       &mkp MB3       &mkp MB1       &mo SCR        &mkp MB2           &kp LC(W)
 &none          &LCG_D        &LCG_L     &LCG_R      &kp LG(TAB)       &kp LSHFT         &kp RGUI       &kp LS(HOME)   &kp LC(HOME)   &kp LC(END)    &kp LS(END)        &none
 &none          &none         &none      &mkp MB4    &mkp MB3          &mkp MB5          &mlt MAR MB4   &mlt MO2 MB5                                                    &none
             >;
@@ -314,7 +376,7 @@
 
         MOVE {
             bindings = <
-&kp ESC         &kp INS    &kp INT5           &kp INT4          &kp CAPS                                   &none           &kp DEL      &kp BSPC   &kp LC(BSPC)   &kp TAB
+&kp ESC         &kp INS    &kp INT5           &kp INT4          &kp CAPS                                   &none           &kp BSPC     &kp DEL    &kp LC(BSPC)   &kp TAB
 &hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  &caps_word    &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT      &kp RET
 &kp PSCRN       &none      &kp LC(T)          &kp LC(I)	        &kp LC(O)     &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END        &kp K_APP
 &none           &none      &none              &none             &none         &none          &lt SET DEL   &lt MAR SPACE                                          &none
@@ -341,19 +403,19 @@
 
         RAISE {
             bindings = <
-&kp F1           &kp F2           &kp F3            &kp F4            &kp F5                                      &kp F6     &kp F7            &kp F8            &kp F9           &kp F10
-&hrm LGUI N1     &hrm LALT N2     &hrm LSHFT N3     &hrm LCTRL N4     &kp N5      &kp LCTRL             &kp RALT  &kp N6     &hrm RCTRL N7     &hrm RSHFT N8     &hrm RALT N9     &hrm RGUI N0
-&kp KP_PLUS      &kp KP_MINUS     &kp KP_MULTIPLY   &kp KP_DIVIDE     &none       &kp LSHFT             &kp RGUI  &none      &kp KP_DOT        &kp KP_EQUAL      &kp F11          &kp F12
-&none            &none            &none             &kp DEL           &kp RET     &lt SET BSPC          &none     &none                                                           &none
+&kp F1           &kp F2           &kp F3            &kp F4            &kp F5                                       &kp F6     &kp F7            &kp F8            &kp F9           &kp F10
+&hrm LGUI N1     &hrm LALT N2     &hrm LSHFT N3     &hrm LCTRL N4     &kp N5       &kp LCTRL             &kp RALT  &kp N6     &hrm RCTRL N7     &hrm RSHFT N8     &hrm RALT N9     &hrm RGUI N0
+&kp KP_PLUS      &kp KP_MINUS     &kp KP_MULTIPLY   &kp KP_DIVIDE     &none        &kp LSHFT             &kp RGUI  &none      &kp KP_DOT        &kp KP_EQUAL      &kp F11          &kp F12
+&none            &none            &none             &kp DEL           &lt MAR RET  &lt SET BSPC          &none     &none                                                           &none
             >;
         };
 
         MACRO {
             bindings = <
-&kp LA(F4)       &kp LG(S)    &mkp MB4      &mkp MB5    &kp BSPC                           &kp LS(LC(ESC))  &kp LC(KP_PLUS)   &kp LC(KP_MINUS)  &LCA_TAB    &LA_TAB
-&kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)   &kp LC(Y)   &kp LCTRL    &kp RALT  &kp LC(T)        &none             &none             &none       &none
-&kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(TAB)   &kp TAB     &kp RET     &kp LSHFT    &kp RGUI  &kp LG(TAB)      &LCG_L            &LCG_R            &LCG_D      &LCG_F4
-&none            &none        &none         &none       &none       &none        &none     &none                                                            &none
+&kp LA(F4)       &kp LG(S)    &mkp MB4      &mkp MB5    &kp BSPC                           &kp LS(LC(ESC))  &msc LC(SCRL_UP)  &msc LC(SCRL_DOWN)  &LCA_TAB    &LA_TAB
+&kp LC(Z)        &kp LC(X)    &kp LC(C)     &kp LC(V)   &kp LC(Y)   &kp LCTRL    &kp RALT  &kp LG(T)        &JPRN2            &JBRC2              &JCBR2      &none
+&kp LS(LC(TAB))  &kp LC(TAB)  &kp LS(TAB)   &kp TAB     &kp RET     &kp LSHFT    &kp RGUI  &kp LG(TAB)      &LCG_L            &LCG_R              &LCG_D      &LCG_F4
+&none            &none        &none         &none       &none       &none        &none     &none                                                              &none
             >;
         };
 
