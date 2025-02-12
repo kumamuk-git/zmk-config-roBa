@@ -52,7 +52,7 @@
 &lt {
     flavor = "tap-preferred";
     tapping-term-ms = <150>;
-    quick-tap-ms = <70>;
+    quick-tap-ms = <100>;
 };
 
 / {
@@ -165,7 +165,7 @@
                        <&macro_pause_for_release>,
                        <&macro_release &ng SPACE>,
                        <&macro_param_1to1>,
-                       <&macro_press &mo MACRO_PLACEHOLDER>;
+                       <&macro_release &mo MACRO_PLACEHOLDER>;
         };
 
     };
@@ -177,7 +177,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <70>;
+            quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -187,7 +187,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <70>;
+            quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&mkp>;
         };
@@ -197,7 +197,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            quick-tap-ms = <70>;
+            quick-tap-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
