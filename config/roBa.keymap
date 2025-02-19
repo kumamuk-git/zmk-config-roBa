@@ -401,7 +401,7 @@
             bindings = <
 &ng Q      &ng W      &ng E      &ng R         &ng T                                        &ng Y      &ng U      &ng I      &ng O      &ng P
 &ng A      &ng S      &ng D      &ng F         &ng G           &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
-&nlt Z     &ng X      &ng C      &ng V         &ng B           &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &nlt SLASH
+&nlt MOU Z &ng X      &ng C      &ng V         &ng B           &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &nlt MOU SLASH
 &none      &none      &none      &mlt MO2 MB1  &mns SCR SPACE  &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
