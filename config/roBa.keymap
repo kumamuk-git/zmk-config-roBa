@@ -8,33 +8,21 @@
 #define HOST_OS 0
 
 // レイヤー定義
-//#define QWE 0
-//#define AST 1
-//#define NAG 2
-//#define MOU 3
-//#define MOV 4
-//#define MO2 5
-//#define LOW 6
-//#define RAI 7
-//#define MAR 8
-//#define SET 9
-//#define SCR 10
-
 #define QWE 0
-#define NAG 1
-#define MOU 2
-#define MOV 3
-#define MO2 4
-#define LOW 5
-#define RAI 6
-#define MAR 7
-#define SET 8
-#define SCR 9
+#define AST 1
+#define NAG 2
+#define MOU 3
+#define MOV 4
+#define MO2 5
+#define LOW 6
+#define RAI 7
+#define MAR 8
+#define SET 9
+#define SCR 10
 
 // keycodeを置き換えるとkeymap editorが利用できないため、基本的に実施しない。
 //#define XXX &none
 //#define ___ &none
-
 // Misc aliases. [TODO: clean up]
 //#define LG_S       &kp LG(S)             // スクリーンショット
 //#define LA_F4      &kp LA(F4)            // アプリケーション終了
@@ -98,6 +86,40 @@
             timeout-ms = <300>;
             key-positions = <25 26>;
             bindings = <&to 0>;
+            layers = <0 1>;
+        };
+
+        // ショートカット
+        combo_esc {
+            timeout-ms = <300>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+            layers = <0 1>;
+        };
+        combo_bspc {
+            timeout-ms = <300>;
+            key-positions = <8 9>;
+            bindings = <&kp BSPC>;
+            layers = <0 1>;
+        };
+        combo_del {
+            timeout-ms = <300>;
+            key-positions = <7 8>;
+            bindings = <&kp DEL>;
+            layers = <0 1>;
+        };
+
+        // 入力切替
+        combo_eisu {
+            timeout-ms = <300>;
+            key-positions = <11 12 13>;
+            bindings = <&kp LANG2>;
+            layers = <0 1>;
+        };
+        combo_kana {
+            timeout-ms = <300>;
+            key-positions = <18 19 20>;
+            bindings = <&kp LANG1>;
             layers = <0 1>;
         };
 
@@ -258,6 +280,14 @@
             flavor = "tap-preferred";
             bindings = <&nscrl>, <&ng>;
         };
+        nlt: nagi_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&ng>;
+        };
 
         // layerの設定(文字を入力する場合)
         klt: key_layer_tap {
@@ -371,7 +401,7 @@
             bindings = <
 &ng Q      &ng W      &ng E      &ng R         &ng T                                        &ng Y      &ng U      &ng I      &ng O      &ng P
 &ng A      &ng S      &ng D      &ng F         &ng G           &kp LCTRL      &kp RALT      &ng H      &ng J      &ng K      &ng L      &ng SEMI
-&ng Z      &ng X      &ng C      &ng V         &ng B           &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &ng SLASH
+&nlt Z     &ng X      &ng C      &ng V         &ng B           &kp LSHFT      &kp RGUI      &ng N      &ng M      &ng COMMA  &ng DOT    &nlt SLASH
 &none      &none      &none      &mlt MO2 MB1  &mns SCR SPACE  &mlt RAI MB2   &lt LOW BSPC  &ng ENTER                                   &mo MOU
             >;
         };
@@ -389,7 +419,7 @@
             bindings = <
 &kp ESC         &kp INS    &kp INT5           &kp INT4          &kp CAPS                                   &none           &kp BSPC     &kp DEL    &kp LC(BSPC)   &kp TAB
 &hrm LGUI TAB   &kp LALT   &hrm LSHFT LANG2   &hrm LCTRL LANG1  &caps_word    &kp LCTRL      &kp RALT      &kp LEFT        &kp DOWN     &kp UP     &kp RIGHT      &kp RET
-&kp PSCRN       &none      &kp LC(T)          &kp LC(I)	        &kp LC(O)     &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END        &kp K_APP
+&kp PSCRN       &none      &kp LC(T)          &kp LC(I)         &kp LC(O)     &kp LSHFT      &kp RGUI      &kp HOME        &kp PG_UP    &kp PG_DN  &kp END        &kp K_APP
 &none           &none      &none              &none             &none         &none          &lt SET DEL   &lt MAR SPACE                                          &none
             >;
         };
