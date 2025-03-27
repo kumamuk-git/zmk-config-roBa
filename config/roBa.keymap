@@ -73,7 +73,7 @@
 &kp QUESTION  &kp K_APPLICATION  &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 1 SPACE  &kp LG(LEFT_WIN)      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
         FUNCTION {
@@ -83,6 +83,8 @@
 &kp CARET             &kp TILDE        &kp SQT        &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &trans      &trans         &kp AT_SIGN     &kp DOLLAR  &kp PAGE_DOWN  &kp F12    &kp F11
 &kp NON_US_BACKSLASH  &trans           &trans         &kp LEFT_SHIFT     &trans                &trans      &kp BACKSPACE  &kp LEFT_ALT                                          &kp RCTRL
             >;
+
+            sensor-bindings = <&inc_dec_kp DOWN UP>;
         };
 
         NUM {
@@ -92,6 +94,8 @@
 &kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp EQUAL  &kp ESCAPE        &trans  &kp RIGHT_BRACE        &kp LEFT      &kp DOWN      &kp RIGHT      &kp LEFT_WIN
 &kp ESCAPE    &kp N0        &kp DOT       &kp LEFT_SHIFT  &trans     &kp LEFT_ALT      &trans  &trans                                                            &kp RCTRL
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         ARROW {
