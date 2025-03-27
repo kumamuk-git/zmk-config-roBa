@@ -78,10 +78,10 @@
 
         FUNCTION {
             bindings = <
-&trans                &kp F2           &trans         &kp F4             &kp LS(LEFT_BRACKET)                             &kp F6          &kp F7      &kp F8         &kp F9     &kp F10
-&kp F5                &kp EXCLAMATION  &kp AMPERSAND  &kp HASH           &kp LEFT_PARENTHESIS  &trans      &trans         &kp UNDERSCORE  &mkp LCLK   &kp PAGE_UP    &mkp RCLK  &kp COLON
-&kp CARET             &kp TILDE        &kp SQT        &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &trans      &trans         &kp AT_SIGN     &kp DOLLAR  &kp PAGE_DOWN  &kp F12    &kp F11
-&kp NON_US_BACKSLASH  &trans           &trans         &kp LEFT_SHIFT     &trans                &trans      &kp BACKSPACE  &kp LEFT_ALT                                          &kp RCTRL
+&trans                &kp F2           &trans         &kp F4             &kp LBKT                             &kp F6        &kp F7      &kp F8         &kp F9     &kp F10
+&kp F5                &kp EXCLAMATION  &kp AMPERSAND  &kp HASH           &kp LPAR  &trans      &trans         &kp UNDER     &mkp LCLK   &kp PAGE_UP    &mkp RCLK  &kp COLON
+&kp CARET             &kp TILDE        &kp SQT        &kp DOUBLE_QUOTES  &kp LBRC  &trans      &trans         &kp AT        &kp DOLLAR  &kp PAGE_DOWN  &kp F12    &kp F11
+&kp NON_US_BACKSLASH  &trans           &trans         &kp LEFT_SHIFT     &trans    &trans      &kp BACKSPACE  &kp LEFT_ALT                                        &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP>;
@@ -89,10 +89,10 @@
 
         NUM {
             bindings = <
-&kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp MINUS                            &kp RIGHT_BRACKET      &kp INT_KANA  &kp INT5      &kp HOME       &kp END
-&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp PLUS   &trans            &trans  &kp RIGHT_PARENTHESIS  &kp PAGE_UP   &kp UP_ARROW  &kp PAGE_DOWN  &kp COLON
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp EQUAL  &kp ESCAPE        &trans  &kp RIGHT_BRACE        &kp LEFT      &kp DOWN      &kp RIGHT      &kp LEFT_WIN
-&kp ESCAPE    &kp N0        &kp DOT       &kp LEFT_SHIFT  &trans     &kp LEFT_ALT      &trans  &trans                                                            &kp RCTRL
+&kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp MINUS                            &kp RBKT  &kp INT_KANA  &kp INT5      &kp HOME       &kp END
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp PLUS   &trans            &trans  &kp RPAR  &kp PAGE_UP   &kp UP_ARROW  &kp PAGE_DOWN  &kp COLON
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp EQUAL  &kp ESCAPE        &trans  &kp RBRC  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LEFT_WIN
+&kp ESCAPE    &kp N0        &kp DOT       &kp LEFT_SHIFT  &trans     &kp LEFT_ALT      &trans  &trans                                               &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
