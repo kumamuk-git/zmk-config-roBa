@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&lt 5 TAB         &kp W              &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S              &kp D         &kp F             &kp G        &kp LC(LA(NUMBER_0))      &lt 6 SEMI     &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X              &kp C         &kp V             &kp B        &kp Q                     &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
-&kp QUESTION      &kp K_APPLICATION  &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 1 SPACE  &kp LG(LEFT_WIN)          &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
+&lt 5 TAB     &kp W              &kp E         &kp R             &kp T                                             &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A         &kp S              &kp D         &kp F             &kp G        &trans                &lt 6 SEMI     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z         &kp X              &kp C         &kp V             &kp B        &kp Q                 &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
+&kp QUESTION  &kp K_APPLICATION  &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 1 SPACE  &kp LG(LEFT_WIN)      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -87,10 +87,10 @@
 
         NUM {
             bindings = <
-&kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp MINUS                                       &kp RIGHT_BRACKET      &kp INT_KANA  &kp INT5      &kp HOME       &kp END
-&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp PLUS   &kp LC(LA(KP_NUMBER_0))      &trans  &kp RIGHT_PARENTHESIS  &kp PAGE_UP   &kp UP_ARROW  &kp PAGE_DOWN  &kp COLON
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp EQUAL  &kp ESCAPE                   &trans  &kp RIGHT_BRACE        &kp LEFT      &kp DOWN      &kp RIGHT      &kp LEFT_WIN
-&kp ESCAPE    &kp N0        &kp DOT       &kp LEFT_SHIFT  &trans     &kp LEFT_ALT                 &trans  &trans                                                            &kp RCTRL
+&kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp MINUS                            &kp RIGHT_BRACKET      &kp INT_KANA  &kp INT5      &kp HOME       &kp END
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp PLUS   &trans            &trans  &kp RIGHT_PARENTHESIS  &kp PAGE_UP   &kp UP_ARROW  &kp PAGE_DOWN  &kp COLON
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp EQUAL  &kp ESCAPE        &trans  &kp RIGHT_BRACE        &kp LEFT      &kp DOWN      &kp RIGHT      &kp LEFT_WIN
+&kp ESCAPE    &kp N0        &kp DOT       &kp LEFT_SHIFT  &trans     &kp LEFT_ALT      &trans  &trans                                                            &kp RCTRL
             >;
         };
 
