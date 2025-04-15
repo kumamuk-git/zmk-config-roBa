@@ -50,15 +50,25 @@
             label = "TO_LAYER_0";
         };
     };
+  behaviors {
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-    behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tap-ms = <20>;
+        };
+
+        multi_tap_tab_bspc: behavior_multi_tap {
+            label = "MT_TAB_BSPC";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp BSPC>;
+
+            max-taps = <2>;
+            max-tap-interrupt-ms = <250>;
+  
         };
     };
 
