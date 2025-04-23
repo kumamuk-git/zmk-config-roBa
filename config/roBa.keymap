@@ -74,13 +74,13 @@
 
         default_Mac {
             bindings = <
-&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &mo 6  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE               &kp BACKSPACE  &kt RIGHT_COMMAND                             &kp ESCAPE
+&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H          &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &mo 6  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE               &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         default_Win {
@@ -88,10 +88,10 @@
 &kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_COMMAND  &mo 6  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE               &kp BACKSPACE  &kt RIGHT_CONTROL                             &kp ESCAPE
+&kp LEFT_COMMAND  &mo 6  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE               &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Allow_Num_Mac {
@@ -132,10 +132,10 @@
 
         Symbol {
             bindings = <
-&none           &none  &none  &none  &none                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
-&none           &none  &none  &none  &none  &none      &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
-&kp LEFT_SHIFT  &none  &none  &none  &none  &none      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
-&none           &none  &none  &none  &none  &none      &none  &none                                                    &kp ESCAPE
+&none           &none         &none         &none         &none                                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
+&kp LEFT_SHIFT  &none         &none         &none         &none         &bt BT_CLR_ALL      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
+&none           &none         &none         &none         &none         &none               &none  &none                                                    &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
