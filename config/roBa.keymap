@@ -18,27 +18,47 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <0 1>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <11 10>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <7 8>;
+        };
+
+        bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <19 20>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <20 21>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <1 2>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        semi_colon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <31 32>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        single_q {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <32 33>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
         };
     };
 
@@ -74,50 +94,50 @@
 
         default_Mac {
             bindings = <
-&kp Q             &kp W         &kp E             &kp R  &kp T                                             &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp LS(LG(C_MUTE))      &kp MINUS      &kp H          &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &kp TAB                 &kp EQUAL      &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
+&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H          &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_GUI                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         default_Win {
             bindings = <
-&kp Q             &kp W         &kp E             &kp R  &kp T                                             &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp ESCAPE
+&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_ALT_AUDIO_INC C_MENU_DECREASE>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         Allow_Num_Mac {
             bindings = <
-&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp BACKSPACE
-&kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(NUMBER_4))  &kp N4  &kp N5  &kp N6  &trans
-&kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)      &trans  &password_input       &kp N1  &kp N2  &kp N3  &trans
-&trans              &trans              &trans          &trans               &trans               &trans           &trans  &kp N0                                        &to 1
+&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
+&kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(NUMBER_4))
+&kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&trans              &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
 
         Allow_Num_Win {
             bindings = <
-&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp BACKSPACE
-&kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(S))    &kp N4  &kp N5  &kp N6  &trans
-&trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)      &trans  &password_input  &kp N1  &kp N2  &kp N3  &trans
-&trans              &trans       &trans          &trans         &trans               &trans           &trans  &kp N0                                   &to 0
+&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
+&kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(S))
+&trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&trans              &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans     &trans                      &trans  &mkp MB4              &trans    &mkp MB5               &trans
+&trans  &trans  &trans  &mkp LCLK  &trans  &trans      &trans  &trans  &mkp MB1              &mkp MB3  &mkp MB2               &trans
+&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans  &kp LG(LEFT_BRACKET)  &trans    &kp LG(RIGHT_BRACKET)  &trans
+&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans                                                         &trans
             >;
         };
 
@@ -132,22 +152,13 @@
 
         Symbol {
             bindings = <
-&none           &none         &none         &none         &none                                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
-&kp LEFT_SHIFT  &kp C_VOL_UP  &none         &none         &none         &bt BT_CLR_ALL      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
-&none           &none         &none         &none         &none         &none               &none  &none                                                    &kp ESCAPE
+&none           &none         &none              &none            &none                                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4  &none      &bt BT_CLR      &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &none
+&kp LEFT_SHIFT  &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none         &none      &bt BT_CLR_ALL  &none  &kp F2       &kp F5            &kp F7             &none
+&none           &none         &none              &none            &none         &none      &none           &none                                                    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
         };
     };
 };
