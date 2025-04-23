@@ -74,10 +74,10 @@
 
         default_Mac {
             bindings = <
-&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 6 I    &kp O    &lt 6 P
+&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &mo 4  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kt SPACE               &kp BACKSPACE  &kt RIGHT_COMMAND                             &kp ESCAPE
+&kp LCTRL         &mo 6  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE               &kp BACKSPACE  &kt RIGHT_COMMAND                             &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP K_VOLUME_DOWN>;
@@ -85,10 +85,10 @@
 
         default_Win {
             bindings = <
-&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 6 I    &kp O    &lt 6 P
+&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_COMMAND  &mo 4  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kt SPACE               &kp BACKSPACE  &kt RIGHT_CONTROL                             &kp ESCAPE
+&kp LEFT_COMMAND  &mo 6  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE               &kp BACKSPACE  &kt RIGHT_CONTROL                             &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP K_VOLUME_DOWN>;
@@ -99,7 +99,7 @@
 &trans              &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp N0
 &kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(NUMBER_4))  &kp N4  &kp N5  &kp N6  &trans
 &trans              &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)      &trans  &password_input       &kp N1  &kp N2  &kp N3  &trans
-&trans              &trans              &trans          &trans               &trans               &trans           &trans  &kp N0                                        &trans
+&trans              &trans              &trans          &trans               &trans               &trans           &trans  &kp N0                                        &to 1
             >;
         };
 
@@ -108,19 +108,8 @@
 &trans              &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp N0
 &kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(S))    &kp N4  &kp N5  &kp N6  &trans
 &trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)      &trans  &password_input  &kp N1  &kp N2  &kp N3  &trans
-&trans              &trans       &trans          &trans         &trans               &trans           &trans  &kp N0                                   &trans
+&trans              &trans       &trans          &trans         &trans               &trans           &trans  &kp N0                                   &to 0
             >;
-        };
-
-        Symbol {
-            bindings = <
-&none           &none  &none  &none  &none                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
-&none           &none  &none  &none  &none  &none      &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
-&kp LEFT_SHIFT  &none  &none  &none  &none  &none      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
-&none           &none  &none  &none  &none  &none      &none  &none                                                    &kp ESCAPE
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         MOUSE {
@@ -139,6 +128,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+        };
+
+        Symbol {
+            bindings = <
+&none           &none  &none  &none  &none                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+&none           &none  &none  &none  &none  &none      &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
+&kp LEFT_SHIFT  &none  &none  &none  &none  &none      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
+&none           &none  &none  &none  &none  &none      &none  &none                                                    &kp ESCAPE
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         layer_6 {
