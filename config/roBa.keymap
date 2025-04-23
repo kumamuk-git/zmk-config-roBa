@@ -80,7 +80,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         default_Win {
