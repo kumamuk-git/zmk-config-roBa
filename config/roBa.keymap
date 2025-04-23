@@ -96,7 +96,7 @@
 
         Allow_Num_Mac {
             bindings = <
-&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp N0
+&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp BACKSPACE
 &kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(NUMBER_4))  &kp N4  &kp N5  &kp N6  &trans
 &kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)      &trans  &password_input       &kp N1  &kp N2  &kp N3  &trans
 &trans              &trans              &trans          &trans               &trans               &trans           &trans  &kp N0                                        &to 1
@@ -105,7 +105,7 @@
 
         Allow_Num_Win {
             bindings = <
-&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp N0
+&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp BACKSPACE
 &kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(S))    &kp N4  &kp N5  &kp N6  &trans
 &trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)      &trans  &password_input  &kp N1  &kp N2  &kp N3  &trans
 &trans              &trans       &trans          &trans         &trans               &trans           &trans  &kp N0                                   &to 0
