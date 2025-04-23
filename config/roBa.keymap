@@ -74,21 +74,21 @@
 
         default_Mac {
             bindings = <
-&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H          &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &mo 6  &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE               &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
+&kp Q             &kp W         &kp E             &kp R  &kp T                                             &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp LS(LG(C_MUTE))      &kp MINUS      &kp H          &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &kp TAB                 &kp EQUAL      &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
 
         default_Win {
             bindings = <
-&kp Q             &kp W  &kp E         &kp R             &kp T                                         &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S  &kp D         &kp F             &kp G  &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X  &kp C         &kp V             &kp B  &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_COMMAND  &mo 6  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE               &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp ESCAPE
+&kp Q             &kp W         &kp E             &kp R  &kp T                                             &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp LS(LG(C_MUTE))      &kp MINUS      &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &kp TAB                 &kp EQUAL      &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -96,16 +96,16 @@
 
         Allow_Num_Mac {
             bindings = <
-&trans              &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp N0
+&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                        &kp LG(Q)             &kp N7  &kp N8  &kp N9  &kp N0
 &kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(NUMBER_4))  &kp N4  &kp N5  &kp N6  &trans
-&trans              &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)      &trans  &password_input       &kp N1  &kp N2  &kp N3  &trans
+&kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)      &trans  &password_input       &kp N1  &kp N2  &kp N3  &trans
 &trans              &trans              &trans          &trans               &trans               &trans           &trans  &kp N0                                        &to 1
             >;
         };
 
         Allow_Num_Win {
             bindings = <
-&trans              &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp N0
+&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                        &kp LA(F4)       &kp N7  &kp N8  &kp N9  &kp N0
 &kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &trans           &trans  &kp LG(LS(S))    &kp N4  &kp N5  &kp N6  &trans
 &trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)      &trans  &password_input  &kp N1  &kp N2  &kp N3  &trans
 &trans              &trans       &trans          &trans         &trans               &trans           &trans  &kp N0                                   &to 0
