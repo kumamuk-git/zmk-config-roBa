@@ -80,7 +80,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_GUI                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         default_Win {
@@ -134,7 +134,7 @@
             bindings = <
 &none           &none         &none         &none         &none                                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR          &none  &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &kp ENTER
-&kp LEFT_SHIFT  &none         &none         &none         &none         &bt BT_CLR_ALL      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp C_VOL_UP  &none         &none         &none         &bt BT_CLR_ALL      &none  &none  &kp F2       &kp F5            &kp F7             &kp RIGHT_SHIFT
 &none           &none         &none         &none         &none         &none               &none  &none                                                    &kp ESCAPE
             >;
 
