@@ -91,7 +91,7 @@
 &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &mo 6                   &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp ESCAPE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_ALT_AUDIO_INC C_MENU_DECREASE>;
         };
 
         Allow_Num_Mac {
