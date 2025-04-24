@@ -94,24 +94,24 @@
 
         default_Mac {
             bindings = <
-&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y          &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H          &kp J  &kp K      &kp L    &kp ENTER
+&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y          &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_GUI                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         default_Win {
             bindings = <
-&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &kp K      &kp L    &kp ENTER
+&kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y              &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &lt 5 K    &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         Allow_Num_Mac {
