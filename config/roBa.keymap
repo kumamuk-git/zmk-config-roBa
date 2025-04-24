@@ -111,35 +111,35 @@
 
         Allow_Num_Mac {
             bindings = <
-&kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
-&kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(NUMBER_4))
-&kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
-&trans              &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
+&trans          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
+&kp ESCAPE      &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(NUMBER_4))
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&trans          &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
             >;
         };
 
         Allow_Num_Win {
             bindings = <
-&kp ESCAPE          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
-&kp LC(LEFT_ARROW)  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(S))
-&trans              &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
-&trans              &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
+&trans          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
+&kp ESCAPE      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(S))
+&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&trans          &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                      &trans  &mkp MB4              &mkp MB5               &trans  &trans
-&trans  &trans  &trans  &mkp LCLK  &trans  &trans      &trans  &trans  &mkp MB1              &mkp MB2               &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans                                                       &trans
+&trans  &trans  &trans  &trans     &trans                      &trans    &mkp MB4              &mkp MB5               &trans  &trans
+&trans  &trans  &trans  &mkp LCLK  &trans  &trans      &trans  &mkp MB2  &mkp MB1              &mo 5                  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans    &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans                                                         &trans
             >;
         };
 
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &none   &mo 4   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
