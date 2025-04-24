@@ -187,5 +187,25 @@
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
+    };    sensor-configs {
+        compatible = "zmk,sensor-configs";
+
+        slow_mouse_config {
+            sensor-label = "PMW3610";
+            sensor-config {
+                scale = <1 1>;
+            };
+            apply-on-activation = <&MOUSE>;
+        };
+
+        fast_scroll_config {
+            sensor-label = "PMW3610";
+            sensor-config {
+                scale = <8 8>;
+            };
+            apply-on-activation = <&SCROLL>;
+        };
     };
 };
+
+
