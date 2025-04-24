@@ -90,7 +90,7 @@
         default_Mac {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H          &kp J  &lt 5 K    &kp L    &lt 4 ENTER
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H          &kp J  &lt 5 K    &lt 4 L  &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N          &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_GUI                             &kp DELETE
             >;
@@ -101,7 +101,7 @@
         default_Win {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y              &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &lt 5 K    &kp L    &lt 4 ENTER
+&kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &lt 5 K    &lt 4 L  &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp DELETE
             >;
@@ -129,9 +129,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                      &trans  &mkp MB4              &trans  &mkp MB5               &trans
-&trans  &trans  &trans  &mkp LCLK  &trans  &trans      &trans  &trans  &mkp MB1              &trans  &mkp MB2               &trans
-&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans  &kp LG(LEFT_BRACKET)  &trans  &kp LG(RIGHT_BRACKET)  &trans
+&trans  &trans  &trans  &trans     &trans                      &trans  &mkp MB4              &mkp MB5               &trans  &trans
+&trans  &trans  &trans  &mkp LCLK  &trans  &trans      &trans  &trans  &mkp MB1              &mkp MB2               &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans      &trans  &trans                                                       &trans
             >;
         };
