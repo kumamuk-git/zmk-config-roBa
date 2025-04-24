@@ -70,25 +70,25 @@
             label = "TO_LAYER_0";
         };
 
-        password_input: new_macro {
+        password_input: password_input {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(NUMBER_1) &kp LS(NUMBER_2) &kp LS(NUMBER_3) &kp LS(W) &kp LS(A) &kp LS(Q) &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp W &kp A &kp Q &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3>;
-            label = "NEW_MACRO";
+            label = "PASSWORD_INPUT";
         };
 
-        bt0_mac: new_macro {
+        bt0_mac: bt0_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
-            label = "NEW_MACRO";
+            label = "BT0_MAC";
         };
 
-        bt1_win: new_macro {
+        bt1_win: bt1_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 1>;
-            label = "NEW_MACRO";
+            label = "BT1_WIN";
         };
 
         bt2_iPad: bt2_iPad {
