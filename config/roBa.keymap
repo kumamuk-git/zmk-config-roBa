@@ -76,6 +76,27 @@
             bindings = <&kp LS(NUMBER_1) &kp LS(NUMBER_2) &kp LS(NUMBER_3) &kp LS(W) &kp LS(A) &kp LS(Q) &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp W &kp A &kp Q &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3>;
             label = "NEW_MACRO";
         };
+
+        bt0_mac: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "NEW_MACRO";
+        };
+
+        bt1_win: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "NEW_MACRO";
+        };
+
+        bt2_iPad: bt2_iPad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
+            label = "BT2_IPAD";
+        };
     };
 
     behaviors {
@@ -118,7 +139,7 @@
             bindings = <
 &trans          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
 &kp ESCAPE      &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(NUMBER_4))
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &none
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
 &trans          &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
             >;
         };
@@ -127,7 +148,7 @@
             bindings = <
 &trans          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
 &kp ESCAPE      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(S))
-&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &none
+&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
 &trans          &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
@@ -152,10 +173,10 @@
 
         Symbol {
             bindings = <
-&none           &none         &none              &none            &none                                    &none  &kp GRAVE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4  &none      &bt BT_CLR      &none  &kp AT_SIGN  &kp SEMICOLON     &kp SQT            &none
-&kp LEFT_SHIFT  &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none         &none      &bt BT_CLR_ALL  &none  &kp F2       &kp F5            &kp F7             &none
-&none           &none         &none              &none            &none         &none      &none           &none                                                    &none
+&none     &none     &none      &none         &none                                    &none  &none      &none   &none   &none
+&bt0_mac  &bt1_win  &bt2_iPad  &bt BT_SEL 3  &bt BT_SEL 4  &none      &bt BT_CLR      &none  &kp GRAVE  &none   &none   &none
+&none     &none     &none      &none         &none         &none      &bt BT_CLR_ALL  &none  &kp F2     &kp F5  &kp F7  &none
+&none     &none     &none      &none         &none         &none      &none           &none                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
