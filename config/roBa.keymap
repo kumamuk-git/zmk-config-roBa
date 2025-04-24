@@ -16,8 +16,8 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
+        back_quate {
+            bindings = <&kp GRAVE>;
             key-positions = <0 1>;
         };
 
@@ -39,11 +39,6 @@
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <20 21>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <1 2>;
         };
 
         semi_colon {
@@ -137,18 +132,18 @@
 
         Allow_Num_Mac {
             bindings = <
-&trans          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
+&trans          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
 &kp ESCAPE      &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(NUMBER_4))
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LG(Q)            &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
 &trans          &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
             >;
         };
 
         Allow_Num_Win {
             bindings = <
-&trans          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
+&trans          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
 &kp ESCAPE      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(S))
-&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(F4)           &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp RIGHT_SHIFT
 &trans          &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
@@ -171,12 +166,12 @@
             >;
         };
 
-        Symbol {
+        BT_Functions {
             bindings = <
-&none     &none     &none      &none         &none                                    &none  &none      &none   &none   &none
-&bt0_mac  &bt1_win  &bt2_iPad  &bt BT_SEL 3  &bt BT_SEL 4  &none      &bt BT_CLR      &none  &kp GRAVE  &none   &none   &none
-&none     &none     &none      &none         &none         &none      &bt BT_CLR_ALL  &none  &kp F2     &kp F5  &kp F7  &none
-&none     &none     &none      &none         &none         &none      &none           &none                             &none
+&none           &none       &none      &none         &none                           &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&bt0_mac        &bt1_win    &bt2_iPad  &bt BT_SEL 3  &bt BT_SEL 4  &none      &none  &kp F4  &kp F5  &kp F6  &none    &kp F12
+&none           &none       &none      &none         &none         &none      &none  &kp F1  &kp F2  &kp F3  &none    &none
+&bt BT_CLR_ALL  &bt BT_CLR  &none      &none         &none         &none      &none  &none                            &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
