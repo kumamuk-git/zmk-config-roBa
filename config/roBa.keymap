@@ -108,7 +108,7 @@
 &kp Q             &kp W         &kp E             &kp R  &kp T                                     &kp Y              &kp U  &lt 5 I    &kp O    &lt 5 P
 &kp A             &kp S         &kp D             &kp F  &kp G      &kp C_MUTE      &kp EQUAL      &kp H              &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V  &kp B      &mo 6           &kp BACKSLASH  &kp N              &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp DELETE
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 3  &kp SPACE  &kp TAB         &kp BACKSPACE  &kp RIGHT_CONTROL                             &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -119,7 +119,7 @@
 &kp ESCAPE          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
 &kp LA(LEFT_ARROW)  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(NUMBER_4))
 &kp LEFT_SHIFT      &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
-&trans              &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 0
+&trans              &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
             >;
         };
 
