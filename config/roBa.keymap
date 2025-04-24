@@ -112,8 +112,8 @@
         Allow_Num_Mac {
             bindings = <
 &trans          &kp LG(UP_ARROW)    &kp UP_ARROW    &kp LG(DOWN_ARROW)   &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LG(Q)
-&kp ESCAPE      &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(NUMBER_4))
-&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&kp ESCAPE      &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &kp LA(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(NUMBER_4))
+&kp LEFT_SHIFT  &kp LG(LEFT_ARROW)  &trans          &kp LG(RIGHT_ARROW)  &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &none
 &trans          &trans              &trans          &trans               &trans               &trans               &trans     &kp N0                                                  &to 1
             >;
         };
@@ -121,8 +121,8 @@
         Allow_Num_Win {
             bindings = <
 &trans          &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN  &trans                                               &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp LA(F4)
-&kp ESCAPE      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp PLUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &kp LS(LG(S))
-&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &none
+&kp ESCAPE      &kp LEFT     &kp DOWN_ARROW  &kp RIGHT      &kp LC(RIGHT_ARROW)  &password_input      &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp LS(LG(S))
+&kp LEFT_SHIFT  &kp HOME     &trans          &kp END        &trans               &kp LA(TAB)          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &none
 &trans          &trans       &trans          &trans         &trans               &trans               &trans     &kp N0                                                  &to 0
             >;
         };
