@@ -55,6 +55,11 @@
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <32 33>;
         };
+
+        alt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <20 41>;
+        };
     };
 
     macros {
