@@ -50,6 +50,11 @@
             bindings = <&mo 3>;
             key-positions = <24 25>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
