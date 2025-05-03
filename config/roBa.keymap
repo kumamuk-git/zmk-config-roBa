@@ -88,10 +88,10 @@
 
         ARROW {
             bindings = <
-&trans    &trans  &trans    &trans  &trans                        &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
-&mkp MB4  &trans  &mkp MB2  &mo 5   &mkp MB5  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans    &trans  &trans    &trans  &trans    &trans      &trans  &kp BACKSPACE         &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mkp MB1
-&trans    &trans  &trans    &trans  &trans    &trans      &trans  &kp ENTER                                                                  &trans
+&trans    &trans  &trans    &trans  &trans                        &trans         &trans          &trans          &trans           &trans
+&mkp MB4  &trans  &mkp MB2  &mo 5   &mkp MB5  &trans      &trans  &mkp MB4       &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB5
+&trans    &trans  &trans    &trans  &trans    &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mkp MB1
+&trans    &trans  &trans    &trans  &trans    &trans      &trans  &kp ENTER                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -108,10 +108,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans        &PW
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LC(LA(KP_NUMBER_0))      &trans  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans        &trans         &trans        &trans        &trans
-&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                   &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET             &kp AMPERSAND     &kp ASTERISK       &kp GRAVE              &PW
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LC(LA(KP_NUMBER_0))      &trans  &kp NUMBER_6          &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0
+&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans
+&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                                            &trans
             >;
         };
 
