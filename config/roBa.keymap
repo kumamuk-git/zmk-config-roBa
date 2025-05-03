@@ -79,8 +79,8 @@
             bindings = <
 &kp Q           &kp W         &kp E             &kp R      &kp T                                       &kp Y                       &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F      &kp G  &kp LS(LG(S))         &kp SQT        &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS      &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 4  &kp LEFT_CONTROL      &kp BACKSPACE  &mt LA(LEFT_CONTROL) ENTER                             &lt 1 A
+&kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS      &kp N                       &kp M  &kp COMMA  &kp DOT  &lt 1 SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 4  &kp LEFT_CONTROL      &kp BACKSPACE  &mt LA(LEFT_CONTROL) ENTER                             &lt 3 A
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
