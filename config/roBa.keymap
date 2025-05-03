@@ -18,12 +18,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <1 2>;
         };
 
         shift_tab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <3 2>;
         };
 
         double_quotation {
@@ -44,6 +44,11 @@
         plus {
             bindings = <&kp EQUAL>;
             key-positions = <19 20>;
+        };
+
+        to_window_layer {
+            bindings = <&mo 0>;
+            key-positions = <12 13>;
         };
     };
 
@@ -85,14 +90,14 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
 &trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 2
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 3
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        SCROLL {
+        WINDOW {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                          &trans    &kp LS(LG(LC(LEFT)))  &kp LS(LA(LC(UP_ARROW)))  &kp LS(LG(LC(RIGHT)))        &trans
 &trans  &trans  &trans  &trans  &trans    &trans        &trans  &trans    &kp LS(LA(LC(LEFT)))  &kp LG(M)                 &kp LS(LC(LA(RIGHT_ARROW)))  &trans
@@ -101,12 +106,12 @@
             >;
         };
 
-        FUNCTION {
+        MouseButtons {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans      &kp F12  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4  &mkp MB1  &mkp MB2  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
             >;
         };
 
@@ -134,6 +139,15 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        FUNCTION {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans      &kp F12  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &trans
             >;
         };
     };
