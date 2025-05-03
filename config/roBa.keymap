@@ -43,12 +43,7 @@
 
         to_window_layer {
             bindings = <&mo 2>;
-            key-positions = <12 13>;
-        };
-
-        SCROLL_LAYER {
-            bindings = <&mo 5>;
-            key-positions = <24 25>;
+            key-positions = <12 11>;
         };
 
         escape {
