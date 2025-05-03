@@ -43,7 +43,7 @@
 
         to_window_layer {
             bindings = <&mo 2>;
-            key-positions = <12 11>;
+            key-positions = <12 13>;
         };
 
         escape {
