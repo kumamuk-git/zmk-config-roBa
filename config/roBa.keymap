@@ -6,12 +6,13 @@
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
-
 #define U_MOUSE_MOVE_MAX 1000
+
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
+
 #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
 #define MOVE_DOWN MOVE_VERT(-U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT MOEV_HOR(-U_MOUSE_MOVE_MAX)
@@ -87,10 +88,10 @@
 
         ARROW {
             bindings = <
-&trans    &trans  &trans    &trans    &trans                        &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
-&mkp MB4  &trans  &mkp MB1  &mkp MB2  &mkp MB5  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans    &trans  &trans    &trans    &trans    &trans      &trans  &kp BACKSPACE         &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 5
-&trans    &trans  &trans    &trans    &trans    &trans      &trans  &kp ENTER                                                                  &trans
+&trans    &trans    &trans  &trans    &trans                        &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
+&mkp MB4  &mkp MB5  &trans  &mkp MB1  &mkp MB2  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
+&trans    &trans    &trans  &trans    &trans    &trans      &trans  &kp BACKSPACE         &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 5
+&trans    &trans    &trans  &trans    &trans    &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
