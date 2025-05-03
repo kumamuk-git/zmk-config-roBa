@@ -62,6 +62,27 @@
             slow-release;
             layers = <4>;
         };
+
+        MB2 {
+            bindings = <&mkp MB2>;
+            key-positions = <19 20>;
+            slow-release;
+            layers = <4>;
+        };
+
+        MB4 {
+            bindings = <&mkp MB4>;
+            key-positions = <17 18>;
+            slow-release;
+            layers = <4>;
+        };
+
+        MB5 {
+            bindings = <&mkp MB5>;
+            key-positions = <20 21>;
+            slow-release;
+            layers = <4>;
+        };
     };
 
     macros {
