@@ -18,9 +18,6 @@
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-
-
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -73,9 +70,6 @@
             bindings = <&kp T &kp I &kp M &kp E &kp S &kp P &kp A &kp C &kp E &kp R &kp N8 &kp N1 &kp N7>;
             label = "PW";
         };
-    };
-
-    behaviors {
     };
 
     keymap {
@@ -141,10 +135,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &trans      &kp F12  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &trans
+&kp C_VOLUME_DOWN  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+&kp F1             &kp F2  &kp F3  &kp F4  &kp F5  &trans      &kp F12  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans             &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &trans
+&trans             &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &trans
             >;
         };
 
