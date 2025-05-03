@@ -71,10 +71,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R      &kp T                                         &kp Y                       &kp U  &kp I      &kp O    &kp P
-&kp A           &kp S         &kp D             &kp F      &kp G  &kp LS(LG(S))         &kp SQT          &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS        &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 6  &kp LEFT_CONTROL      &lt 5 BACKSPACE  &mt LA(LEFT_CONTROL) ENTER                             &mo 1
+&kp Q           &kp W         &kp E             &kp R      &kp T                                   &kp Y                       &kp U  &kp I      &kp O    &kp P
+&kp A           &kp S         &kp D             &kp F      &kp G  &kp LS(LG(S))         &kp SQT    &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS  &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 6  &kp LEFT_CONTROL      &mo 5      &mt LA(LEFT_CONTROL) ENTER                             &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -84,7 +84,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE         &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LANGUAGE_1                                                             &trans
             >;
 
