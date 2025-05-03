@@ -70,10 +70,21 @@
 &kp Q               &kp W         &kp E             &kp R      &kp T                                                                 &kp Y                       &kp U  &lt 5 I    &kp O    &kp P
 &mt A LCTRL         &kp S         &kp D             &kp F      &kp G        &kp LS(LG(S))                          &kp MINUS         &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_CONTROL Z  &kp X         &kp C             &kp V      &kp B        &kp COLON                              &kp SINGLE_QUOTE  &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT      &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &lt 2 SPACE  &mt LA(LEFT_CONTROL) INT_MUHENKAN      &kp BACKSPACE     &mt LA(LEFT_CONTROL) LANG1                             &lt 3 A
+&kp LEFT_SHIFT      &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &lt 3 SPACE  &mt LA(LEFT_CONTROL) INT_MUHENKAN      &kp BACKSPACE     &mt LA(LEFT_CONTROL) ENTER                             &lt 1 A
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        ARROW {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         FUNCTION {
@@ -92,17 +103,6 @@
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
             >;
-        };
-
-        ARROW {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                                                     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
