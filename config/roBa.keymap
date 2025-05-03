@@ -45,6 +45,11 @@
             bindings = <&mo 2>;
             key-positions = <12 13>;
         };
+
+        SCROLL_LAYER {
+            bindings = <&mo 3>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
