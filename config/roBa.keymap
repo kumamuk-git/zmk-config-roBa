@@ -56,17 +56,6 @@
         };
     };
 
-    behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -85,7 +74,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
 &trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 3
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
             >;
 
