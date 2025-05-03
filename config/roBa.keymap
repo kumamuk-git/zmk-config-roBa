@@ -50,6 +50,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
+
+        comma {
+            bindings = <&none>;
+            key-positions = <30 31>;
+        };
+
+        period {
+            bindings = <&kp PERIOD>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
