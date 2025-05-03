@@ -83,6 +83,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 2
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SCROLL {
