@@ -48,11 +48,11 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        PW: PW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp I &kp M &kp E &kp S &kp P &kp A &kp C &kp E &kp R &kp N8 &kp N1 &kp N7>;
+            label = "PW";
         };
     };
 
@@ -112,7 +112,7 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans        &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans        &PW
 &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LC(LA(KP_NUMBER_0))      &trans  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
 &trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans        &trans         &trans        &trans        &trans
 &trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                   &trans
