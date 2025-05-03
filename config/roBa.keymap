@@ -28,26 +28,21 @@
 
         double_quotation {
             bindings = <&kp SQT>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            key-positions = <19 20>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <19 18>;
+            key-positions = <7 6>;
         };
 
         plus {
             bindings = <&kp EQUAL>;
-            key-positions = <19 20>;
+            key-positions = <8 7>;
         };
 
         to_window_layer {
-            bindings = <&mo 0>;
+            bindings = <&mo 2>;
             key-positions = <12 13>;
         };
     };
