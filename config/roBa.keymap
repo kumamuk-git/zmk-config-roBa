@@ -18,6 +18,24 @@
 #define MOVE_LEFT MOEV_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 
+
+// #includeのあとのあたりにスクロール量を変更
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+//  behaviors に追加
+// 新しいスクロール動作の追加
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
+        };
+
+// 設定したいレイヤー
+sensor-bindings = <&scroll_up_down>;
+
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
