@@ -81,7 +81,7 @@
 &kp Q           &kp W         &kp E             &kp R      &kp T                                          &kp Y                       &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F      &kp G  &kp LS(LG(S))         &kp SQT           &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
 &kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS         &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 6  &kp LEFT_CONTROL      &lt 5 LANGUAGE_1  &mt LA(LEFT_CONTROL) ENTER                             &mo 1
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 6  &kp LEFT_CONTROL      &lt 6 LANGUAGE_1  &mt LA(LEFT_CONTROL) ENTER                             &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -107,12 +107,12 @@
             >;
         };
 
-        SCROLL {
+        NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans        &PW
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LC(LA(KP_NUMBER_0))      &trans  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans        &trans         &trans        &trans        &trans
+&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                   &trans
             >;
         };
 
@@ -125,12 +125,12 @@
             >;
         };
 
-        NUM {
+        SCROLL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DLLR      &kp PERCENT                                        &kp CARET     &kp AMPERSAND  &kp ASTERISK  &trans        &PW
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp LC(LA(KP_NUMBER_0))      &trans  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans        &trans         &trans        &trans        &trans
-&trans           &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                   &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
