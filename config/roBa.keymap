@@ -67,10 +67,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E             &kp R      &kp T                                                                   &kp Y                            &kp U  &lt 2 I    &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D             &kp F      &kp G             &kp LS(LG(S))                          &kp SQT        &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V      &kp B             &kp COLON                              &kp MINUS      &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mo 4               &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &mt LA(LEFT_CONTROL) INT_MUHENKAN      &kp BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 A
+&kp Q           &kp W         &kp E             &kp R      &kp T                                       &kp Y                       &kp U  &lt 2 I    &kp O    &kp P
+&kp A           &kp S         &kp D             &kp F      &kp G  &kp LS(LG(S))         &kp SQT        &kp H                       &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z           &kp X         &kp C             &kp V      &kp B  &kp COLON             &kp MINUS      &kp N                       &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mo 4  &kp LEFT_CONTROL      &kp BACKSPACE  &mt LA(LEFT_CONTROL) ENTER                             &lt 1 A
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -81,7 +81,7 @@
 &trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &kp MINUS          &kp EQUAL
 &trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &mo 2
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp ENTER                                                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
