@@ -56,7 +56,7 @@
             key-positions = <0 1>;
         };
 
-        MB1 {
+        mb_one {
             bindings = <&mkp MB1>;
             key-positions = <31 30>;
         };
