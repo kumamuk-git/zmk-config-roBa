@@ -85,15 +85,7 @@
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &mo 6       &lt 3 BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &mo 1
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-            
-             encoder {
-                rotate-cw = <&scroll_up_down 0>;
-                rotate-ccw = <&scroll_up_down 1>;
-            };
-
-
-            
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;  
         };
 
         ARROW {
