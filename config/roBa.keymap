@@ -6,17 +6,17 @@
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
-#define U_MOUSE_MOVE_MAX 1000
 
+
+#define U_MOUSE_MOVE_MAX 1400  // 新しい最大速度設定（デフォルトは600）
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
-
 #define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT MOEV_HOR(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
 
 // #includeのあとのあたりにスクロール量を変更
