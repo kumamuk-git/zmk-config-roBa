@@ -6,14 +6,6 @@
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2000     // 高速
-#define U_MOUSE_MOVE_EXPONENT 1             // 線形加速（加速なし）
-#define U_MOUSE_MOVE_TIME 0                 // 即最大速度（加速しないので意味なし）
-#define U_MOUSE_MOVE_DELAY 0                // 遅延なし
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 120      // 少し多めのスクロール量
-#define U_MOUSE_SCROLL_EXPONENT 1           // 線形加速（加速なし）
-#define U_MOUSE_SCROLL_TIME 0               // 即最大速度（加速しないので意味なし）
-#define U_MOUSE_SCROLL_DELAY 0              // 遅延なし
 
 &mt {
     flavor = "balanced";
