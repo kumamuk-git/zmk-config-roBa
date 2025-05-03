@@ -116,9 +116,9 @@
 
         SCROLL {
             bindings = <
-&kp  &kp  &kp  &kp  &kp                &kp  &kp                   &kp LS(LA(LC(UP_ARROW)))  &kp                          &kp
+&kp  &kp  &kp  &kp  &kp                &kp  &kp LS(LA(LG(LEFT)))  &kp LS(LA(LC(UP_ARROW)))  &kp LS(LA(LG(RIGHT)))        &kp
 &kp  &kp  &kp  &kp  &kp  &kp      &kp  &kp  &kp LS(LA(LC(LEFT)))  &kp LG(M)                 &kp LS(LC(LA(RIGHT_ARROW)))  &kp
-&kp  &kp  &kp  &kp  &kp  &kp      &kp  &kp  &kp                   &kp                       &kp                          &kp
+&kp  &kp  &kp  &kp  &kp  &kp      &kp  &kp  &kp LS(LA(LG(LEFT)))  &kp                       &kp LA(LS(LG(RIGHT)))        &kp
 &kp  &kp  &kp  &kp  &kp  &kp      &kp  &kp                                                                               &kp
             >;
         };
