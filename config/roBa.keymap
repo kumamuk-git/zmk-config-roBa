@@ -81,7 +81,7 @@
 &trans  &trans  &trans  &trans  &trans                             &trans                &kp BACKSLASH     &kp GRAVE       &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
 &trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &kp LANGUAGE_1                                                             &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
