@@ -18,7 +18,8 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <10 11>;
+            key-positions = <2 1>;
+            timeout-ms = <100>;
         };
 
         shift_tab {
@@ -41,18 +42,13 @@
             key-positions = <8 7>;
         };
 
-        to_window_layer {
-            bindings = <&mo 2>;
-            key-positions = <12 13>;
-        };
-
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
 
         comma {
-            bindings = <&none>;
+            bindings = <&kp COMMA>;
             key-positions = <30 31>;
         };
 
