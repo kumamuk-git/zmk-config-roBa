@@ -85,7 +85,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans         &mkp MB4  &kp UP_ARROW    &mkp MB5   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &mo 5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &mkp MB1  &trans          &mkp MB2   &mkp MB1
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &mkp MB1  &mkp MB2        &trans     &mkp MB1
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp ENTER                                           &trans
             >;
 
