@@ -30,19 +30,16 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <7 6>;
-            timeout-ms = <100>;
         };
 
         plus {
             bindings = <&kp EQUAL>;
             key-positions = <8 7>;
-            timeout-ms = <100>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            timeout-ms = <100>;
         };
 
         comma {
