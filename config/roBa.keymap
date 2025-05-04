@@ -83,10 +83,10 @@
 
         ARROW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans         &mkp MB4        &trans          &mkp MB5         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &mkp MB1        &kp UP_ARROW    &mkp MB2         &mo 5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mkp MB1
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp ENTER                                                       &trans
+&trans  &trans  &trans  &trans  &trans                      &trans         &mkp MB4  &kp UP_ARROW    &mkp MB5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans         &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &mo 5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp BACKSPACE  &mkp MB1  &trans          &mkp MB2   &mkp MB1
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp ENTER                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
