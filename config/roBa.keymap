@@ -51,6 +51,11 @@
             bindings = <&kp PERIOD>;
             key-positions = <31 32>;
         };
+
+        PW {
+            bindings = <&PW>;
+            key-positions = <18 19 20>;
+        };
     };
 
     macros {
