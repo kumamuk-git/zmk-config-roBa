@@ -78,7 +78,7 @@
 &mo 3             &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &mo 6               &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 LANGUAGE_1
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         ARROW {
@@ -103,10 +103,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN      &kp HASH         &kp DLLR         &kp PERCENT                          &kp CARET             &kp AMPERSAND     &kp ASTERISK     &kp GRAVE          &kp BACKSLASH
-&trans           &trans           &trans           &trans           &trans           &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp COLON        &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans      &trans  &kp KP_NUMBER_6       &kp KP_N7         &kp KP_NUMBER_8  &kp KP_NUMBER_9    &kp KP_NUMBER_0
-&trans           &trans           &trans           &trans           &trans           &trans      &trans  &trans                                                                      &kp PERIOD
+&kp EXCLAMATION             &kp AT_SIGN      &kp HASH         &kp DLLR         &kp PERCENT                          &kp CARET             &kp AMPERSAND     &kp ASTERISK     &kp GRAVE          &kp BACKSLASH
+&trans                      &trans           &trans           &trans           &trans           &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp COLON        &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
+&mt LEFT_SHIFT KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans      &trans  &kp KP_NUMBER_6       &kp KP_N7         &kp KP_NUMBER_8  &kp KP_NUMBER_9    &kp KP_NUMBER_0
+&trans                      &trans           &trans           &trans           &trans           &trans      &trans  &trans                                                                      &kp PERIOD
             >;
         };
 
