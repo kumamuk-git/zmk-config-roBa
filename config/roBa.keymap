@@ -70,6 +70,13 @@
             bindings = <&kp T &kp I &kp M &kp E &kp S &kp P &kp A &kp C &kp E &kp R &kp N8 &kp N1 &kp N7>;
             label = "PW";
         };
+
+        divider: divider {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp FSLH>;
+            label = "DIVIDER";
+        };
     };
 
     keymap {
