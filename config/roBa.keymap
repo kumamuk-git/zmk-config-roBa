@@ -90,7 +90,7 @@
             bindings = <
 &trans  &trans     &trans     &trans         &trans                      &mkp MB4              &mkp MB1          &kp UP_ARROW    &mkp MB2           &mkp MB5
 &trans  &kp LG(Z)  &trans     &kp LS(LG(Z))  &trans  &trans      &trans  &kp BACKSPACE         &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &mo 5
-&trans  &trans     &kp LG(C)  &kp LG(V)      &trans  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &mkp MB2        &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
+&trans  &trans     &kp LG(C)  &kp LG(V)      &trans  &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &mkp MB1        &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
@@ -108,10 +108,10 @@
 
         NUM {
             bindings = <
-&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp LS(CARET)         &kp LS(AMPS)      &kp LS(STAR)  &kp GRAVE          &kp BSLH
-&kp N1        &kp N2      &kp N3         &kp N4        &kp N5         &trans      &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp COLON     &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS
-&trans        &trans      &trans         &trans        &trans         &trans      &trans  &kp N6                &kp N7            &kp N8        &kp N9             &kp N0
-&trans        &trans      &trans         &trans        &trans         &trans      &trans  &trans                                                                   &kp PERIOD
+&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                      &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp GRAVE  &kp BSLH
+&kp N1        &kp N2      &kp N3         &kp N4        &kp N5         &trans      &trans  &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
+&trans        &trans      &trans         &trans        &trans         &trans      &trans  &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
+&trans        &trans      &trans         &trans        &trans         &trans      &trans  &trans                                                &kp PERIOD
             >;
         };
 
