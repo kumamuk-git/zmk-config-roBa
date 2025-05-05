@@ -56,6 +56,11 @@
             bindings = <&PW>;
             key-positions = <18 19 20>;
         };
+
+        colonn {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <18 19>;
+        };
     };
 
     macros {
@@ -73,7 +78,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E             &kp R      &kp T                                                           &kp Y                           &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D             &kp F      &kp G             &trans              &trans                    &kp H                           &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp A             &kp S         &kp D             &kp F      &kp G             &trans              &trans                    &kp H                           &kp J  &kp K      &kp L    &lt 3 SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V      &kp B             &kp LEFT_SHIFT      &kp LA(LEFT_COMMAND)      &kp N                           &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &lt 3 LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &mo 6               &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) BACKSPACE                             &lt 1 LANGUAGE_1
             >;
