@@ -23,7 +23,7 @@
         };
 
         double_quotation {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp APOSTROPHE>;
             key-positions = <19 20>;
         };
 
@@ -47,8 +47,8 @@
             key-positions = <18 19 20>;
         };
 
-        colonn {
-            bindings = <&kp SEMICOLON>;
+        backquote {
+            bindings = <&kp GRAVE>;
             key-positions = <18 19>;
         };
     };
