@@ -103,7 +103,7 @@
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_up_down SCRL_LEFT SCRL_RIGHT>;
         };
 
         WINDOW {
