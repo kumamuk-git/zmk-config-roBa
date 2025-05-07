@@ -9,12 +9,12 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <140>;
+    tapping-term-ms = <130>;
 };
 
 &lt {
     flavor = "hold-preferred";
-    tapping-term-ms = <160>;
+    tapping-term-ms = <130>;
 };
 
 / {
