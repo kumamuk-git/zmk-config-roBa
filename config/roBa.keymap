@@ -35,12 +35,12 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <7 6>;
+            key-positions = <>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <8 7>;
+            key-positions = <>;
         };
 
         escape {
@@ -82,7 +82,7 @@
             bindings = <
 &kp Q                     &kp W         &kp E             &kp R      &kp T                                                      &kp Y                            &kp U  &kp I      &kp O    &kp P
 &kp A                     &kp S         &kp D             &kp F      &kp G    &trans                      &kp COLON             &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
-&lt 3 Z                   &kp X         &kp C             &kp V      &kp B    &kp MINUS                   &kp LA(LEFT_COMMAND)  &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp Z                     &kp X         &kp C             &kp V      &kp B    &kp MINUS                   &kp LA(LEFT_COMMAND)  &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &mt LEFT_SHIFT LS(MINUS)  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp TAB  &mt LEFT_CONTROL MINUS      &lt 3 PLUS            &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
             >;
 
@@ -113,7 +113,7 @@
             bindings = <
 &kp LS(EXCL)       &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                       &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp GRAVE  &kp BSLH
 &kp N1             &kp N2      &kp N3         &kp N4        &kp N5         &trans      &trans   &kp N6         &kp N7        &kp N8        &kp N9     &kp N0
-&mt LEFT_SHIFT F1  &kp F2      &trans         &kp F4        &kp F8         &trans      &kp F12  &kp F6         &kp F7        &trans        &trans     &trans
+&mt LEFT_SHIFT F1  &kp F2      &trans         &kp F4        &kp F8         &trans      &kp F12  &kp F6         &kp F7        &trans        &trans     &divider
 &trans             &trans      &trans         &trans        &trans         &trans      &trans   &trans                                                &trans
             >;
 
