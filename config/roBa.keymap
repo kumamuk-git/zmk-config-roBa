@@ -8,9 +8,8 @@
 #define NUM 6
 
 &mt {
-    flavor = "tap-preferred";
-    quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    flavor = "balanced";
+    quick-tap-ms = <150>;
 };
 
 / {
@@ -149,6 +148,15 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        WINDOW {
+            if-layers = <1 3>;
+            then-layer = <2>;
         };
     };
 };
