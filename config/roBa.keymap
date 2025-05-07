@@ -30,7 +30,7 @@
 
         double_quotation {
             bindings = <&kp APOSTROPHE>;
-            key-positions = <19 20>;
+            key-positions = <>;
         };
 
         minus {
@@ -55,7 +55,7 @@
 
         backquote {
             bindings = <&kp GRAVE>;
-            key-positions = <18 19>;
+            key-positions = <>;
         };
     };
 
@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q                     &kp W         &kp E             &kp R      &kp T                                                      &kp Y                            &kp U  &kp I      &kp O    &kp P
-&kp A                     &kp S         &kp D             &kp F      &kp G    &trans                      &kp COLON             &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z                     &kp X         &kp C             &kp V      &kp B    &kp MINUS                   &kp LA(LEFT_COMMAND)  &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_SHIFT LS(MINUS)  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp TAB  &mt LEFT_CONTROL MINUS      &lt 3 PLUS            &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
+&kp Q                     &kp W         &kp E             &kp R      &kp T                                                          &kp Y                            &kp U  &kp I      &kp O    &kp P
+&kp A                     &kp S         &kp D             &kp F      &kp G    &trans                      &kp COLON                 &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z                     &kp X         &kp C             &kp V      &kp B    &kp GRAVE                   &mt LA(LEFT_COMMAND) SQT  &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT LS(MINUS)  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp TAB  &mt LEFT_CONTROL MINUS      &lt 3 PLUS                &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
