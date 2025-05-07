@@ -111,10 +111,10 @@
 
         NUM {
             bindings = <
-&kp LS(EXCL)       &kp LS(AT)       &kp LS(POUND)    &kp LS(DLLR)     &kp LS(PRCNT)                         &kp LS(CARET)    &kp LS(AMPS)     &kp LS(STAR)     &kp GRAVE        &kp BSLH
-&kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans      &trans   &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0
-&mt LEFT_SHIFT F1  &kp F2           &trans           &kp F4           &kp F8           &trans      &kp F12  &kp F6           &kp F7           &trans           &trans           &divider
-&trans             &trans           &trans           &trans           &trans           &trans      &trans   &trans                                                              &trans
+&kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                       &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp GRAVE  &kp BSLH
+&kp N1        &kp N2      &kp N3         &kp N4        &kp N5         &trans      &trans   &kp N6         &kp N7        &kp N8        &kp N9     &kp LS(N0)
+&trans        &kp F2      &trans         &kp F4        &kp F8         &trans      &kp F12  &kp F6         &kp F7        &trans        &trans     &divider
+&trans        &trans      &trans         &trans        &trans         &trans      &trans   &trans                                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
