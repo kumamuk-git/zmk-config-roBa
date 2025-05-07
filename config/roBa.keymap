@@ -8,14 +8,13 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <160>;
 };
 
 &lt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     tapping-term-ms = <160>;
-    hold-trigger-key-positions = <5 5 6 7 8 9 17 18 19 20 21 29 30 31 32 33 42 16 17 28 29 40 41>;
 };
 
 / {
