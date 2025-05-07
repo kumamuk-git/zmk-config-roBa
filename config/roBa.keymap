@@ -9,12 +9,16 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <100>;
+    quick-tap-ms = <80>;
+    tapping-term-ms = <120>;
+    retro-tap;
 };
 
 &lt {
     flavor = "balanced";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <80>;
+    retro-tap;
+    tapping-term-ms = <120>;
 };
 
 / {
