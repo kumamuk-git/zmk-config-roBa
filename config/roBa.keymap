@@ -9,8 +9,8 @@
 
 &mt {
     flavor = "tap-unless-interrupted";
-    tapping-term-ms = <160>;
-    quick-tap-ms = <100>;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <80>;
 };
 
 &lt {
