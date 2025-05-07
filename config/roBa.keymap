@@ -70,15 +70,6 @@
         };
     };
 
-    behaviors {
-        SCROLL_ROTATE: SCROLL_ROTATE {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_ROTATE";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -90,7 +81,7 @@
 &lt 3 LS(MINUS)   &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)      &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         ARROW {
@@ -101,7 +92,7 @@
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
-            sensor-bindings = <&SCROLL_ROTATE>;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         WINDOW {
