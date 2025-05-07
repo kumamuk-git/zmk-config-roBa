@@ -10,7 +10,7 @@
 &mt {
     flavor = "tap-preferred";
     quick-tap-ms = <0>;
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
 };
 
 / {
@@ -71,13 +71,11 @@
     };
 
     behaviors {
-        scroll_up_down: scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL_UP_DOWN";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-
-            tap-ms = <3>;
+        SCROLL_ROTATE: SCROLL_ROTATE {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ROTATE";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
@@ -92,7 +90,7 @@
 &lt 3 LS(MINUS)   &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)      &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&none>;
         };
 
         ARROW {
@@ -103,7 +101,7 @@
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&SCROLL_ROTATE>;
         };
 
         WINDOW {
