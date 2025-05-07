@@ -33,7 +33,7 @@
         };
 
         plus {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp PLUS>;
             key-positions = <8 7>;
         };
 
@@ -77,7 +77,7 @@
 &kp Q             &kp W         &kp E             &kp R      &kp T                                                               &kp Y                            &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S         &kp D             &kp F      &kp G             &trans                  &kp MINUS                 &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C             &kp V      &kp B             &kp COLON               &kp LA(LEFT_COMMAND)      &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&lt 3 LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)      &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &mo 1
+&lt 3 LS(MINUS)   &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &kp LEFT_CONTROL  &kp LC(LEFT_SHIFT)      &mt LEFT_SHIFT BACKSPACE  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
