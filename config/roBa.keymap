@@ -8,8 +8,9 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     quick-tap-ms = <0>;
+    tapping-term-ms = <150>;
 };
 
 / {
