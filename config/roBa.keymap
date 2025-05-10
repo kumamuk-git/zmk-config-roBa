@@ -8,14 +8,14 @@
 #define NUM 6
 
 &mt {
-    tapping-term-ms = <100>;
+    tapping-term-ms = <110>;
     quick-tap-ms = <80>;
     flavor = "balanced";
 };
 
 &lt {
     flavor = "hold-preferred";
-    tapping-term-ms = <100>;
+    tapping-term-ms = <110>;
     quick-tap-ms = <80>;
 };
 
