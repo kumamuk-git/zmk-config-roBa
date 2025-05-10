@@ -40,7 +40,7 @@
         };
 
         plus {
-            bindings = <&kp PLUS>;
+            bindings = <&kp EQUAL>;
             key-positions = <20 19>;
         };
 
