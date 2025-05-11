@@ -92,7 +92,7 @@
 &mt LEFT_SHIFT KP_MINUS  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mt LG(LEFT_CONTROL) TAB  &mt LEFT_CONTROL GRAVE      &lt 3 SQT  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &lt 1 KP_PLUS
             >;
 
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         ARROW {
@@ -103,7 +103,7 @@
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+            sensor-bindings = <&inc_dec_kp HOME END>;
         };
 
         WINDOW {
@@ -113,6 +113,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(LA(LG(LEFT_ARROW)))  &kp LS(LA(LG(UP_ARROW)))  &kp LS(LA(LG(RIGHT)))        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                                     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         NUM {
