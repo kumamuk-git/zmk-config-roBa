@@ -63,6 +63,11 @@
             bindings = <&kp COLON>;
             key-positions = <20 21>;
         };
+
+        BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <30 31>;
+        };
     };
 
     macros {
@@ -83,7 +88,7 @@
         toNumLayer: toNumLayer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &lt 3 SQT>;
+            bindings = <&kp LANGUAGE_2 &mo 3>;
             label = "TONUMLAYER";
         };
     };
