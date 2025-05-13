@@ -68,6 +68,11 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <30 31>;
         };
+
+        pw2 {
+            bindings = <&pw2>;
+            key-positions = <17 18 19>;
+        };
     };
 
     macros {
@@ -83,6 +88,13 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp FSLH>;
             label = "DIVIDER";
+        };
+
+        pw2: pw2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp I &kp M &kp E &kp AT &kp LS(S) &kp P &kp A &kp C &kp E &kp R &kp N8 &kp N1 &kp N7>;
+            label = "PW2";
         };
     };
 
