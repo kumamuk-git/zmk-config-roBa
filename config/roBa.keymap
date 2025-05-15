@@ -7,21 +7,6 @@
 #define SCROLL 5
 #define NUM 6
 
-
-&sensor-rotate-x {}
-&sensor-rotate-y {}
-
-&keymap {
-    default_layer {
-        bindings = <...>;
-        sensor-bindings = <&sensor-rotate-x &sensor-rotate-y>; // ここで反映
-    };
-
-    MOUSE {
-        bindings = <...>; // マウス用のキーを割り当てているレイヤー
-    };
-};
-
 &mt {
     tapping-term-ms = <110>;
     quick-tap-ms = <80>;
