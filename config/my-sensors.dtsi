@@ -1,0 +1,13 @@
+/ {
+    sensor-rotate-x {
+        compatible = "zmk,sensor-rotate";
+        label = "trackball-x";
+        sensor-bindings = <&behavior_mouse_layer_on>;
+    };
+
+    sensor-rotate-y {
+        compatible = "zmk,sensor-rotate";
+        label = "trackball-y";
+        sensor-bindings = <&behavior_mouse_layer_on>;
+    };
+};
