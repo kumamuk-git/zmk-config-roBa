@@ -159,10 +159,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &kp K_SCROLL_DOWN  &trans            &trans                      &trans     &trans    &trans  &trans    &trans
-&trans  &trans  &kp K_SCROLL_UP    &kp C_AC_ZOOM_IN  &trans  &trans      &trans  &trans     &trans    &trans  &trans    &trans
-&trans  &trans  &trans             &trans            &trans  &trans      &trans  &mkp MB4   &mkp MB1  &trans  &mkp MB2  &mkp MB5
-&trans  &trans  &trans             &trans            &trans  &trans      &trans  &kp ENTER                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
