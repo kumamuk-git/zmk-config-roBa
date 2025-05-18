@@ -159,10 +159,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans     &trans     &trans         &trans                      &kp LPAR       &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RPAR
-&trans  &kp LG(Z)  &trans     &kp LS(LG(Z))  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &mo 5
-&trans  &trans     &kp LG(C)  &kp LG(V)      &trans  &trans      &trans  &mkp MB4       &mkp MB1          &kp GRAVE       &mkp MB2           &mkp MB5
-&trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                           &trans
+&trans  &trans  &trans  &trans  &trans                      &trans     &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB4   &mkp MB1  &trans  &mkp MB2  &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp ENTER                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
