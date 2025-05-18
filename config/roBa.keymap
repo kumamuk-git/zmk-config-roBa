@@ -39,11 +39,6 @@
             key-positions = <18 19>;
         };
 
-        plus {
-            bindings = <&kp EQUAL>;
-            key-positions = <20 19>;
-        };
-
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
@@ -55,18 +50,13 @@
         };
 
         backquote {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp EQUAL>;
             key-positions = <6 7>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <20 21>;
         };
 
         BS {
             bindings = <&kp BACKSPACE>;
-            key-positions = <30 31>;
+            key-positions = <20 19>;
         };
 
         pw2 {
