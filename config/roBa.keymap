@@ -56,7 +56,7 @@
 
         BS {
             bindings = <&kp BACKSPACE>;
-            key-positions = <16 17>;
+            key-positions = <17 18>;
         };
 
         pw2 {
