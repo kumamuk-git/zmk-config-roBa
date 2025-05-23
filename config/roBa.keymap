@@ -63,6 +63,11 @@
             bindings = <&pw2>;
             key-positions = <17 18 19>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <20 21>;
+        };
     };
 
     macros {
