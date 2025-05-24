@@ -68,12 +68,12 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                              &kp Y            &kp U  &lt 0 I    &kp O    &kp P
-&mt LEFT_WIN A    &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(NUMBER_4))      &kp MINUS                   &kp H            &kp J  &kp K      &lt 3 L  &lt 3 ENTER
+&mt LEFT_WIN A    &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(NUMBER_4))      &kp MINUS                   &kp H            &kp J  &kp K      &kp L    &lt 3 ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp SEMICOLON             &kp SQT                     &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 1 SPACE  &lt 5 TAB                 &mt RIGHT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                             &lt 4 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         NUM {
@@ -98,10 +98,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans     &trans                  &trans                   &kp LG(LS(T))                                      &trans    &kp LC(UP_ARROW)    &trans               &trans  &trans
-&trans  &kp LG(W)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LG(T)         &trans                   &trans  &mkp MB5  &mkp MB1            &mkp MB2             &trans  &trans
-&trans  &trans     &kp F22                 &kp F23                  &kp F24           &trans                   &trans  &mkp MB4  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans
-&trans  &trans     &trans                  &kp LC(LEFT_ARROW)       &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)      &trans  &trans                                                     &trans
+&trans  &trans     &trans                  &trans                   &kp LG(LS(T))                                      &trans    &kp LC(UP_ARROW)  &msc SCRL_UP        &msc SCRL_DOWN       &trans
+&trans  &kp LG(W)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LG(T)         &trans                   &trans  &mkp MB5  &mkp MB5          &mkp MB1            &mkp MB2             &trans
+&trans  &trans     &kp F22                 &kp F23                  &kp F24           &trans                   &trans  &mkp MB4  &mkp MB4          &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans
+&trans  &trans     &trans                  &kp LC(LEFT_ARROW)       &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)      &trans  &trans                                                               &trans
             >;
         };
 
@@ -115,6 +115,15 @@
         };
 
         layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
