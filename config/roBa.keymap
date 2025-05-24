@@ -73,7 +73,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 1 SPACE  &lt 5 TAB                 &mt RIGHT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                             &lt 4 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
@@ -98,10 +98,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans     &trans                  &trans                   &kp LG(W)                          &trans    &kp LC(UP_ARROW)    &trans               &trans  &trans
-&trans  &kp LG(W)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LS(LG(T))  &trans      &trans  &mkp MB5  &mkp MB1            &mkp MB2             &trans  &trans
-&trans  &trans     &kp F22                 &kp F23                  &kp F24        &trans      &trans  &mkp MB4  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans
-&trans  &trans     &trans                  &trans                   &trans         &trans      &trans  &trans                                                     &trans
+&trans  &trans     &trans                  &trans                   &kp LG(W)                                              &trans    &kp LC(UP_ARROW)    &trans               &trans  &trans
+&trans  &kp LG(W)  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LS(LG(T))         &trans                   &trans  &mkp MB5  &mkp MB1            &mkp MB2             &trans  &trans
+&trans  &trans     &kp F22                 &kp F23                  &kp F24               &trans                   &trans  &mkp MB4  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans
+&trans  &trans     &trans                  &kp LC(LEFT_ARROW)       &kp LC(LG(UP_ARROW))  &kp LC(RIGHT_ARROW)      &trans  &trans                                                     &trans
             >;
         };
 
