@@ -34,7 +34,7 @@
 &kp Q             &kp W         &kp E         &kp R                 &kp T                                                              &kp Y            &kp U  &kp I      &kp O    &kp P
 &mt LEFT_WIN A    &kp S         &kp D         &kp F                 &kp G        &kp LS(LG(NUMBER_4))      &kp MINUS                   &kp H            &kp J  &kp K      &kp L    &lt 3 ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &kp SEMICOLON             &kp SQT                     &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &lt 1 SPACE  &lt 5 LANGUAGE_2          &mt RIGHT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                             &lt 4 DELETE
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &lt 1 SPACE  &lt 0 LANGUAGE_2          &mt RIGHT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                             &lt 4 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
@@ -75,24 +75,15 @@
             bindings = <
 &bt BT_CLR    &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&to 0         &to 6         &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&to 0         &to 5         &trans        &trans        &trans        &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        M_sub {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
         W_TEXT {
             bindings = <
 &kp Q               &kp W         &kp E         &kp R                 &kp T                                                         &kp Y            &kp U  &kp I      &kp O       &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D         &kp F                 &kp G        &kp LS(LC(S))         &kp MINUS                  &kp H            &kp J  &kp K      &kp L       &lt 7 ENTER
+&mt LEFT_CONTROL A  &kp S         &kp D         &kp F                 &kp G        &kp LS(LC(S))         &kp MINUS                  &kp H            &kp J  &kp K      &kp L       &lt 6 ENTER
 &mt LEFT_SHIFT Z    &kp X         &kp C         &kp V                 &kp B        &kp SEMICOLON         &kp SINGLE_QUOTE           &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL    &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL TAB  &lt 1 SPACE  &lt 0 LANGUAGE_2      &mt LEFT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                                &lt 4 DELETE
             >;
