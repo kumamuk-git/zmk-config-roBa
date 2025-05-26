@@ -95,7 +95,7 @@
             bindings = <
 &trans  &trans     &trans           &trans                  &kp LS(LC(T))                                              &trans  &trans    &kp LG(LC(UP_ARROW))    &trans                   &trans
 &trans  &kp LC(W)  &kp LS(LC(TAB))  &kp LC(TAB)             &kp LC(T)             &trans                       &trans  &trans  &mkp MB5  &mkp MB1                &mkp MB2                 &trans
-&trans  &trans     &kp F22          &kp F23                 &kp F24               &trans                       &trans  &trans  &mkp MB4  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans
+&trans  &trans     &trans           &trans                  &trans                &trans                       &trans  &trans  &mkp MB4  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans
 &trans  &trans     &trans           &kp LG(LC(LEFT_ARROW))  &kp LG(LC(UP_ARROW))  &kp LG(LC(RIGHT_ARROW))      &trans  &trans                                                             &trans
             >;
 
