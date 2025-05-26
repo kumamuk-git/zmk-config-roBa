@@ -62,4 +62,13 @@
     };
 };
 
+/ {
+    behaviors {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-momentary-layer";
+            label = "TO_LAYER_0";
+            layer = <0>;
+        };
+    };
+};
 
