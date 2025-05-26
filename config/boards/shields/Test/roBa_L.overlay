@@ -14,6 +14,7 @@
 &left_encoder {
     status = "okay";
 };
+
 / {
     behaviors {
         to_layer_0: to_layer_0 {
