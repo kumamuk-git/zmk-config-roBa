@@ -36,8 +36,6 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &kp SEMICOLON                  &kp SQT                     &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &lt 1 SPACE  &mt LEFT_SHIFT LANGUAGE_2      &mt RIGHT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                             &lt 4 DELETE
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         MW_NUM {
@@ -56,8 +54,6 @@
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &trans       &trans  &kp F6         &kp F7          &kp F8          &kp F9           &kp F10
 &trans  &trans  &trans  &kp F11  &kp F12  &kp F13      &trans  &trans                                                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         M_MOUSE {
@@ -67,8 +63,6 @@
 &trans  &trans     &trans                  &trans                   &trans            &trans                   &trans  &trans  &mkp MB4  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &trans
 &trans  &trans     &trans                  &kp LC(LEFT_ARROW)       &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)      &trans  &trans                                                     &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         MW_BT {
@@ -87,8 +81,6 @@
 &mt LEFT_SHIFT Z    &kp X         &kp C         &kp V                 &kp B        &kp SEMICOLON                  &kp SINGLE_QUOTE           &kp N            &kp M  &kp COMMA  &kp PERIOD  &mt LEFT_SHIFT SLASH
 &kp LEFT_CONTROL    &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL TAB  &lt 1 SPACE  &mt LEFT_SHIFT LANGUAGE_2      &mt LEFT_SHIFT LANGUAGE_1  &lt 2 BACKSPACE                                &lt 4 DELETE
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         W_MOUSE {
@@ -98,8 +90,6 @@
 &trans  &trans     &trans           &trans                  &trans                &trans                       &trans  &trans  &mkp MB4  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))  &trans
 &trans  &trans     &trans           &kp LG(LC(LEFT_ARROW))  &kp LG(LC(UP_ARROW))  &kp LG(LC(RIGHT_ARROW))      &trans  &trans                                                             &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
