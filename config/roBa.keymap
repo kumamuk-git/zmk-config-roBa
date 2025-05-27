@@ -49,6 +49,22 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+       mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                 <&macro_press>,
+                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                 <&macro_pause_for_release>,
+                 <&macro_release>,
+                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                 <&macro_tap>,
+                 <&sl 4>;
+
+           label = "MKP_EXIT_AML";
+
+
     };
 
     behaviors {
