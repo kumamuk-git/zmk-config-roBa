@@ -1,0 +1,8 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        keymap {
+            // キーなし、USBにBLE入力を出力
+        };
+    };
+};
