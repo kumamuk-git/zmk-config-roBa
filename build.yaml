@@ -19,9 +19,12 @@
 ---
 include:
  - board: seeeduino_xiao_ble
+   shield: roBa_dongle_center
+ - board: seeeduino_xiao_ble
    shield: roBa_R
-   snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
  - board: seeeduino_xiao_ble
    shield: roBa_L
+   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
  - board: seeeduino_xiao_ble
    shield: settings_reset
