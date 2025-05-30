@@ -1,0 +1,17 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        keymap {
+            // ドングルはキー入力不要
+        };
+    };
+};
+
+&behaviors {
+    compatible = "zmk,behavior-hold-tap";
+};
+
+&kscan {
+    input = <&ble>;
+    output = <&usb>;
+};
