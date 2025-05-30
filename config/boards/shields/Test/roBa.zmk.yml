@@ -7,6 +7,6 @@ requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
-  - nayutyl_dongle_center
-  - nayutyl_dongle_left
-  - nayutyl_dongle_right
+  - roBa_dongle_center
+  - roBa_R
+  - roBa_L
