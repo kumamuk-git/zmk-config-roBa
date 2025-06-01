@@ -112,7 +112,7 @@
             bindings = <
 &kp Q             &kp W         &kp E             &kp R      &kp T                                                                 &kp Y                            &kp U  &kp I      &kp O    &kp P
 &kp A             &kp S         &kp D             &kp F      &kp G                     &trans                      &trans          &kp H                            &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V      &kp B                     &trans                      &trans          &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V      &kp B                     &kp SPACE                   &trans          &kp N                            &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &mo 3             &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE  &mt LG(LEFT_CONTROL) TAB  &mt LEFT_CONTROL GRAVE      &kp LEFT_SHIFT  &mt LA(LEFT_CONTROL) LANGUAGE_1                             &mo 1
             >;
 
