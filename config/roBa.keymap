@@ -145,7 +145,7 @@
             bindings = <
 &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                              &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp COLON   &kp BSLH
 &kp N1        &kp N2      &kp N3         &kp N4        &kp N5                &trans      &trans   &kp N6         &kp N7        &kp N8        &kp N9      &kp N0
-&kp COLON     &kp F2      &trans         &kp F4        &kp F8                &trans      &kp F12  &kp F6         &kp F7        &kp KP_COMMA  &kp KP_DOT  &kp KP_DIVIDE
+&trans        &kp F2      &trans         &kp F4        &kp F8                &trans      &kp F12  &kp F6         &kp F7        &kp KP_COMMA  &kp KP_DOT  &kp KP_DIVIDE
 &trans        &trans      &trans         &trans        &kp NON_US_BACKSLASH  &trans      &trans   &trans                                                 &trans
             >;
 
