@@ -10,7 +10,7 @@
 &mt {
     tapping-term-ms = <180>;
     quick-tap-ms = <80>;
-    flavor = "balanced";
+    flavor = "hold-preferred";
 };
 
 &lt {
@@ -151,7 +151,7 @@
 &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                                 &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp COLON   &kp NON_US_BACKSLASH
 &kp N1        &kp N2      &kp N3         &kp N4        &kp N5         &trans            &kp F12      &kp N6         &kp N7        &kp N8        &kp N9      &kp N0
 &trans        &kp F2      &trans         &kp F4        &kp F8         &kp KP_MINUS      &kp KP_PLUS  &kp F6         &kp F7        &kp KP_COMMA  &kp KP_DOT  &kp KP_DIVIDE
-&trans        &trans      &trans         &trans        &trans         &trans            &trans       &kp KP_EQUAL                                           &trans
+&trans        &trans      &trans         &trans        &trans         &trans            &kp EQUAL    &trans                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
