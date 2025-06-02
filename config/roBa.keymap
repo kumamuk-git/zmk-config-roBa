@@ -53,11 +53,6 @@
             key-positions = <19 20>;
         };
 
-        BS {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <17 18>;
-        };
-
         pw2 {
             bindings = <&pw2>;
             key-positions = <17 18 19>;
@@ -70,7 +65,7 @@
 
         back-quote {
             bindings = <&kp GRAVE>;
-            key-positions = <6 5>;
+            key-positions = <6 7>;
         };
     };
 
