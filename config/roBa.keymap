@@ -35,7 +35,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <18 19>;
+            key-positions = <18 19 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 41 42>;
         };
 
         escape {
@@ -50,17 +50,12 @@
 
         backquote {
             bindings = <&kp EQUAL>;
-            key-positions = <19 20>;
+            key-positions = <19 20 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 41 42>;
         };
 
         pw2 {
             bindings = <&pw2>;
             key-positions = <17 18 19>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <20 21>;
         };
 
         back-quote {
@@ -122,7 +117,7 @@
             bindings = <
 &trans  &trans     &trans     &trans         &trans                      &kp LPAR       &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RPAR
 &trans  &kp LG(Z)  &trans     &kp LS(LG(Z))  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &mo 5
-&trans  &trans     &kp LG(C)  &kp LG(V)      &trans  &trans      &trans  &mkp MB4       &mkp MB1          &kp GRAVE       &mkp MB2           &mkp MB5
+&trans  &trans     &kp LG(C)  &kp LG(V)      &trans  &trans      &trans  &mkp MB4       &mkp MB1          &trans          &mkp MB2           &mkp MB5
 &trans  &trans     &trans     &trans         &trans  &trans      &trans  &kp ENTER                                                           &trans
             >;
 
