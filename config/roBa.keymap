@@ -115,10 +115,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp LC(LG(U))  &trans  &kp LG(LC(O))       &trans                          &kp LPAR   &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RPAR
-&kp TAB     &trans         &trans  &kp BACKSPACE       &kp DELETE  &trans      &trans  &trans     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &mo 5
-&trans      &kp LC(LG(M))  &trans  &kp LC(LG(PERIOD))  &trans      &trans      &trans  &mkp MB4   &mkp MB1          &trans          &mkp MB2           &mkp MB5
-&trans      &trans         &trans  &trans              &trans      &trans      &trans  &kp ENTER                                                       &trans
+&kp ESCAPE  &kp LC(LG(U))  &kp LS(LC(UP_ARROW))    &kp LG(LC(O))       &trans                          &kp LPAR   &kp LEFT_BRACKET  &kp UP_ARROW    &kp RIGHT_BRACKET  &kp RPAR
+&kp TAB     &trans         &trans                  &kp BACKSPACE       &kp DELETE  &trans      &trans  &trans     &kp LEFT          &kp DOWN_ARROW  &kp RIGHT          &mo 5
+&trans      &kp LC(LG(M))  &kp LS(LC(DOWN_ARROW))  &kp LC(LG(PERIOD))  &trans      &trans      &trans  &mkp MB4   &mkp MB1          &trans          &mkp MB2           &mkp MB5
+&trans      &trans         &trans                  &trans              &trans      &trans      &trans  &kp ENTER                                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
