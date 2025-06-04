@@ -35,7 +35,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <18 19 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 41 42>;
+            key-positions = <18 19 18 19 18 19>;
         };
 
         escape {
@@ -50,7 +50,7 @@
 
         backquote {
             bindings = <&kp EQUAL>;
-            key-positions = <19 20 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 41 42>;
+            key-positions = <19 20>;
         };
 
         pw2 {
