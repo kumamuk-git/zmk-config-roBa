@@ -33,11 +33,6 @@
             key-positions = <8 7>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <18 19 18 19 18 19>;
-        };
-
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
@@ -61,6 +56,11 @@
         back-quote {
             bindings = <&kp GRAVE>;
             key-positions = <6 7>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <18 19>;
         };
     };
 
