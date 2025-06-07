@@ -30,7 +30,7 @@
 
         double_quotation {
             bindings = <&kp APOSTROPHE>;
-            key-positions = <8 7>;
+            key-positions = <20 19>;
         };
 
         escape {
@@ -45,7 +45,7 @@
 
         backquote {
             bindings = <&kp EQUAL>;
-            key-positions = <19 20>;
+            key-positions = <8 7>;
         };
 
         pw2 {
