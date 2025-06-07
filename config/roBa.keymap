@@ -55,12 +55,12 @@
 
         back-quote {
             bindings = <&kp GRAVE>;
-            key-positions = <6 7>;
+            key-positions = <19 18>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <18 19>;
+            key-positions = <6 7>;
         };
     };
 
