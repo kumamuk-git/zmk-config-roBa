@@ -111,10 +111,10 @@
 
         SYMBOL {
             bindings = <
-&kp PERCENT  &kp DOLLAR  &kp AMPERSAND  &kp CARET        &kp SLASH                          &kp PIPE              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
-&kp AT_SIGN  &kp HASH    &kp ASTERISK   &kp PLUS         &kp EQUAL     &trans      &kp F13  &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp COLON
-&kp GRAVE    &kp TILDE   &kp POUND      &kp EXCLAMATION  &kp QUESTION  &trans      &trans   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans       &trans      &trans         &trans           &trans        &trans      &trans   &trans                                                                               &kp F12
+&kp PERCENT           &kp DOLLAR           &kp AMPERSAND     &kp CARET        &kp SLASH                          &kp PIPE2             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
+&kp LS(SINGLE_QUOTE)  &kp HASH             &kp ASTERISK      &kp PLUS         &kp EQUAL     &trans      &kp F13  &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp COLON
+&kp GRAVE             &kp LS(NON_US_HASH)  &kp LS(NUMBER_3)  &kp EXCLAMATION  &kp QUESTION  &trans      &trans   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans                &trans               &trans            &trans           &trans        &trans      &trans   &trans                                                                               &kp F12
             >;
         };
 
