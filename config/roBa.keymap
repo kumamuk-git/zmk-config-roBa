@@ -53,6 +53,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <23 24>;
+        };
     };
 
     macros {
@@ -81,7 +86,7 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q    &kp W             &kp E         &kp R                 &kp T                                                    &kp Y        &kp U  &lt 5 I   &kp O     &kp P
-&kp A             &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &kp MINUS      &kp H        &kp J  &kp K     &kp L     &kp SQT
+&kp A             &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &kp MINUS      &kp H        &kp J  &kp K     &kp L     &lt_to_layer_0 3 APOSTROPHE
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                 &kp B        &kp COMMA                    &kp PERIOD     &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
 &kp LEFT_WIN      &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 3 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &kp RIGHT_CONTROL
             >;
@@ -100,7 +105,7 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                                   &kp LC(PAGE_UP)   &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
+&kp LC(W)                   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                                   &kp LC(PAGE_UP)   &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
 &kp SLASH                   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp PAGE_UP       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN
 &mt LEFT_SHIFT KP_NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &mkp MB4        &mkp MB1        &kp K_APPLICATION  &mkp MB5
 &trans                      &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                               &kp ESCAPE
@@ -129,10 +134,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp LA(LEFT_ALT)  &kp F7  &kp F8  &kp F9  &kp F10                      &kp F9  &kp F10   &kp F11  &kp F12            &kp RA(F4)
+&kp LEFT_CONTROL  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &trans  &trans    &kp F5   &trans             &trans
+&trans            &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans  &trans  &mkp MB4  &kp F2   &kp K_APPLICATION  &mkp MB5
+&trans            &trans  &trans  &trans  &trans   &trans      &trans  &trans                                        &trans
             >;
         };
 
