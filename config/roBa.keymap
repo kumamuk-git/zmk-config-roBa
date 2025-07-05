@@ -88,7 +88,7 @@
 &mt LEFT_ALT Q    &kp W             &kp E         &kp R                 &kp T                                                    &kp Y        &kp U  &lt 5 I   &kp O     &kp P
 &kp A             &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &kp MINUS      &kp H        &kp J  &kp K     &kp L     &lt_to_layer_0 3 APOSTROPHE
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                 &kp B        &kp COMMA                    &kp PERIOD     &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LEFT_WIN      &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 3 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &kp RIGHT_CONTROL
+&kp LEFT_WIN      &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 5 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp LC(K_SCROLL_DOWN) K_SCROLL_UP>;
