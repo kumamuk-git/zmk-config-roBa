@@ -73,11 +73,6 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <32 33>;
         };
-
-        dash {
-            bindings = <&kp MINUS>;
-            key-positions = <20 21>;
-        };
     };
 
     macros {
