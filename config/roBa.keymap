@@ -106,7 +106,7 @@
 &kp LEFT_WIN        &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 5 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_CONTROL MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         SYMBOL {
