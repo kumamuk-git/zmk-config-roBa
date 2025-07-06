@@ -44,21 +44,6 @@
             key-positions = <11 10>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-
-        underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <23 24>;
-        };
-
         comma {
             bindings = <&kp COMMA>;
             key-positions = <30 31>;
@@ -72,6 +57,21 @@
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <32 33>;
+        };
+
+        comma2 {
+            bindings = <&kp COMMA>;
+            key-positions = <13 31>;
+        };
+
+        period2 {
+            bindings = <&kp PERIOD>;
+            key-positions = <13 32>;
+        };
+
+        backslash2 {
+            bindings = <&kp NON_US_BACKSLASH>;
+            key-positions = <13 33>;
         };
     };
 
@@ -101,8 +101,8 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q      &kp W             &kp E         &kp R                 &kp T                                                    &kp Y        &kp U  &kp I     &kp O     &kp P
-&mt LEFT_CONTROL A  &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &kp MINUS      &kp H        &kp J  &lt 5 K   &kp L     &lt_to_layer_0 5 APOSTROPHE
-&mt LEFT_SHIFT Z    &kp X             &kp C         &kp V                 &kp B        &kp COMMA                    &kp PERIOD     &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&mt LEFT_CONTROL A  &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &none          &kp H        &kp J  &lt 5 K   &kp L     &lt_to_layer_0 5 APOSTROPHE
+&mt LEFT_SHIFT Z    &kp X             &kp C         &kp V                 &kp B        &none                        &none          &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
 &kp LEFT_WIN        &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 5 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_CONTROL MINUS
             >;
 
@@ -111,19 +111,19 @@
 
         SYMBOL {
             bindings = <
-&kp PERCENT           &kp DOLLAR           &kp AMPERSAND     &kp CARET        &kp SLASH                          &kp PIPE2             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
-&kp LS(SINGLE_QUOTE)  &kp NON_US_HASH      &kp ASTERISK      &kp PLUS         &kp EQUAL     &trans      &kp F13  &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp COLON
-&kp GRAVE             &kp LS(NON_US_HASH)  &kp LS(NUMBER_3)  &kp EXCLAMATION  &kp QUESTION  &trans      &trans   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp LS(NUMBER_2)
-&trans                &trans               &trans            &trans           &trans        &trans      &trans   &trans                                                                               &kp F12
+&kp PERCENT       &kp DOLLAR           &kp AMPERSAND     &kp CARET        &kp SLASH                         &kp PIPE2             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN     &kp GREATER_THAN
+&kp LS(NUMBER_2)  &kp NON_US_HASH      &kp ASTERISK      &kp PLUS         &kp EQUAL     &trans      &none   &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp COLON
+&kp GRAVE         &kp LS(NON_US_HASH)  &kp LS(NUMBER_3)  &kp EXCLAMATION  &kp QUESTION  &trans      &trans  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE  &kp LS(DOUBLE_QUOTES)
+&trans            &trans               &trans            &trans           &trans        &trans      &trans  &trans                                                                               &kp ESCAPE
             >;
         };
 
         NUM {
             bindings = <
-&kp LC(W)                   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                                   &kp LC(PAGE_UP)   &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
-&kp SLASH                   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp PAGE_UP       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN
-&mt LEFT_SHIFT KP_NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &mkp MB4        &mkp MB1        &kp K_APPLICATION  &mkp MB5
-&trans                      &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                               &kp ESCAPE
+&kp LC(W)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                           &kp LC(PAGE_UP)  &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
+&none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp LC(LA(KP_NUMBER_0))      &none   &kp PAGE_UP      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN
+&none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp ASTERISK                 &trans  &none            &mkp MB4        &mkp MB1        &kp K_APPLICATION  &mkp MB5
+&trans     &trans        &trans        &trans        &trans        &trans                       &trans  &trans                                                              &kp ESCAPE
             >;
         };
 
