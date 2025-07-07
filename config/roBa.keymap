@@ -101,8 +101,8 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q      &kp W             &kp E         &kp R                 &kp T                                                    &kp Y        &kp U  &kp I     &kp O     &kp P
-&mt LEFT_CONTROL A  &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &none          &kp H        &kp J  &lt 5 K   &kp L     &lt_to_layer_0 5 APOSTROPHE
-&mt LEFT_SHIFT Z    &kp X             &kp C         &kp V                 &kp B        &none                        &none          &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&mt LEFT_CONTROL A  &kp S             &kp D         &kp F                 &kp G        &kp LS(LG(S))                &to 6          &kp H        &kp J  &lt 5 K   &kp L     &lt_to_layer_0 5 APOSTROPHE
+&mt LEFT_SHIFT Z    &kp X             &kp C         &kp V                 &kp B        &none                        &none          &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
 &kp LEFT_WIN        &kp LEFT_CONTROL  &kp LEFT_ALT  &lt_to_layer_0 1 TAB  &lt 2 SPACE  &lt_to_layer_0 5 ESCAPE      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_CONTROL MINUS
             >;
 
@@ -120,16 +120,16 @@
 
         NUM {
             bindings = <
-&kp LC(W)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                               &kp LC(PAGE_UP)  &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
-&none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp LC(LA(KP_NUMBER_0))      &none       &kp PAGE_UP      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN
-&none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp ASTERISK                 &trans      &none            &mkp MB4        &mkp MB1        &kp K_APPLICATION  &mkp MB5
-&trans     &trans        &trans        &trans        &trans        &trans                       &kp DELETE  &kp ENTER                                                           &kp ESCAPE
+&kp LC(W)       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS                                               &kp LC(PAGE_UP)  &kp HOME        &kp UP_ARROW    &kp END            &kp LC(PAGE_DOWN)
+&kp LCTRL       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0  &kp LC(LA(KP_NUMBER_0))      &none       &kp PAGE_UP      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PAGE_DOWN
+&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp ASTERISK                 &trans      &kp INSERT       &mkp MB4        &mkp MB1        &kp K_APPLICATION  &mkp MB5
+&trans          &trans        &trans        &trans        &trans        &trans                       &kp DELETE  &kp ENTER                                                           &kp ESCAPE
             >;
         };
 
         ARROW {
             bindings = <
-&kp LEFT_ALT      &kp F7  &kp F8  &kp F9  &kp F10                          &kp F9         &kp F10   &kp F11  &kp F12            &kp RA(F4)
+&kp LEFT_ALT      &kp F7  &kp F8  &kp F9  &kp F10                          &kp F9         &kp F10   &kp F11  &kp F12            &kp LA(F4)
 &kp LEFT_CONTROL  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans      &trans         &trans    &kp F5   &trans             &trans
 &kp LEFT_SHIFT    &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans      &kp LS(LG(S))  &mkp MB4  &kp F2   &kp K_APPLICATION  &mkp MB5
 &trans            &trans  &trans  &trans  &trans   &trans      &kp DELETE  &kp ENTER                                            &kp ESCAPE
