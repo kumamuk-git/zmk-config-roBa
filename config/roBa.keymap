@@ -54,6 +54,12 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        language {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -110,10 +116,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE            &trans                  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans             &kp C_AC_BACK    &kp LS(C_AC_FORWARD)  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans             &trans           &trans                &trans                  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                                            &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE     &trans            &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans             &kp LA(LEFT)     &kp LA(RIGHT)  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans             &trans           &trans         &trans            &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
