@@ -63,6 +63,17 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <0>;
         };
+
+        mt_fast: mt_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_FAST";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <145>;
+            quick-tap-ms = <0>;
+        };
     };
 
     keymap {
@@ -70,10 +81,10 @@
 
         default_layer {
             bindings = <
-&kp Q                  &kp W                    &kp E                     &kp R  &kp T                                                             &kp Y                 &kp U  &kp I      &kp O    &kp P
-&mt_slow LEFT_SHIFT A  &kp S                    &kp D                     &kp F  &kp G        &kp LG(MINUS)             &kp LG(PLUS)               &kp H                 &kp J  &kp K      &kp L    &kp COLON
-&kp Z                  &mt_slow LS(LEFT_ALT) X  &mt_slow LS(LEFT_META) C  &kp V  &kp B        &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &kp N                 &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LANG2              &kp LEFT_ALT             &kp LEFT_META             &mo 1  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_META ENTER                             &mt RCTRL ESCAPE
+&kp Q                  &kp W                    &kp E                     &kp R  &kp T                                                             &kp Y                 &kp U  &kp I                 &kp O                 &kp P
+&mt_slow LEFT_SHIFT A  &kp S                    &kp D                     &kp F  &kp G        &kp LG(MINUS)             &kp LG(PLUS)               &kp H                 &kp J  &kp K                 &kp L                 &kp COLON
+&kp Z                  &mt_slow LS(LEFT_ALT) X  &mt_slow LS(LEFT_META) C  &kp V  &kp B        &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &kp N                 &kp M  &mt RIGHT_META COMMA  &mt RIGHT_ALT PERIOD  &mt_fast RCTRL SLASH
+&lt 7 LANG2            &mo 6                    &mo 3                     &mo 1  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_META ENTER                                                     &kp ESCAPE
             >;
         };
 
@@ -97,10 +108,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans                  &trans                  &trans                &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(DOWN_ARROW))  &kp LS(LG(UP_ARROW))  &kp LS(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                  &trans                  &trans                &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                                   &trans
             >;
         };
 
@@ -119,6 +130,24 @@
 &trans  &kp LS(LG(NUMBER_4))  &kp F11        &kp LS(LA(O))  &trans  &trans      &trans  &trans        &kp N4  &kp N5  &kp N6  &trans
 &trans  &trans                &kp LS(LC(C))  &trans         &trans  &trans      &trans  &trans        &kp N1  &kp N2  &kp N3  &trans
 &trans  &trans                &trans         &trans         &trans  &trans      &trans  &kp NUMBER_0                          &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans                  &trans                  &trans                &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LA(LEFT_ARROW))  &kp LS(LA(DOWN_ARROW))  &kp LS(LA(UP_ARROW))  &kp LS(LA(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                  &trans                  &trans                &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                                         &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans            &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(NUMBER_0)                                                        &trans
             >;
         };
     };
