@@ -7,8 +7,10 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 3
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
     quick-tap-ms = <0>;
+    require-prior-idle-ms = <150>;
 };
 
 &trackball {
