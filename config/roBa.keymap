@@ -97,7 +97,7 @@
             >;
         };
 
-        layer_2 {
+        layer_2_mouse_click_and_func {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7              &kp F8     &kp F9               &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp LCLK           &mkp RCLK  &mkp MCLK            &kp F11
@@ -106,7 +106,7 @@
             >;
         };
 
-        layer_3 {
+        layer_3_text_select {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans                  &trans                  &trans                &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LG(LEFT_ARROW))  &kp LS(LG(DOWN_ARROW))  &kp LS(LG(UP_ARROW))  &kp LS(LG(RIGHT))  &trans
@@ -142,7 +142,7 @@
             >;
         };
 
-        layer_7 {
+        layer_7_change_browser_tab {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans            &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &kp LG(NUMBER_6)  &trans
@@ -151,7 +151,7 @@
             >;
         };
 
-        layer_8 {
+        layer_8_move_window {
             bindings = <
 &trans  &trans  &trans  &trans         &trans                                     &kp LS(LC(Y))      &trans         &trans         &kp LS(LC(O))    &trans
 &trans  &trans  &trans  &kp LS(LC(F))  &trans  &trans      &trans                 &kp LS(LC(H))      &kp LS(LC(J))  &kp LS(LC(K))  &kp LC(LS(L))    &trans
