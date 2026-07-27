@@ -153,10 +153,10 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                     &kp LS(LC(Y))      &trans         &trans         &kp LS(LC(O))    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans                 &kp LS(LC(H))      &kp LS(LC(J))  &kp LS(LC(K))  &kp LC(LS(L))    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans                 &kp LS(LC(N))      &trans         &trans         &kp LS(LC(DOT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LS(LC(BACKSPACE))  &kp LS(LC(ENTER))                                                 &trans
+&trans  &trans  &trans  &trans         &trans                                     &kp LS(LC(Y))      &trans         &trans         &kp LS(LC(O))    &trans
+&trans  &trans  &trans  &kp LS(LC(F))  &trans  &trans      &trans                 &kp LS(LC(H))      &kp LS(LC(J))  &kp LS(LC(K))  &kp LC(LS(L))    &trans
+&trans  &trans  &trans  &trans         &trans  &trans      &trans                 &kp LS(LC(N))      &trans         &trans         &kp LS(LC(DOT))  &trans
+&trans  &trans  &trans  &trans         &trans  &trans      &kp LS(LC(BACKSPACE))  &kp LS(LC(ENTER))                                                 &trans
             >;
         };
     };
