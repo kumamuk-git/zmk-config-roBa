@@ -84,7 +84,7 @@
 &lt 8 Q                &kp W                    &kp E                     &kp R  &kp T                                                             &kp Y                 &kp U  &kp I                 &kp O                 &kp P
 &mt_slow LEFT_SHIFT A  &kp S                    &kp D                     &kp F  &kp G        &kp LG(MINUS)             &kp LG(PLUS)               &kp H                 &kp J  &kp K                 &kp L                 &kp MINUS
 &kp Z                  &mt_slow LS(LEFT_ALT) X  &mt_slow LS(LEFT_META) C  &kp V  &kp B        &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &kp N                 &kp M  &mt RIGHT_META COMMA  &mt RIGHT_ALT PERIOD  &mt_fast RCTRL SLASH
-&lt 7 LANG2            &mo 6                    &mo 3                     &mo 1  &lt 2 SPACE  &lt_to_layer_0 4 TAB      &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_META ENTER                                                     &kp ESCAPE
+&lt 7 LANG2            &mo 6                    &mo 3                     &mo 1  &lt 2 SPACE  &lt_to_layer_0 5 TAB      &mt RIGHT_SHIFT BACKSPACE  &mt RIGHT_META ENTER                                                     &kp ESCAPE
             >;
         };
 
@@ -115,21 +115,21 @@
             >;
         };
 
-        layer_4_number {
-            bindings = <
-&trans  &trans          &trans         &trans  &trans                      &trans  &kp N7  &kp N8  &kp N9  &trans
-&trans  &kp LS(LG(N4))  &trans         &trans  &trans  &trans      &trans  &trans  &kp N4  &kp N5  &kp N6  &trans
-&trans  &trans          &kp LS(LC(C))  &trans  &trans  &trans      &trans  &trans  &kp N1  &kp N2  &kp N3  &trans
-&trans  &trans          &trans         &trans  &trans  &trans      &trans  &kp N0                          &trans
-            >;
-        };
-
-        layer_5_mouse_layer {
+        layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        layer_5_mouse_layer {
+            bindings = <
+&trans  &trans                &trans         &trans  &trans                      &trans  &kp N7  &kp N8  &kp N9  &trans
+&trans  &kp LS(LG(NUMBER_4))  &trans         &trans  &trans  &trans      &trans  &trans  &kp N4  &kp N5  &kp N6  &trans
+&trans  &trans                &kp LS(LC(C))  &trans  &trans  &trans      &trans  &trans  &kp N1  &kp N2  &kp N3  &trans
+&trans  &trans                &trans         &trans  &trans  &trans      &trans  &kp N0                          &trans
             >;
         };
 
