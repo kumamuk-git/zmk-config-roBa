@@ -63,9 +63,14 @@
         // ベースレイヤーからレイヤー6を開くキーが 1 つも無くなっており、
         // &bt BT_SEL / BT_CLR / BT_CLR_ALL を物理的に押せない状態だった。
         // 位置 9 = P、位置 33 = SLASH。どちらも右半分なので、
-        // 左半分が繋がらなくても右手だけで BT 操作ができる。
+        // 左半分が繋がらなくても右手だけで BT 操作が完結する。
+        //
+        // モーメンタリ (&mo) ではなくトグル (&tog) にしてある。
+        // BT_SEL 0-4 は Y/U/I/O/P の位置にあり、P を押さえたままでは
+        // 同じ右手で押せないため。
+        // 抜けるには もう一度 P + SLASH か、レイヤー6 の ENTER 位置 (&to 0)。
         system_layer {
-            bindings = <&mo 6>;
+            bindings = <&tog 6>;
             key-positions = <9 33>;
             timeout-ms = <100>;
         };
@@ -171,7 +176,7 @@
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &to 0                                                   &bt BT_CLR_ALL
             >;
         };
 
