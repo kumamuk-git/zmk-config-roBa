@@ -7,10 +7,15 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # revision: main で追従していたため、10ヶ月分の上流変更を一度に引いて
+      # ビルドが壊れていた (settings_reset まで落ちる = 設定側の問題ではない)。
+      # 最後にビルドが通っていた 2025-10 時点の main に固定する。
+      # 上げるときは 1 コミットずつではなくタグ単位で試すこと。
+      revision: 4ec69cb7e658590adf6354027aca789b364a70c5
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
-      revision: main
+      # このドライバは 2025-02-26 以降更新されていない。最新コミットに固定。
+      revision: 5e04553ab803d24405bd45621a41310ea3050e59
   self:
     path: config

@@ -2,4 +2,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # config/west.yml でピン留めした ZMK と同じリビジョンのワークフローを使う。
+    # @main のままだと、新しい ZMK にしか無い CONFIG_ZMK_BOARD_COMPAT=y を
+    # 要求するステップでビルド成功後に落ちてアーティファクトが出ない。
+    # west.yml のピンを動かすときは、この ref も必ず一緒に動かすこと。
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@4ec69cb7e658590adf6354027aca789b364a70c5
