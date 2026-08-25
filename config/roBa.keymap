@@ -159,7 +159,7 @@
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4  &kp N5                                           &kp N7  &kp N8    &kp N9            &kp N0             &kp MINUS
 &trans        &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT     &kp NUMBER_6  &kp NUMBER_6      &kp LEFT_ARROW   &kp F7  &mkp MB1  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL
-&trans        &kp HOME        &kp DOWN_ARROW  &kp END       &trans        &kp NUMBER_6      &kp RIGHT_ARROW  &trans  &trans    &kp SEMICOLON     &kp GRAVE          &kp BACKSLASH
+&trans        &kp HOME        &kp DOWN_ARROW  &kp END       &kp F6        &kp NUMBER_6      &kp RIGHT_ARROW  &trans  &trans    &kp SEMICOLON     &kp GRAVE          &kp BACKSLASH
 &trans        &trans          &trans          &trans        &trans        &trans            &trans           &trans                                                 &trans
             >;
 
