@@ -257,20 +257,26 @@
          * する。&trans にすると記号が失われるため、タップ時は従来どおり
          * \ | ? ! を出す。hml は hold-trigger-key-positions = <KEYS_R THUMBS>
          * のため、左手だけで記号を連打しても hold には化けない。
+         *
+         * 最下段は SYMBOL 最下段の完全ミラー。同じ物理キー = 同じ記号で、
+         * どちらの親指(レイヤー)でも入力できる。開き括弧は右親指(本レイヤー)
+         * + 左手、閉じ括弧は左親指(SYMBOL) + 右手が交差ホールドで快適。
+         * 旧配置の HOME/PG_DN/PG_UP/END は FUNCTION の矢印位置へ移動。
          */
         NAV_NUM {
             bindings = <
 &kp CARET            &kp DLLR        &kp DOT              &kp ASTRK         &kp PLUS                                &kp PLUS  &kp MINUS  &kp ASTRK  &kp SLASH  &kp EQUAL
 &hml LGUI BACKSLASH  &hml LALT PIPE  &hml LCTRL QUESTION  &hml LSHIFT EXCL  &kp AMPERSAND  &trans      &kp DEL  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans               &trans          &trans               &trans            &trans         &trans      &trans   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+&kp GRAVE            &kp LESS_THAN   &kp LEFT_BRACE       &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp SEMI      &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp BACKSLASH
 &trans               &trans          &trans               &trans            &trans         &trans      &trans   &trans                                     &trans
             >;
         };
 
+        /* 右手ホームロウは NAV_NUM の矢印と同位置の強化版 (← = HOME 等)。 */
         FUNCTION {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4  &kp F5                      &kp F6            &kp F7  &kp F8  &kp F9        &kp F10
-&trans  &kp F11  &kp F12  &trans  &trans  &trans      &trans  &trans            &trans  &trans  &trans        &trans
+&kp F1  &kp F2   &kp F3   &kp F4  &kp F5                      &kp F6            &kp F7     &kp F8     &kp F9        &kp F10
+&trans  &kp F11  &kp F12  &trans  &trans  &trans      &trans  &kp HOME          &kp PG_DN  &kp PG_UP  &kp END       &trans
 &trans  &trans   &trans   &trans  &trans  &trans      &trans  &trans            &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP
 &trans  &trans   &trans   &trans  &trans  &trans      &trans  &mo LAYER_SYSTEM                                &kp CAPSLOCK
             >;
