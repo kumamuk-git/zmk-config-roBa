@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -14,11 +15,20 @@
             ;
 };
 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+    excluded-positions = <
+        18 // J
+    >;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        // トラボ使用後1秒はカーソルレイヤーを有効に
+        input-processors = <&zip_temp_layer 2 1000>;
     };
 };
 
