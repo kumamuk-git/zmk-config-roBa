@@ -64,14 +64,14 @@
         mac_setup: osx_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &tog 0>;
+            bindings = <&bt BT_SEL 0 &to 1>;
             label = "OSX_SETUP";
         };
 
         win_setup: win_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 1>;
+            bindings = <&bt BT_SEL 1 &to 0>;
             label = "WIN_SETUP";
         };
     };
@@ -79,23 +79,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer_mac {
-            bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 5          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
         default_layer_win {
             bindings = <
 &kp Q           &kp W         &kp E         &kp R                        &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D         &kp F                        &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C         &kp V                        &lt 4 B      &mo 5          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_CONTROL LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        default_layer_mac {
+            bindings = <
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 5          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
