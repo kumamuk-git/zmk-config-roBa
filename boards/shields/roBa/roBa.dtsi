@@ -3,6 +3,7 @@
 
 / {
     chosen {
+        // このシールドに物理レイアウトを関連付ける。
         zmk,physical-layout = &roba_physical_layout;
     };
 
@@ -12,7 +13,8 @@
         transform = <&default_transform>;
         kscan = <&kscan0>;
 
-        keys  //                     w   h    x    y     rot    rx    ry
+        // キーマップ表示やツール用の物理キー位置。
+        keys  //                     幅  高さ  x    y     回転  rx  ry
             = <&key_physical_attrs 100 100    0   37       0     0     0>
             , <&key_physical_attrs 100 100  100   12       0     0     0>
             , <&key_physical_attrs 100 100  200    0       0     0     0>
@@ -70,6 +72,7 @@
             ;
     };
 
+    // キーマップのバインドで使う論理マトリクス順。
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <11>;
@@ -82,10 +85,15 @@
         >;
     };
 
+    // GPIO マトリクススキャン設定（行はここ、列は overlay 側）。
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
+        // ディープスリープからキー操作で復帰できるようにする。
+        wakeup-source;
+        debounce-press-ms = <20>;
+        debounce-release-ms = <20>;
             row-gpios
                 = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -94,30 +102,35 @@
                 ;
     };
 
+    // 左エンコーダ配線。各半分で overlay から有効化。
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <12>;
+        steps = <24>; // 1クリックあたりの分解能を上げる。
         status = "disabled";
     };
 
+    // 右エンコーダの枠（未実装なら無効のまま）。
     right_encoder: encoder_right {
         status = "disabled";
     };
 
+    // エンコーダをキーマップのセンサーへ登録。
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <10>;
     };
 
+    // トラックボールのリスナーは右側のみ有効。
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
     };
 };
 
+// トラックボールは右側のみ有効。
 &spi0 {
     status = "disabled";
 

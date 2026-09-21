@@ -1,15 +1,42 @@
+// このキーマップ全体で使う基本ビヘイビアとキーコード定義。
+// エンコーダのスクロール量を調整（SCRL_UP/DOWN に反映）。
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// 左エンコーダのスクロール量（小さいほど滑らか）。
+
+#define ENCODER_SCROLL_STEP 4
+#define ENC_SCRL_UP MOVE_Y(ENCODER_SCROLL_STEP)
+#define ENC_SCRL_DOWN MOVE_Y(-ENCODER_SCROLL_STEP)
+
+// ホールド判定を長めにする共通タッピング時間。
+
+#define HOLD_TAPPING_TERM_MS 198
+#define WORK_LAYER 7
+
+// &mt のモッドタップ設定を共通調整。
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
 };
 
+// &lt のレイヤータップ判定を共通調整。
+
+&lt { tapping-term-ms = <HOLD_TAPPING_TERM_MS>; };
+
+// トラックボールの動作設定（レイヤ番号は下のキーマップ参照）。
+
 &trackball {
-    automouse-layer = <4>;
+    // Disable auto layer switching to avoid unintended clicks.
+
+    automouse-layer = <0>;
     scroll-layers = <5>;
 
     // arrows {
@@ -19,7 +46,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -29,6 +55,8 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        // よく使う操作の2キーコンボ。
 
         tab {
             bindings = <&kp TAB>;
@@ -52,11 +80,43 @@
 
         eq {
             bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            key-positions = <7 8>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <13 16>;
+        };
+
+        cmd_s {
+            bindings = <&kp LG(S)>;
+            key-positions = <11 12>;
+        };
+
+        cmd_z {
+            bindings = <&kp LG(Z)>;
+            key-positions = <20 21>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <31 32>;
+        };
+
+        screenShot {
+            bindings = <&kp LG(LS(N5))>;
+            key-positions = <26 27>;
         };
     };
 
     macros {
+        // ベースレイヤへ移動後、引数のキーコードを送るマクロ。
+
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -66,58 +126,131 @@
     };
 
     behaviors {
+        // ホールド時はモーメンタリ、タップ時はベースレイヤへ移動。
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+        };
+
+        // 左内側キーはタップでコロン、ホールドで WORK レイヤ。
+
+        work_colon: work_colon {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COLON / WORK";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+            flavor = "tap-preferred";
+        };
+
+        // エンコーダ回転で滑らかなホイールスクロールを送信。
+
+        enc_scroll: enc_scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
+
+        // エンコーダ回転でマウススクロール（下→上の順）。
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        // タップで英数、ホールドでシフト（シングルタップ用）
+
+        ek_hold: eisu_kana_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+            flavor = "balanced";
+        };
+
+        // 親指キー用の英数／かな切り替えタップダンス。
+        // シングルタップ: 英数 (ホールドでシフト)
+        // ダブルタップ: かな
+
+        ek: eisu_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Eisu / Kana";
+            #binding-cells = <0>;
+            bindings = <&ek_hold LEFT_SHIFT LANGUAGE_2>, <&kp LANGUAGE_1>;
+
+            tapping-term-ms = <250>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
+        // エンコーダスクロール付きの基本タイピングレイヤ。
+
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q      &kp W     &kp E     &kp R  &kp T                                                          &kp Y        &kp U  &lt 5 I   &kp O     &kp P
+&kp A      &kp S     &kp D     &kp F  &kp G        &kp LS(N5)                         &kp MINUS      &kp H        &kp J  &kp K     &kp L     &mt RIGHT_SHIFT SQT
+&kp Z      &kp X     &kp C     &kp V  &kp B        &work_colon WORK_LAYER COLON       &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp COMMA
+&kp LCTRL  &kp LALT  &kp LGUI  &ek    &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp PERIOD
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            // エンコーダでスムーズスクロール。
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
+
+        // 編集・メディア用レイヤ（日本語記号対応）。
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE                      &kp LBKT       &kp RBKT       &kp LS(LBKT)  &kp LS(RBKT)   &kp LS(MINUS)
+&trans  &trans      &kp LG(X)     &kp LG(C)     &kp LG(V)         &trans      &trans  &kp LG(Z)      &kp LG(A)      &kp LG(S)     &kp MINUS      &kp LS(N7)
+&trans  &trans      &trans        &trans        &trans            &trans      &trans  &kp LG(LS(Z))  &kp LS(COMMA)  &kp LS(DOT)   &kp LS(SLASH)  &kp LS(N1)
+&trans  &trans      &trans        &kp C_BRI_DN  &kp C_BRI_UP      &trans      &trans  &trans                                                     &trans
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
+
+        // コーディング記号レイヤ。
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp LEFT_BRACKET  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp RIGHT_BRACKET                                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL
+&kp LEFT_BRACE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RIGHT_BRACE    &kp LC(LA(KP_NUMBER_0))      &kp PLUS       &kp MINUS             &kp ASTERISK           &kp SLASH      &kp UNDERSCORE    &kp CARET
+&kp GRAVE         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0    &kp EQUAL                    &kp TILDE      &kp EXCLAMATION       &kp AT_SIGN            &kp HASH       &kp DOLLAR        &kp PERCENT
+&trans            &trans           &trans           &trans           &trans             &trans                       &kp BACKSLASH  &kp PIPE                                                                      &kp AMPERSAND
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
+
+        // ナビゲーションレイヤ（Mac標準のテキスト移動）。
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))   &kp UP_ARROW    &kp LC(TAB)        &kp LG(UP)                      &kp LA(UP)        &kp LA(LEFT)    &kp LA(RIGHT)     &kp LA(DOWN)       &trans
+&kp HOME        &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp END     &trans      &trans  &kp LG(LEFT)      &kp LG(DOWN)    &kp LG(UP)        &kp LG(RIGHT)      &trans
+&kp LEFT_SHIFT  &kp LS(LA(LEFT))  &kp LG(DOWN)    &kp LS(LA(RIGHT))  &trans      &trans      &trans  &kp LS(LG(LEFT))  &kp LS(LA(UP))  &kp LS(LA(DOWN))  &kp LS(LG(RIGHT))  &trans
+&sys_reset      &trans            &trans          &trans             &trans      &trans      &trans  &trans                                                                 &sys_reset
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
+
+        // マウスボタン用レイヤ。
 
         MOUSE {
             bindings = <
@@ -126,7 +259,11 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
+
+        // スクロールレイヤ（トラックボールのスクロールモード用）。
 
         SCROLL {
             bindings = <
@@ -135,7 +272,11 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
+
+        // Bluetooth 管理／ブートローダーレイヤ。
 
         layer_6 {
             bindings = <
@@ -144,6 +285,21 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        // Mac 側の logical Hyper actions だけを送る左手 WORK レイヤ。
+
+        WORK {
+            bindings = <
+&kp LC(LA(LG(LS(H))))  &kp LC(LA(LG(LS(V))))  &kp LC(LA(LG(LS(M))))  &kp LC(LA(LG(LS(K))))  &kp LC(LA(LG(LS(L))))                      &trans  &trans  &trans  &trans  &trans
+&trans                  &kp LC(LA(LG(LS(B))))  &kp LC(LA(LG(LS(P))))  &kp LC(LA(LG(LS(F))))  &trans                  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                  &kp LC(LA(LG(LS(C))))  &kp LC(LA(LG(LS(T))))  &kp LC(LA(LG(LS(E))))  &trans                  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                  &trans                  &trans                  &trans                  &trans                  &trans      &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
     };
 };
